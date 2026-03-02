@@ -1,0 +1,34 @@
+Create a Twitter/X thread based on this blog content:
+
+{blog_content}
+
+Twitter Thread Best Practices:
+- Thread should have 4-6 tweets total
+- First tweet is the HOOK - must stop scrolling
+- Each tweet should work standalone but connect to next
+- Length: 200-280 characters per tweet optimal
+- Use numbers, questions, or bold claims for engagement
+- End with clear CTA or engagement question
+
+Thread Structure:
+
+**Tweet 1 (Hook):**
+- Attention-grabbing opening
+- Use pattern: "Here's what nobody tells you about [topic]" or "I analyzed [X] and found [surprising result]"
+- Make people want to read more
+
+**Tweets 2-4 (Value):**
+- Each tweet = one key insight from blog
+- Use bullet points or numbered lists when possible
+- Include specific examples or data
+- Keep language punchy and direct
+
+**Tweet 5 (CTA):**
+- Summarize the value
+- Link to full blog post
+- Ask an engagement question or request retweet
+- Add 2-3 relevant hashtags
+
+Format each tweet separately with clear numbering (1/, 2/, etc.)
+Keep language conversational and direct
+No unnecessary emojis - only if they enhance clarity

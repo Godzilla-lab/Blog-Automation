@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-02-05T16:07:09.884656",
+  "question": "Why tenants don't pay rent on time?",
+  "niche": "Property Management",
+  "category": "property_management",
+  "intent": "problem_diagnosis",
+  "website": "hexaaiagency.com",
+  "blog_length": 21078,
+  "linkedin_length": 1823,
+  "twitter_length": 1539,
+  "threads_length": 740,
+  "question_id": 3,
+  "version": "v1_niche_enhanced",
+  "quality_target": "9.5+"
+}

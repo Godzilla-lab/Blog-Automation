@@ -1,0 +1,564 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Why property managers spend 40% of their time on repetitive tasks?",
+      "category": "property_management",
+      "difficulty": "intermediate",
+      "niche": "Property Management",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 2,
+      "question": "How to automate tenant maintenance requests?",
+      "category": "property_management",
+      "difficulty": "intermediate",
+      "niche": "Property Management",
+      "intent": "solution"
+    },
+    {
+      "id": 3,
+      "question": "Why tenants don't pay rent on time?",
+      "category": "property_management",
+      "difficulty": "intermediate",
+      "niche": "Property Management",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 4,
+      "question": "How automation reduces late rent without hiring more staff?",
+      "category": "property_management",
+      "difficulty": "advanced",
+      "niche": "Property Management",
+      "intent": "solution"
+    },
+    {
+      "id": 5,
+      "question": "Why maintenance requests are bottleneck killing property management teams?",
+      "category": "property_management",
+      "difficulty": "advanced",
+      "niche": "Property Management",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 6,
+      "question": "How to improve property management follow up?",
+      "category": "property_management",
+      "difficulty": "intermediate",
+      "niche": "Property Management",
+      "intent": "solution"
+    },
+    {
+      "id": 7,
+      "question": "Why lease renewal reminders fail?",
+      "category": "property_management",
+      "difficulty": "intermediate",
+      "niche": "Property Management",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 8,
+      "question": "How to reduce property management software problems?",
+      "category": "property_management",
+      "difficulty": "advanced",
+      "niche": "Property Management",
+      "intent": "solution"
+    },
+    {
+      "id": 9,
+      "question": "Why property managers are overwhelmed with tenant communications?",
+      "category": "property_management",
+      "difficulty": "intermediate",
+      "niche": "Property Management",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 10,
+      "question": "How to streamline rent collection process?",
+      "category": "property_management",
+      "difficulty": "intermediate",
+      "niche": "Property Management",
+      "intent": "solution"
+    },
+    {
+      "id": 11,
+      "question": "Why dental practices lose thousands monthly to no-shows?",
+      "category": "dental",
+      "difficulty": "advanced",
+      "niche": "Dental Practices",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 12,
+      "question": "How to reduce dental no shows?",
+      "category": "dental",
+      "difficulty": "intermediate",
+      "niche": "Dental Practices",
+      "intent": "solution"
+    },
+    {
+      "id": 13,
+      "question": "Why dental patients miss appointments?",
+      "category": "dental",
+      "difficulty": "intermediate",
+      "niche": "Dental Practices",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 14,
+      "question": "How automated recall systems increase chair utilization?",
+      "category": "dental",
+      "difficulty": "advanced",
+      "niche": "Dental Practices",
+      "intent": "solution"
+    },
+    {
+      "id": 15,
+      "question": "Why dental appointment reminders don't work?",
+      "category": "dental",
+      "difficulty": "intermediate",
+      "niche": "Dental Practices",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 16,
+      "question": "How to fix insurance verification delays in dental practice?",
+      "category": "dental",
+      "difficulty": "advanced",
+      "niche": "Dental Practices",
+      "intent": "solution"
+    },
+    {
+      "id": 17,
+      "question": "What is the operational bottleneck in small dental practices?",
+      "category": "dental",
+      "difficulty": "advanced",
+      "niche": "Dental Practices",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 18,
+      "question": "How to improve dental practice patient recall?",
+      "category": "dental",
+      "difficulty": "intermediate",
+      "niche": "Dental Practices",
+      "intent": "solution"
+    },
+    {
+      "id": 19,
+      "question": "Why dental practice management systems fail?",
+      "category": "dental",
+      "difficulty": "advanced",
+      "niche": "Dental Practices",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 20,
+      "question": "How to fill empty dental chairs consistently?",
+      "category": "dental",
+      "difficulty": "intermediate",
+      "niche": "Dental Practices",
+      "intent": "solution"
+    },
+    {
+      "id": 21,
+      "question": "Why medical billing teams waste 40% of time on manual follow-ups?",
+      "category": "medical_billing",
+      "difficulty": "advanced",
+      "niche": "Medical Billing",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 22,
+      "question": "How automation reduces claim denials without more staff?",
+      "category": "medical_billing",
+      "difficulty": "advanced",
+      "niche": "Medical Billing",
+      "intent": "solution"
+    },
+    {
+      "id": 23,
+      "question": "Why claims get denied in medical billing?",
+      "category": "medical_billing",
+      "difficulty": "intermediate",
+      "niche": "Medical Billing",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 24,
+      "question": "What is the real cost of inefficient RCM operations?",
+      "category": "medical_billing",
+      "difficulty": "advanced",
+      "niche": "Medical Billing",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 25,
+      "question": "How to improve medical billing follow up process?",
+      "category": "medical_billing",
+      "difficulty": "intermediate",
+      "niche": "Medical Billing",
+      "intent": "solution"
+    },
+    {
+      "id": 26,
+      "question": "How to reduce claim denials in medical billing?",
+      "category": "medical_billing",
+      "difficulty": "advanced",
+      "niche": "Medical Billing",
+      "intent": "solution"
+    },
+    {
+      "id": 27,
+      "question": "Why revenue cycle management is broken?",
+      "category": "medical_billing",
+      "difficulty": "advanced",
+      "niche": "Medical Billing",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 28,
+      "question": "How to fix medical billing workflow inefficiencies?",
+      "category": "medical_billing",
+      "difficulty": "advanced",
+      "niche": "Medical Billing",
+      "intent": "solution"
+    },
+    {
+      "id": 29,
+      "question": "Why claims follow up takes so long?",
+      "category": "medical_billing",
+      "difficulty": "intermediate",
+      "niche": "Medical Billing",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 30,
+      "question": "How to streamline claims denial management?",
+      "category": "medical_billing",
+      "difficulty": "advanced",
+      "niche": "Medical Billing",
+      "intent": "solution"
+    },
+    {
+      "id": 31,
+      "question": "Why commercial cleaning companies lose contracts over communication?",
+      "category": "commercial_cleaning",
+      "difficulty": "advanced",
+      "niche": "Commercial Cleaning",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 32,
+      "question": "How automation prevents missed cleanings?",
+      "category": "commercial_cleaning",
+      "difficulty": "intermediate",
+      "niche": "Commercial Cleaning",
+      "intent": "solution"
+    },
+    {
+      "id": 33,
+      "question": "What is the operational chaos behind growing cleaning businesses?",
+      "category": "commercial_cleaning",
+      "difficulty": "advanced",
+      "niche": "Commercial Cleaning",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 34,
+      "question": "How to manage cleaning schedules effectively?",
+      "category": "commercial_cleaning",
+      "difficulty": "intermediate",
+      "niche": "Commercial Cleaning",
+      "intent": "solution"
+    },
+    {
+      "id": 35,
+      "question": "Why cleaning companies lose clients?",
+      "category": "commercial_cleaning",
+      "difficulty": "intermediate",
+      "niche": "Commercial Cleaning",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 36,
+      "question": "How to improve commercial cleaning quality control?",
+      "category": "commercial_cleaning",
+      "difficulty": "advanced",
+      "niche": "Commercial Cleaning",
+      "intent": "solution"
+    },
+    {
+      "id": 37,
+      "question": "Why employee scheduling kills cleaning business productivity?",
+      "category": "commercial_cleaning",
+      "difficulty": "intermediate",
+      "niche": "Commercial Cleaning",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 38,
+      "question": "How to reduce missed cleanings and client complaints?",
+      "category": "commercial_cleaning",
+      "difficulty": "intermediate",
+      "niche": "Commercial Cleaning",
+      "intent": "solution"
+    },
+    {
+      "id": 39,
+      "question": "Why cleaning business operations problems cost contracts?",
+      "category": "commercial_cleaning",
+      "difficulty": "advanced",
+      "niche": "Commercial Cleaning",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 40,
+      "question": "How to improve client retention for cleaning companies?",
+      "category": "commercial_cleaning",
+      "difficulty": "intermediate",
+      "niche": "Commercial Cleaning",
+      "intent": "solution"
+    },
+    {
+      "id": 41,
+      "question": "Why dumpster rental companies lose quotes they never follow up?",
+      "category": "waste_management",
+      "difficulty": "advanced",
+      "niche": "Waste Management",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 42,
+      "question": "How automation fixes missed pickups and angry customers?",
+      "category": "waste_management",
+      "difficulty": "intermediate",
+      "niche": "Waste Management",
+      "intent": "solution"
+    },
+    {
+      "id": 43,
+      "question": "How to schedule dumpster pickups efficiently?",
+      "category": "waste_management",
+      "difficulty": "intermediate",
+      "niche": "Waste Management",
+      "intent": "solution"
+    },
+    {
+      "id": 44,
+      "question": "Why missed waste pickups destroy customer relationships?",
+      "category": "waste_management",
+      "difficulty": "intermediate",
+      "niche": "Waste Management",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 45,
+      "question": "How to improve dumpster rental follow up?",
+      "category": "waste_management",
+      "difficulty": "intermediate",
+      "niche": "Waste Management",
+      "intent": "solution"
+    },
+    {
+      "id": 46,
+      "question": "Why waste management scheduling is broken?",
+      "category": "waste_management",
+      "difficulty": "advanced",
+      "niche": "Waste Management",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 47,
+      "question": "How to convert more dumpster rental quotes?",
+      "category": "waste_management",
+      "difficulty": "intermediate",
+      "niche": "Waste Management",
+      "intent": "solution"
+    },
+    {
+      "id": 48,
+      "question": "Why dumpster rental businesses struggle with operations?",
+      "category": "waste_management",
+      "difficulty": "advanced",
+      "niche": "Waste Management",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 49,
+      "question": "How to prevent missed pickups in waste management?",
+      "category": "waste_management",
+      "difficulty": "intermediate",
+      "niche": "Waste Management",
+      "intent": "solution"
+    },
+    {
+      "id": 50,
+      "question": "Why dumpster rental quote follow-up matters?",
+      "category": "waste_management",
+      "difficulty": "intermediate",
+      "niche": "Waste Management",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 51,
+      "question": "Why self-storage facilities lose leads to faster competitors?",
+      "category": "self_storage",
+      "difficulty": "advanced",
+      "niche": "Self-Storage",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 52,
+      "question": "How automated payment reminders reduce storage auctions?",
+      "category": "self_storage",
+      "difficulty": "intermediate",
+      "niche": "Self-Storage",
+      "intent": "solution"
+    },
+    {
+      "id": 53,
+      "question": "How to reduce late payments in self storage?",
+      "category": "self_storage",
+      "difficulty": "intermediate",
+      "niche": "Self-Storage",
+      "intent": "solution"
+    },
+    {
+      "id": 54,
+      "question": "Why self storage lead follow up fails?",
+      "category": "self_storage",
+      "difficulty": "intermediate",
+      "niche": "Self-Storage",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 55,
+      "question": "How to automate self storage facility management?",
+      "category": "self_storage",
+      "difficulty": "advanced",
+      "niche": "Self-Storage",
+      "intent": "solution"
+    },
+    {
+      "id": 56,
+      "question": "Why storage unit auctions hurt profitability?",
+      "category": "self_storage",
+      "difficulty": "intermediate",
+      "niche": "Self-Storage",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 57,
+      "question": "How to improve self storage occupancy rates?",
+      "category": "self_storage",
+      "difficulty": "intermediate",
+      "niche": "Self-Storage",
+      "intent": "solution"
+    },
+    {
+      "id": 58,
+      "question": "Why self storage management systems are inefficient?",
+      "category": "self_storage",
+      "difficulty": "advanced",
+      "niche": "Self-Storage",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 59,
+      "question": "How to speed up self storage lead response time?",
+      "category": "self_storage",
+      "difficulty": "intermediate",
+      "niche": "Self-Storage",
+      "intent": "solution"
+    },
+    {
+      "id": 60,
+      "question": "Why late payments plague self storage facilities?",
+      "category": "self_storage",
+      "difficulty": "intermediate",
+      "niche": "Self-Storage",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 61,
+      "question": "Why equipment rental businesses lose money on late returns?",
+      "category": "equipment_rental",
+      "difficulty": "advanced",
+      "niche": "Equipment Rental",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 62,
+      "question": "How automation improves equipment turnover?",
+      "category": "equipment_rental",
+      "difficulty": "intermediate",
+      "niche": "Equipment Rental",
+      "intent": "solution"
+    },
+    {
+      "id": 63,
+      "question": "How to manage equipment returns effectively?",
+      "category": "equipment_rental",
+      "difficulty": "intermediate",
+      "niche": "Equipment Rental",
+      "intent": "solution"
+    },
+    {
+      "id": 64,
+      "question": "Why late rental returns are killing profitability?",
+      "category": "equipment_rental",
+      "difficulty": "intermediate",
+      "niche": "Equipment Rental",
+      "intent": "problem_diagnosis"
+    },
+    {
+      "id": 65,
+      "question": "How to automate rental booking and scheduling?",
+      "category": "equipment_rental",
+      "difficulty": "advanced",
+      "niche": "Equipment Rental",
+      "intent": "solution"
+    },
+    {
+      "id": 66,
+      "question": "Why equipment rental scheduling is inefficient?",
+      "category": "equipment_rental",
+      "difficulty": "intermediate",
+      "niche": "Equipment Rental",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 67,
+      "question": "How to reduce late equipment returns?",
+      "category": "equipment_rental",
+      "difficulty": "intermediate",
+      "niche": "Equipment Rental",
+      "intent": "solution"
+    },
+    {
+      "id": 68,
+      "question": "Why party rental businesses struggle with logistics?",
+      "category": "equipment_rental",
+      "difficulty": "advanced",
+      "niche": "Equipment Rental",
+      "intent": "operational_problem"
+    },
+    {
+      "id": 69,
+      "question": "How to improve equipment availability tracking?",
+      "category": "equipment_rental",
+      "difficulty": "intermediate",
+      "niche": "Equipment Rental",
+      "intent": "solution"
+    },
+    {
+      "id": 70,
+      "question": "Why rental business operations break down during peak season?",
+      "category": "equipment_rental",
+      "difficulty": "advanced",
+      "niche": "Equipment Rental",
+      "intent": "operational_problem"
+    }
+  ]
+}

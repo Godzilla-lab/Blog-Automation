@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell.exe -ExecutionPolicy Bypass -Command \"python gen2.py\")",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\HP\\\\.vscode\\\\test\\\\directives\")",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\HP\\\\.vscode\\\\test\\\\execution\")",
+      "Bash(cmd.exe /c \"dir /s /b C:\\\\Users\\\\HP\\\\.vscode\"\")"
+    ]
+  }
+}

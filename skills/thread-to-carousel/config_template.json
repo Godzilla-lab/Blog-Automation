@@ -1,0 +1,40 @@
+{
+  "profile": {
+    "display_name": "HEXA AI AGENCY",
+    "handle": "@hexa_aiagency",
+    "verified": false,
+    "headshot": "skills/thread-to-carousel/assets/headshot.png"
+  },
+  "theme": "light",
+  "output_dir": "workspace/carousels/YYYY-MM-DD-topic-slug",
+  "slides": [
+    {
+      "tweets": [
+        {
+          "text": "Hook tweet goes here. This is the first tweet that stops the scroll.",
+          "image": "workspace/carousels/YYYY-MM-DD-topic-slug/reference/hero.png"
+        }
+      ]
+    },
+    {
+      "tweets": [
+        {
+          "text": "Short tweet A — a quick point.",
+          "image": null
+        },
+        {
+          "text": "Short tweet B — another quick point.",
+          "image": null
+        }
+      ]
+    },
+    {
+      "tweets": [
+        {
+          "text": "Longer standalone tweet that gets its own slide because it has more than 200 characters or includes an image. This gives it room to breathe and look clean on the carousel.",
+          "image": null
+        }
+      ]
+    }
+  ]
+}

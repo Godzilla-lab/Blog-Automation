@@ -9,6 +9,9 @@ token.json
 *.tmp
 *.cache
 
+# Workspace (generated carousel output)
+workspace/
+
 # Python
 __pycache__/
 *.py[cod]

@@ -34,7 +34,7 @@ def search_videos(query, count=5, orientation="portrait", min_duration=3):
     headers = {"Authorization": api_key}
     params = {
         "query": query,
-        "per_page": count * 2,  # fetch extra in case some are filtered out
+        "per_page": count * 3,  # fetch extra for QA fallbacks
         "orientation": orientation,
     }
 
@@ -90,8 +90,8 @@ def search_videos(query, count=5, orientation="portrait", min_duration=3):
             "photographer": video.get("user", {}).get("name", "Unknown"),
         })
 
-        if len(videos) >= count:
-            break
+        if len(videos) >= count * 3:
+            break  # enough candidates for QA fallbacks
 
     return videos
 
@@ -113,6 +113,34 @@ def extract_frame(video_path, output_path, timestamp="00:00:01"):
     cmd = [ffmpeg, "-y", "-i", video_path, "-ss", timestamp, "-frames:v", "1", "-q:v", "2", output_path]
     result = subprocess.run(cmd, capture_output=True, text=True)
     return result.returncode == 0 and os.path.exists(output_path)
+
+
+def validate_frame(frame_path, min_brightness=30):
+    """Check if an extracted frame meets quality standards."""
+    try:
+        from PIL import Image
+        import numpy as np
+    except ImportError:
+        return True, "skipped (Pillow/numpy not installed)"
+
+    try:
+        img = Image.open(frame_path)
+        w, h = img.size
+        if w < 480 or h < 480:
+            return False, f"too small ({w}x{h})"
+
+        arr = np.array(img.convert("L"))
+        brightness = float(arr.mean())
+        if brightness < min_brightness:
+            return False, f"too dark (brightness={brightness:.0f})"
+
+        file_size = os.path.getsize(frame_path)
+        if file_size < 10000:
+            return False, f"corrupt ({file_size // 1024}KB)"
+
+        return True, f"ok (brightness={brightness:.0f}, {w}x{h})"
+    except Exception as e:
+        return False, f"error ({e})"
 
 
 def download_video(url, output_path):
@@ -173,15 +201,25 @@ def main():
     print(f"\nDownloading to {args.output}...")
 
     downloaded = []
+    clip_num = 0
     for i, v in enumerate(videos):
-        filename = f"clip-{i + 1}.mp4"
-        frame_filename = f"clip-{i + 1}.jpg"
+        if clip_num >= args.count:
+            break
+        filename = f"clip-{clip_num + 1}.mp4"
+        frame_filename = f"clip-{clip_num + 1}.jpg"
         output_path = os.path.join(args.output, filename)
         frame_path = os.path.join(args.output, frame_filename)
         if download_video(v["url"], output_path):
-            # Extract a still frame for Remotion (headless Chrome can't decode video)
             if extract_frame(output_path, frame_path):
                 print(f"  Extracted frame: {frame_path}")
+                # Validate frame quality
+                is_valid, reason = validate_frame(frame_path)
+                if not is_valid:
+                    print(f"  Frame failed QA: {reason}, trying next candidate...")
+                    os.remove(output_path)
+                    os.remove(frame_path)
+                    continue
+                print(f"  QA passed: {reason}")
             downloaded.append({
                 "filename": filename,
                 "frame": frame_filename,
@@ -193,6 +231,7 @@ def main():
                 "photographer": v["photographer"],
                 "pexels_id": v["id"],
             })
+            clip_num += 1
 
     # Write metadata for the orchestrator
     meta_path = os.path.join(args.output, "footage_meta.json")

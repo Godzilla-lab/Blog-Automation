@@ -216,16 +216,22 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
                 with open(timestamps_path, "r") as f:
                     config["word_timestamps"] = json.load(f)
 
-    # Pick background music based on reel type
+    # Pick background music based on reel type (randomly from available tracks per mood)
     BG_MUSIC_MAP = {
-        "pas": "sfx/bg-dramatic.mp3",         # problem-agitation-solution: serious tone
-        "before_after": "sfx/bg-upbeat.mp3",   # transformation: motivational
-        "lead_magnet": "sfx/bg-corporate.mp3",  # free value + CTA: professional
-        "trend": "sfx/bg-energetic.mp3",        # trend reaction: high energy
+        "pas": "bg-dramatic",         # problem-agitation-solution: serious tone
+        "before_after": "bg-upbeat",   # transformation: motivational
+        "lead_magnet": "bg-corporate",  # free value + CTA: professional
+        "trend": "bg-energetic",        # trend reaction: high energy
     }
-    BG_MUSIC_FALLBACK = "sfx/bg-chill.mp3"
-    bg_track = BG_MUSIC_MAP.get(reel_type, BG_MUSIC_FALLBACK)
-    if os.path.exists(os.path.join(REMOTION_PUBLIC, bg_track)):
+    BG_MUSIC_FALLBACK = "bg-chill"
+    mood_prefix = BG_MUSIC_MAP.get(reel_type, BG_MUSIC_FALLBACK)
+    sfx_dir = os.path.join(REMOTION_PUBLIC, "sfx")
+    mood_tracks = [
+        f for f in os.listdir(sfx_dir)
+        if f.startswith(mood_prefix) and f.endswith(".mp3")
+    ] if os.path.exists(sfx_dir) else []
+    if mood_tracks:
+        bg_track = f"sfx/{random.choice(mood_tracks)}"
         config["bg_music"] = bg_track
         config["bg_music_volume"] = 0.12
 

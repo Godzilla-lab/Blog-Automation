@@ -216,9 +216,17 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
                 with open(timestamps_path, "r") as f:
                     config["word_timestamps"] = json.load(f)
 
-    # Add background music
-    if os.path.exists(os.path.join(REMOTION_PUBLIC, "sfx", "ambient-tech.mp3")):
-        config["bg_music"] = "sfx/ambient-tech.mp3"
+    # Pick background music based on reel type
+    BG_MUSIC_MAP = {
+        "pas": "sfx/bg-dramatic.mp3",         # problem-agitation-solution: serious tone
+        "before_after": "sfx/bg-upbeat.mp3",   # transformation: motivational
+        "lead_magnet": "sfx/bg-corporate.mp3",  # free value + CTA: professional
+        "trend": "sfx/bg-energetic.mp3",        # trend reaction: high energy
+    }
+    BG_MUSIC_FALLBACK = "sfx/bg-chill.mp3"
+    bg_track = BG_MUSIC_MAP.get(reel_type, BG_MUSIC_FALLBACK)
+    if os.path.exists(os.path.join(REMOTION_PUBLIC, bg_track)):
+        config["bg_music"] = bg_track
         config["bg_music_volume"] = 0.12
 
     # Save updated config with footage paths and voiceover

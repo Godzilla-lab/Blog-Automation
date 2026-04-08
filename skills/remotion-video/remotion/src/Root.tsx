@@ -24,16 +24,8 @@ export const RemotionRoot: React.FC = () => {
         calculateMetadata={({ props }: { props: Record<string, unknown> }) => {
           const slides = (props.slides ?? dailyReelDefaults.slides) as DailyReelProps['slides'];
           const sps = (props.secondsPerSlide ?? dailyReelDefaults.secondsPerSlide) as number;
-          const slideDurations = props.slideDurations as number[] | undefined;
           const TRANSITION = 15; // must match TRANSITION_FRAMES in DailyReel
-          let totalFrames: number;
-          if (slideDurations && slideDurations.length === slides.length) {
-            // Sum per-slide durations, subtract crossfade overlaps
-            totalFrames = slideDurations.reduce((sum, d) => sum + Math.round(d * FPS), 0)
-              - (slides.length - 1) * TRANSITION;
-          } else {
-            totalFrames = slides.length * sps * FPS;
-          }
+          const totalFrames = slides.length * sps * FPS - (slides.length - 1) * TRANSITION;
           return { durationInFrames: totalFrames, props };
         }}
       />

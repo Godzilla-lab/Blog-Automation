@@ -37,54 +37,6 @@ def check_prerequisites():
         subprocess.run(["npm", "install"], cwd=REMOTION_DIR, check=True, env=env)
 
 
-def calculate_slide_durations(slides, word_timestamps):
-    """Calculate per-slide durations by splitting voiceover at '...' pause markers.
-    Each '...' in the voiceover corresponds to a slide boundary."""
-    import math
-
-    # Find pause marker indices
-    pause_indices = [i for i, w in enumerate(word_timestamps) if w["word"] == "..."]
-
-    # Build segments: each segment runs from after one pause to the next pause
-    # First segment starts at word 0, ends at first pause
-    segments = []
-    start_idx = 0
-    for pi in pause_indices:
-        # Find start time (first non-pause word after previous boundary)
-        seg_start = None
-        for j in range(start_idx, pi):
-            if word_timestamps[j]["word"] != "...":
-                seg_start = word_timestamps[j]["startMs"]
-                break
-        seg_end = word_timestamps[pi - 1]["endMs"] if pi > 0 else 0
-        if seg_start is not None:
-            segments.append((seg_start, seg_end))
-        start_idx = pi + 1
-
-    # Last segment: from after last pause to end
-    if start_idx < len(word_timestamps):
-        seg_start = None
-        for j in range(start_idx, len(word_timestamps)):
-            if word_timestamps[j]["word"] != "...":
-                seg_start = word_timestamps[j]["startMs"]
-                break
-        if seg_start is not None:
-            seg_end = word_timestamps[-1]["endMs"]
-            segments.append((seg_start, seg_end))
-
-    # Map segments to slides (may not be 1:1 if counts differ)
-    durations = []
-    for i in range(len(slides)):
-        if i < len(segments):
-            start_ms, end_ms = segments[i]
-            dur = (end_ms - start_ms + 500) / 1000  # add 0.5s buffer
-            durations.append(max(dur, 2.0))  # minimum 2 seconds
-        else:
-            durations.append(4.0)  # fallback
-
-    return durations
-
-
 def render_reel(config_path, output_path=None):
     """Render a DailyReel composition from config."""
     with open(config_path, "r") as f:
@@ -96,18 +48,8 @@ def render_reel(config_path, output_path=None):
         sys.exit(1)
 
     seconds_per_slide = config.get("seconds_per_slide", 4)
-
-    # Calculate per-slide durations from voiceover timestamps if available
-    slide_durations = None
-    word_timestamps = config.get("word_timestamps", [])
-    if word_timestamps:
-        slide_durations = calculate_slide_durations(slides, word_timestamps)
-        total_seconds = sum(slide_durations)
-        total_frames = int(total_seconds * 30)
-        print(f"  Slide durations (voiceover-synced): {[f'{d:.1f}s' for d in slide_durations]}")
-    else:
-        total_frames = len(slides) * seconds_per_slide * 30
-        total_seconds = len(slides) * seconds_per_slide
+    total_frames = len(slides) * seconds_per_slide * 30
+    total_seconds = len(slides) * seconds_per_slide
 
     # Build props JSON for Remotion
     props = {
@@ -116,12 +58,10 @@ def render_reel(config_path, output_path=None):
         "accentColor": config.get("accent_color", "#FFD700"),
         "handle": config.get("handle", "@hexa_aiagency"),
     }
-    if slide_durations:
-        props["slideDurations"] = slide_durations
     if config.get("voiceover"):
         props["voiceover"] = config["voiceover"]
-    if word_timestamps:
-        props["wordTimestamps"] = word_timestamps
+    if config.get("word_timestamps"):
+        props["wordTimestamps"] = config["word_timestamps"]
     if config.get("bg_music"):
         props["bgMusic"] = config["bg_music"]
     if config.get("bg_music_volume"):

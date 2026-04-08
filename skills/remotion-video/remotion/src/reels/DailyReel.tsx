@@ -35,7 +35,6 @@ export interface SlideConfig {
 export interface DailyReelProps {
   slides: SlideConfig[];
   secondsPerSlide: number;
-  slideDurations?: number[];
   accentColor: string;
   handle: string;
   voiceover: string;
@@ -98,7 +97,6 @@ const FadeWrapper: React.FC<{
 export const DailyReel: React.FC<DailyReelProps> = ({
   slides = dailyReelDefaults.slides,
   secondsPerSlide = dailyReelDefaults.secondsPerSlide,
-  slideDurations,
   accentColor = dailyReelDefaults.accentColor,
   handle = dailyReelDefaults.handle,
   voiceover = dailyReelDefaults.voiceover,
@@ -106,13 +104,8 @@ export const DailyReel: React.FC<DailyReelProps> = ({
   bgMusic = dailyReelDefaults.bgMusic,
   bgMusicVolume = dailyReelDefaults.bgMusicVolume,
 }) => {
-  // Calculate per-slide frame counts
-  const getSlideFrames = (i: number) => {
-    if (slideDurations && slideDurations[i] != null) {
-      return Math.round(slideDurations[i] * FPS);
-    }
-    return secondsPerSlide * FPS;
-  };
+  const framesPerSlide = secondsPerSlide * FPS;
+  const getSlideFrames = (_i: number) => framesPerSlide;
 
   // Calculate cumulative start frames with crossfade overlap
   const slideStarts: number[] = [];

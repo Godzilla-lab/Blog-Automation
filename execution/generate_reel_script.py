@@ -95,11 +95,22 @@ VOICEOVER RULES:
 - ~15-25 seconds total when spoken
 
 FOOTAGE QUERIES:
-- For each slide, provide a Pexels search query that finds relevant stock b-roll
-- Queries should be specific but not so specific that Pexels returns nothing
-- Good: "dental office reception desk" — Bad: "dentist looking at AI software on tablet"
-- Good: "person frustrated at computer" — Bad: "overwhelmed property manager"
+- For each slide, provide a stock video search query that finds relevant b-roll
+- CRITICAL: Use niche-specific queries. A dental reel must show actual dental settings, not generic offices.
 - Think about what VISUAL would pair well with the text on screen
+- Use 2-4 word queries that describe a real scene
+
+NICHE-SPECIFIC QUERY EXAMPLES (use these patterns):
+- Dental: "dental chair operatory", "dentist examining patient", "dental receptionist desk", "dental office waiting room", "patient in dental chair", "dental x-ray screen", "dental tools closeup"
+- Property Management: "apartment building exterior", "tenant mailbox hallway", "property manager walkthrough", "maintenance worker repairing", "apartment interior modern", "lease signing table", "rental property showing"
+- Cleaning: "commercial cleaning crew mopping", "janitor vacuuming office", "cleaning cart supplies hallway", "office being cleaned night", "window cleaning professional", "floor polishing machine", "cleaning team uniform"
+- General/Business: "small business owner desk", "entrepreneur laptop cafe", "team meeting whiteboard", "business dashboard screen", "startup office modern", "phone notification closeup"
+
+BAD QUERIES (avoid these):
+- "person at desk" (too generic, applies to any niche)
+- "business handshake" (stock cliche)
+- "happy team celebrating" (overused)
+- "person on phone" (meaningless without context)
 
 DURATION RULES:
 - Decide the right length based on the topic depth:

@@ -169,15 +169,46 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
     with open(config_path, "r") as f:
         config = json.load(f)
 
-    # Step 2: Download footage for each slide (downloads .mp4 + extracts .jpg frame)
+    # Step 2: Download footage for each slide
+    # Check curated library first, then fall back to API search
     os.makedirs(footage_dir, exist_ok=True)
     slides = config.get("slides", [])
+    library_dir = os.path.join(project_root, "workspace", "footage-library", niche)
+    library_meta = None
+    if os.path.exists(os.path.join(library_dir, "metadata.json")):
+        with open(os.path.join(library_dir, "metadata.json"), "r") as f:
+            library_meta = json.load(f)
+
     for i, slide in enumerate(slides):
         query = slide.get("footage_query", slide.get("text", "business")[:30])
         clip_path = os.path.join(footage_dir, f"clip-{i+1}.mp4")
         frame_path = os.path.join(footage_dir, f"clip-{i+1}.jpg")
 
-        if not run_step(
+        # Try curated library first (keyword match against tags)
+        library_hit = False
+        if library_meta:
+            query_words = set(query.lower().split())
+            best_match = None
+            best_score = 0
+            for entry in library_meta:
+                tags = set(t.lower() for t in entry.get("tags", []))
+                score = len(query_words & tags)
+                if score > best_score:
+                    best_score = score
+                    best_match = entry
+            if best_match and best_score >= 1:
+                src = os.path.join(library_dir, best_match["filename"])
+                if os.path.exists(src):
+                    import shutil
+                    shutil.copy2(src, clip_path)
+                    # Copy thumbnail if it exists
+                    thumb_src = src.replace(".mp4", ".jpg")
+                    if os.path.exists(thumb_src):
+                        shutil.copy2(thumb_src, frame_path)
+                    library_hit = True
+                    print(f"  [Reel {index+1}] Slide {i+1}: library hit '{best_match['filename']}' (score={best_score})")
+
+        if not library_hit and not run_step(
             f"[Reel {index+1}] Downloading footage {i+1}/{len(slides)}: '{query}'",
             ["python3", os.path.join(script_dir, "download_pexels_video.py"),
              "--query", query, "--output", footage_dir, "--count", "1",

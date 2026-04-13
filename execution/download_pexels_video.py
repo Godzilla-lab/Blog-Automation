@@ -21,6 +21,7 @@ project_root = os.path.dirname(script_dir)
 load_dotenv(os.path.join(project_root, ".env"))
 
 PEXELS_API_URL = "https://api.pexels.com/videos/search"
+PIXABAY_API_URL = "https://pixabay.com/api/videos/"
 
 
 def search_videos(query, count=5, orientation="portrait", min_duration=3):
@@ -94,6 +95,77 @@ def search_videos(query, count=5, orientation="portrait", min_duration=3):
             break  # enough candidates for QA fallbacks
 
     return videos
+
+
+def search_pixabay(query, count=5, orientation="vertical", min_duration=3):
+    """Search for videos on Pixabay as fallback source."""
+    api_key = os.getenv("PIXABAY_API_KEY")
+    if not api_key:
+        return []  # silently skip if no key
+
+    params = {
+        "key": api_key,
+        "q": query,
+        "video_type": "film",
+        "orientation": orientation,
+        "per_page": count * 3,
+        "safesearch": "true",
+    }
+
+    try:
+        response = requests.get(PIXABAY_API_URL, params=params, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as e:
+        print(f"  Pixabay search failed: {e}")
+        return []
+
+    videos = []
+    for hit in data.get("hits", []):
+        duration = hit.get("duration", 0)
+        if duration < min_duration:
+            continue
+
+        # Pixabay provides videos in multiple sizes
+        video_data = hit.get("videos", {})
+        # Prefer large > medium > small
+        chosen = None
+        for size_key in ["large", "medium", "small"]:
+            vf = video_data.get(size_key, {})
+            if vf.get("url") and vf.get("height", 0) >= 720:
+                chosen = vf
+                break
+        if not chosen:
+            chosen = video_data.get("medium", video_data.get("small", {}))
+        if not chosen or not chosen.get("url"):
+            continue
+
+        videos.append({
+            "id": hit.get("id", 0),
+            "duration": duration,
+            "width": chosen.get("width", 0),
+            "height": chosen.get("height", 0),
+            "url": chosen["url"],
+            "quality": "pixabay",
+            "photographer": hit.get("user", "Unknown"),
+        })
+
+        if len(videos) >= count * 3:
+            break
+
+    return videos
+
+
+def search_all_sources(query, count=5, orientation="portrait", min_duration=3):
+    """Search Pexels + Pixabay, merge results sorted by resolution."""
+    pexels_results = search_videos(query, count, orientation, min_duration)
+    pixabay_orientation = "vertical" if orientation == "portrait" else "horizontal"
+    pixabay_results = search_pixabay(query, count, pixabay_orientation, min_duration)
+
+    # Merge and sort by height (highest quality first)
+    all_results = pexels_results + pixabay_results
+    all_results.sort(key=lambda v: v.get("height", 0), reverse=True)
+    return all_results
 
 
 def extract_frame(video_path, output_path, timestamp="00:00:01"):
@@ -183,7 +255,7 @@ def main():
     args = parser.parse_args()
 
     print(f"Searching Pexels for: '{args.query}' ({args.orientation})")
-    videos = search_videos(args.query, args.count, args.orientation, args.min_duration)
+    videos = search_all_sources(args.query, args.count, args.orientation, args.min_duration)
 
     if not videos:
         print("No videos found.")

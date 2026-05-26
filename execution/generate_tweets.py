@@ -29,17 +29,30 @@ def generate_human_tweets(count=5):
     trends_data = load_trends()
 
     # Extract trend topics
-    trend_topics = [t.get('title', '') for t in trends_data.get('trends', [])][:10]
+    ai_topics = [t.get('title', '') for t in trends_data.get('ai_trends', trends_data.get('trends', []))][:10]
+    niche_topics = [t.get('title', '') for t in trends_data.get('niche_trends', [])][:10]
+    trend_topics = ai_topics + niche_topics
     evergreen = trends_data.get('evergreen', [])
 
+    # Build trend strings outside f-string (Python 3.9 compat)
+    nl = chr(10)
+    ai_trends_str = nl.join(f"- {t}" for t in ai_topics[:10]) if ai_topics else "- AI automation\n- Custom AI agents\n- ChatGPT updates"
+    niche_trends_str = nl.join(f"- {t}" for t in niche_topics[:10]) if niche_topics else "- Property management automation\n- Dental no-shows\n- Medical billing efficiency"
+    evergreen_str = nl.join(f"- {t}" for t in evergreen[:5])
+
     # Human-mimicking prompt (this is the secret sauce)
-    prompt = f"""You're a founder of an AI agency tweeting from your personal experience. Generate {count} tweet ideas that sound COMPLETELY human and natural.
+    prompt = f"""You're the founder of Hex AI Agency (@hexa_aiagency) tweeting from personal experience helping businesses automate with AI. Your niches: property management, dental practices, medical billing, commercial cleaning, waste management, self-storage.
+
+Generate {count} tweet ideas that sound COMPLETELY human and natural.
 
 CURRENT AI TRENDS:
-{chr(10).join(f"- {t}" for t in trend_topics) if trend_topics else "- AI automation\n- Custom AI agents\n- ChatGPT updates"}
+{ai_trends_str}
+
+NICHE/INDUSTRY TRENDS:
+{niche_trends_str}
 
 EVERGREEN TOPICS:
-{chr(10).join(f"- {t}" for t in evergreen[:5])}
+{evergreen_str}
 
 CRITICAL: Make these sound like a REAL person wrote them, not AI:
 - Use contractions (don't, can't, we've, here's)
@@ -78,7 +91,7 @@ Make each tweet FEEL different — different rhythm, different vibe. Not templat
 
     # Call Claude Opus 4.5
     response = client.messages.create(
-        model="claude-opus-4-5-20251101",  # Opus 4.5
+        model="claude-opus-4-6",  # Opus 4.6
         max_tokens=2000,
         temperature=0.8,  # Higher temp = more creative/varied
         messages=[{

@@ -44,3 +44,17 @@ blog-automation/.env
 blog-automation/.env.example
 
 blog-automation/*.env
+
+# Node
+node_modules/
+
+# Remotion build artifacts and large assets
+skills/remotion-video/remotion/out/
+skills/remotion-video/remotion/public/
+skills/remotion-video/remotion/.tmp-*.json
+
+# Claude local state (memory, project metadata)
+.claude/projects/
+
+# Stray cwd marker files
+tmpclaude-*-cwd

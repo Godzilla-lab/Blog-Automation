@@ -58,7 +58,11 @@ Slide 5: Tweet 7 (CTA) - own slide
 
 Image pipelines in priority order:
 1. **User-provided images** — always highest priority. If the user pastes or references an image, save it to the `reference/` folder.
-2. **Web search** — use your web search tool to find relevant images. Search for the topic + "screenshot", "logo", "product", etc. When you find a good image URL, download it:
+2. **Web search (Tavily)** — search for relevant images using the Tavily API:
+   ```bash
+   python3 execution/search_images.py --query "dental office software screenshot" --output "workspace/carousels/YYYY-MM-DD-slug/reference/" --count 3 --download
+   ```
+   For a specific URL you already have, download directly:
    ```bash
    python3 execution/download_image.py --url "https://example.com/image.png" --output "workspace/carousels/YYYY-MM-DD-slug/reference/hero.png"
    ```
@@ -108,6 +112,10 @@ After generation:
 3. Offer to adjust and re-run if needed (swap images, edit text, change theme)
 
 To regenerate after changes, update the config.json and re-run the script.
+
+### Step 8: Generate Caption
+
+Every carousel needs a `caption.txt` for the Instagram post. Include a hook line (under 125 chars), value summary, CTA with keyword trigger (e.g., "DM us DENTAL"), and 15-25 hashtags. Save to `workspace/carousels/YYYY-MM-DD-slug/caption.txt`.
 
 ## Theme Options
 

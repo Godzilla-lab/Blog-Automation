@@ -88,10 +88,45 @@ The system supports event-driven execution via Modal webhooks. Each webhook maps
 
 **All webhook activity streams to Slack in real-time.**
 
+## Workflow Router
+
+When the user requests one of these workflows, read the linked directive FIRST before doing anything:
+
+| User says... | Read this directive | Key scripts |
+|---|---|---|
+| "make a carousel" / "carousel" / "thread to carousel" | `directives/thread_to_carousel.md` | `execution/search_images.py`, `execution/render_carousel.py`, `execution/generate_ig_caption.py` |
+| "generate reels" / "daily reels" / "make reels" | `directives/generate_daily_reels.md` | `execution/run_daily_reels.py` (orchestrates all steps) |
+| "make a reel" / "single reel" / "generate reel" | `directives/generate_daily_reel.md` | `execution/generate_reel.py`, `execution/generate_voiceover.py` |
+| "highlight covers" / "generate video" | `directives/generate_video.md` | `execution/render_video.py` |
+| "tweets" / "viral tweets" / "tweet ideas" | `directives/generate_viral_tweets.md` | `execution/generate_tweets.py` |
+| "content strategy" / "instagram strategy" | `directives/instagram_content_strategy.md` | (reference doc, not a pipeline) |
+
+### Global Defaults (override everything else)
+- **Voiceover voice**: ElevenLabs **Ellen** (voice_id `BIvP0GN1cAtSRTxNHnWS`) — serious, direct, confident female. Set as `ELEVENLABS_VOICE_ID` in `.env`; `generate_voiceover.py --engine auto` picks ElevenLabs whenever the key + voice_id are present. Edge TTS (`en-US-EmmaNeural`) is the free fallback only when ElevenLabs is unavailable.
+- **Image search for carousels**: Use `execution/search_images.py` (Tavily API). NOT Pexels. NOT download_image.py for discovery.
+- **Always generate caption.txt**: Every carousel AND every reel must include a `caption.txt` with hook, CTA, and hashtags. Use `execution/generate_ig_caption.py` or write manually.
+- **Carousels must have images**: Slide 1 (hook) MUST have an image. Aim for 50%+ slides with images. Never create text-only carousels.
+- **Reels are lead-gen, not commentary**: Every reel is scored against the 9-dimension rubric in `directives/evaluate_reel_script.md`. Hooks must hit visceral pain (dollar amount or time amount in first 6 words). CTAs must name a concrete deliverable ("the calculator", "the checklist") — never "more info" or vague "the playbook". Thought-leadership reels fail `lead_gen_intent`.
+- **Reel video element is `<Video>`, not `<OffthreadVideo>`.** `skills/remotion-video/remotion/src/reels/scenes/FootageBackground.tsx` must use `<Video>` from Remotion. OffthreadVideo bakes horizontal stripe artifacts into every frame. If stripes appear, FIRST check `git diff HEAD -- FootageBackground.tsx`.
+
+## Layered Reel QA (3 gates — every reel passes all three)
+
+The reel pipeline (`execution/run_daily_reels.py`) wires three AI quality gates around the existing render step. All three must pass for a reel to ship.
+
+| Gate | Script | Directive | When it runs | What it catches |
+|---|---|---|---|---|
+| **0. TopicResearcher** | `execution/research_topic.py` | `directives/research_topic.md` | Before script gen | No real stats / hallucinated numbers — emits `research_brief.json` with sourced stats, pain points, hook angles, CTA deliverable ideas |
+| **1. ScriptEvaluator** | `execution/evaluate_reel_script.py` | `directives/evaluate_reel_script.md` | After script gen, before Pexels/ElevenLabs spend | Weak hooks, vague CTAs, low specificity, hallucinated stats not from the brief. 2 auto-retries with critique fed back. Hard-fails before any paid API spend. |
+| **2. RealityQA** | `execution/reality_qa_reel.py` | `directives/reality_qa_reel.md` | After render, alongside `review_reel.py` | Clipped captions, off-topic b-roll, missing watermark on a frame, wrong CTA keyword baked into the final frame, decode artifacts (stripes). One auto-rerender on footage-level fail. |
+
+The existing `execution/review_reel.py` (deterministic file-level checks) is unchanged and runs alongside RealityQA. Final `qa_passed = review_passed AND reality_qa_passed`.
+
+Outputs per reel: `<reel_dir>/research_brief.json`, `script_eval.json`, `reality_qa.json`, plus `.qa_frames/` for post-hoc review.
+
 ## Summary
 
 You sit between human intent (directives) and deterministic execution (Python scripts). Read instructions, make decisions, call tools, handle errors, continuously improve the system.
 
 Be pragmatic. Be reliable. Self-anneal.
 
-Also, use Opus-4.5 for everything while building. It came out a few days ago and is an order of magnitude better than Sonnet and other models. If you can't find it, look it up first.
+Also, use Opus-4.7 for everything while building. It came out a few days ago and is an order of magnitude better than Sonnet and other models. If you can't find it, look it up first.

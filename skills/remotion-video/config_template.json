@@ -1,0 +1,10 @@
+{
+  "template": "Results",
+  "output_dir": "workspace/videos/YYYY-MM-DD-slug",
+  "output_filename": "video.mp4",
+  "branding": {
+    "logo": "skills/remotion-video/remotion/public/hexa.png",
+    "primary_color": "#00e5cc",
+    "secondary_color": "#00b4ff"
+  }
+}

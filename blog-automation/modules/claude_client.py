@@ -38,7 +38,7 @@ class ClaudeClient:
         Returns:
             List of 5 questions to ask the user
         """
-        prompt = f"""I'm writing a blog post for Hex AI Agency (hexaiagency.com) answering this question:
+        prompt = f"""I'm writing a blog post for Hexa AI Agency (hexaaiagency.com) answering this question:
 
 "{blog_question}"
 

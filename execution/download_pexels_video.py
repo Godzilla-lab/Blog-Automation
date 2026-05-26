@@ -49,24 +49,22 @@ def search_videos(query, count=5, orientation="portrait", min_duration=3):
         if duration < min_duration:
             continue
 
-        # Find the best video file: prefer HD portrait, largest adequate resolution
-        # Sort descending by height so we pick the highest quality first
+        # The reel renders at 1080x1920. Pick the SMALLEST file that's >= 1080p
+        # tall — 4K source files are 3-5x bigger, download slower, and are more
+        # likely to fail mid-stream or have decode artifacts in the H.264 chunks.
         video_files = sorted(
             video.get("video_files", []),
             key=lambda f: f.get("height", 0),
-            reverse=True,
         )
 
-        # Pick the largest file that's at least 1080p tall (for 1080x1920 output)
         chosen_file = None
         for vf in video_files:
             h = vf.get("height", 0)
-            w = vf.get("width", 0)
             if h >= 1080 and vf.get("link"):
                 chosen_file = vf
                 break
 
-        # Fallback: pick largest file >= 720p if no 1080p available
+        # Fallback: any file >= 720p (still acceptable, will scale up)
         if not chosen_file:
             for vf in video_files:
                 h = vf.get("height", 0)
@@ -76,7 +74,7 @@ def search_videos(query, count=5, orientation="portrait", min_duration=3):
 
         # Last resort: largest available
         if not chosen_file and video_files:
-            chosen_file = video_files[0]  # already sorted descending
+            chosen_file = video_files[-1]  # largest
 
         if not chosen_file:
             continue
@@ -215,32 +213,80 @@ def validate_frame(frame_path, min_brightness=30):
         return False, f"error ({e})"
 
 
-def download_video(url, output_path):
-    """Download a single video file."""
+def _verify_video_decodes(path):
+    """Run ffmpeg null-decode to check the file isn't truncated/corrupt.
+    Returns (ok, message)."""
+    import shutil
+    import subprocess
+    node_bin = os.path.expanduser("~/.local/node-v22.22.2-darwin-arm64/bin")
+    ffmpeg = shutil.which("ffmpeg", path=f"{node_bin}:{os.environ.get('PATH', '')}") or shutil.which("ffmpeg")
+    if not ffmpeg:
+        return True, "ffmpeg not available, skipped"
+    r = subprocess.run(
+        [ffmpeg, "-v", "error", "-i", path, "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    if r.returncode != 0 or "Invalid NAL" in r.stderr or "partial file" in r.stderr:
+        first = r.stderr.strip().splitlines()[0] if r.stderr.strip() else "decode error"
+        return False, first[:120]
+    return True, "decodes cleanly"
+
+
+def download_video(url, output_path, max_attempts=3):
+    """Download a single video file. Verifies Content-Length match and ffmpeg-decodes
+    cleanly; retries on truncation/corruption."""
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
     }
-    try:
-        response = requests.get(url, headers=headers, timeout=120, stream=True)
-        response.raise_for_status()
+    last_err = None
+    for attempt in range(1, max_attempts + 1):
+        try:
+            response = requests.get(url, headers=headers, timeout=(15, 60), stream=True)
+            response.raise_for_status()
 
-        total = int(response.headers.get("content-length", 0))
-        downloaded = 0
+            total = int(response.headers.get("content-length", 0))
+            downloaded = 0
 
-        with open(output_path, "wb") as f:
-            for chunk in response.iter_content(chunk_size=65536):
-                f.write(chunk)
-                downloaded += len(chunk)
-                if total > 0:
-                    pct = (downloaded / total) * 100
-                    print(f"\r  Downloading: {pct:.0f}%", end="", flush=True)
+            with open(output_path, "wb") as f:
+                for chunk in response.iter_content(chunk_size=65536):
+                    f.write(chunk)
+                    downloaded += len(chunk)
+                    if total > 0:
+                        pct = (downloaded / total) * 100
+                        print(f"\r  Downloading: {pct:.0f}%", end="", flush=True)
 
-        size = os.path.getsize(output_path)
-        print(f"\r  Downloaded: {output_path} ({size / 1024 / 1024:.1f} MB)")
-        return True
-    except Exception as e:
-        print(f"\n  Failed to download: {e}")
-        return False
+            size = os.path.getsize(output_path)
+
+            # Bytes check: Content-Length must match (when provided)
+            if total > 0 and size != total:
+                last_err = f"truncated: got {size}/{total} bytes ({size*100//total}%)"
+                print(f"\n  Attempt {attempt}: {last_err}")
+                if os.path.exists(output_path):
+                    os.remove(output_path)
+                continue
+
+            # Decode check: ffmpeg must read the whole file without errors
+            ok, msg = _verify_video_decodes(output_path)
+            if not ok:
+                last_err = f"corrupt: {msg}"
+                print(f"\n  Attempt {attempt}: {last_err}")
+                if os.path.exists(output_path):
+                    os.remove(output_path)
+                continue
+
+            print(f"\r  Downloaded: {output_path} ({size / 1024 / 1024:.1f} MB, {msg})")
+            return True
+        except Exception as e:
+            last_err = str(e)
+            print(f"\n  Attempt {attempt} failed: {e}")
+            if os.path.exists(output_path):
+                try:
+                    os.remove(output_path)
+                except OSError:
+                    pass
+
+    print(f"  Giving up after {max_attempts} attempts: {last_err}")
+    return False
 
 
 def main():
@@ -250,9 +296,13 @@ def main():
     parser.add_argument("--count", type=int, default=4, help="Number of videos to download")
     parser.add_argument("--orientation", default="portrait", choices=["portrait", "landscape", "square"],
                         help="Video orientation (default: portrait)")
-    parser.add_argument("--min-duration", type=int, default=3, help="Minimum video duration in seconds")
+    parser.add_argument("--min-duration", type=int, default=6, help="Minimum video duration in seconds (default 6 — covers most slides without looping)")
     parser.add_argument("--list-only", action="store_true", help="List results without downloading")
+    parser.add_argument("--filename", help="Explicit output filename (e.g. clip-3.mp4). When set, --count is forced to 1 and the file goes directly to <output>/<filename>. Use this when downloading per-slide to avoid clip-1 collisions.")
     args = parser.parse_args()
+
+    if args.filename:
+        args.count = 1
 
     print(f"Searching Pexels for: '{args.query}' ({args.orientation})")
     videos = search_all_sources(args.query, args.count, args.orientation, args.min_duration)
@@ -277,8 +327,12 @@ def main():
     for i, v in enumerate(videos):
         if clip_num >= args.count:
             break
-        filename = f"clip-{clip_num + 1}.mp4"
-        frame_filename = f"clip-{clip_num + 1}.jpg"
+        if args.filename:
+            filename = args.filename
+            frame_filename = os.path.splitext(args.filename)[0] + ".jpg"
+        else:
+            filename = f"clip-{clip_num + 1}.mp4"
+            frame_filename = f"clip-{clip_num + 1}.jpg"
         output_path = os.path.join(args.output, filename)
         frame_path = os.path.join(args.output, frame_filename)
         if download_video(v["url"], output_path):

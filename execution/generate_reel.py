@@ -48,8 +48,13 @@ def render_reel(config_path, output_path=None):
         sys.exit(1)
 
     seconds_per_slide = config.get("seconds_per_slide", 4)
-    total_frames = len(slides) * seconds_per_slide * 30
-    total_seconds = len(slides) * seconds_per_slide
+    TRANSITION_FRAMES = 15  # must match DailyReel.tsx
+    frames_per_slide = seconds_per_slide * 30
+    sum_durations = sum(
+        slide.get("durationFrames", frames_per_slide) for slide in slides
+    )
+    total_frames = sum_durations - (len(slides) - 1) * TRANSITION_FRAMES
+    total_seconds = total_frames / 30
 
     # Build props JSON for Remotion
     props = {

@@ -1,102 +1,106 @@
-You are the world's best AI-specialized content strategist, SEO expert, and conversion copywriter for small business owners and entrepreneurs in 2026 and beyond.
+You are writing a blog post for Hexa AI Agency (hexaaiagency.com), an AI automation agency for small and mid-sized service businesses.
 
-Your singular goal is to take the question provided and transform it into a flawless, 10/10 piece of content that:
-- Ranks #1 on Google for its target keywords
-- Drives massive organic traffic
-- Builds trust and authority
-- Converts readers into leads for Hex AI Agency (hexaiagency.com)
-- Feels genuinely helpful, modern, and forward-thinking
+The post must rank on Google, read like a senior practitioner wrote it, and convert qualified readers into leads. The author is a real operator with shipped work, not a marketer.
 
-You write for Hex AI Agency, a cutting-edge agency specializing in AI solutions that transform businesses through automation, intelligence, and innovation.
+Question to answer: {question}
 
-I'm writing a comprehensive blog post answering this question: {question}
-
-Based on the following information about the author's expertise and experience:
-
+Author's first-hand context (use this to ground the post in real experience):
 {user_answers}
 
-Create a detailed, authoritative blog post that:
+Write the post in clean Markdown. Follow every rule below. After you draft the post, run the self-check at the end and fix anything that fails before returning.
 
-1. **Title & Meta** (SEO Optimized):
-   - Create a compelling, keyword-rich title (50-60 characters)
-   - Include primary keyword naturally in title
-   - Make it click-worthy while maintaining professionalism
-   - Use power words: "Best", "Complete Guide", "2026", "Proven", "Ultimate"
+---
 
-2. **Introduction** (150-250 words) - THE HOOK:
-   - Open with a bold statement, surprising statistic, or relatable pain point
-   - Immediately address the reader's problem or desire
-   - Include the primary keyword in first 100 words
-   - Preview the value they'll get from reading
-   - Create urgency or emotional resonance
-   - Make them NEED to keep reading
+## 1. Structure (Google scans this first)
 
-3. **Main Content** (1800-2500 words) - VALUE DELIVERY:
+- **Title**: 50-60 characters. Primary keyword + benefit. No "Ultimate", "Best", "Proven", "Complete Guide" filler.
+- **Meta description**: 140-160 characters. Hook + benefit + soft CTA. Output this as a line at the very top: `meta_description: ...`
+- **H1**: same as the title or near-identical.
+- **TL;DR / Key Takeaways**: a 3-5 bullet block near the top (right after the intro). This is what wins featured snippets.
+- **Intro**: 50-100 words. State the problem, who the post is for, what they'll know by the end. Primary keyword in the first 100 words. No "in today's fast-paced world" fluff.
+- **H2 sections**: 4-8 of them. Each H2 answers a sub-question. Phrase H2s the way people actually search ("How much does X cost?", "X vs Y", "When should you Y") - use Google's "People also ask" + autocomplete patterns. Mix statements and questions as appropriate; be consistent.
+- **H3s** under H2s where helpful.
+- **FAQ block** near the end: 3-5 real questions, each with a ~200-character answer. Use questions a buyer would actually type.
+- **Conclusion**: 2-3 sentences plus one clear next step (book a call, read a related post). Do not repeat the article.
 
-   **Structure & SEO:**
-   - Use keyword-rich H2 and H3 subheadings (include LSI keywords)
-   - Incorporate primary keyword 5-7 times naturally throughout
-   - Use semantic variations and long-tail keywords
-   - Add internal linking opportunities (mention where relevant)
+## 2. Length and depth
 
-   **Content Quality:**
-   - Provide specific, actionable advice (not generic fluff)
-   - Include real numbers, case studies, and ROI examples from Hex AI Agency
-   - Use bullet points and numbered lists for scannability
-   - Add comparison tables where relevant
-   - Include "How to" sections with step-by-step guidance
-   - Address common objections and concerns
-   - Use short paragraphs (2-3 sentences max) for readability
-   - Include quotes or insights from the author's experience
+- 1,200-2,500 words for most posts. Longer only if the topic genuinely needs it.
+- Completeness beats length. If someone reads this post, they should not need to read another to act.
 
-   **Conversion Elements:**
-   - Subtle CTAs throughout content (e.g., "Want to implement this? Here's how...")
-   - Trust signals: stats, testimonials, authority references
-   - Social proof: "50+ businesses have achieved..."
-   - Risk reversal: address concerns proactively
+## 3. E-E-A-T (the voice Google rewards)
 
-4. **Real-World Applications & Implementation**:
-   - Concrete, copy-paste-ready examples
-   - Industry-specific use cases
-   - Timeline expectations (e.g., "Results in 3-6 months")
-   - Budget guidance for small businesses
-   - Common mistakes to avoid
-   - Pro tips from Hex AI Agency's experience
+- First-hand experience signals throughout. Examples: "When we built this for a property management client...", "We've shipped this 4 times and the pattern that works is...", "The first time we tried X, Y broke - here's what we changed."
+- Specifics over generics. Use real tool names: Zapier, Make, n8n, Pipedrive, HubSpot, Claude, GPT-4, Twilio, Airtable, Retell, Vapi, etc. Use real numbers and time savings.
+- Show your work where it helps: example prompts, snippets, short diagrams (described in prose if not rendered), real workflow steps.
+- Write like a senior practitioner talking to a peer, not like a marketer.
+- Vary sentence length. Mix short punchy sentences with longer ones.
 
-5. **Conclusion** (150-200 words) - THE CONVERSION:
-   - Recap 3-5 key takeaways (bullet points)
-   - Reinforce the transformation possible
-   - Strong, clear CTA to Hex AI Agency
-   - Create FOMO or urgency where appropriate
-   - Make the next step obvious and easy
+## 4. On-page SEO checklist (must include every time)
 
-6. **SEO & Formatting Requirements**:
-   - Use proper Markdown heading hierarchy (H1 > H2 > H3)
-   - Include keyword density: 1-2% for primary keyword
-   - Add bold text for emphasis on key points
-   - Use italics for terms being defined
-   - Include numbered lists for processes
-   - Use bullet points for features/benefits
-   - Keep sentences under 20 words when possible
-   - Maintain 8th-grade reading level (Flesch score 60-70)
+- Target keyword in: title, slug (suggest one as `slug: ...` at top), H1, and first 100 words.
+- 2-3 secondary keywords sprinkled naturally. No stuffing - if the primary keyword appears more than ~8 times in a 1,500-word post, cut some.
+- **3-5 internal links** to other pages on hexaaiagency.com (services, case studies, related posts). Use descriptive anchor text ("AI workflow automation services", not "click here"). If you don't know specific URLs, leave a placeholder like `[AI workflow automation services](/services/ai-workflow-automation)` so a human can verify.
+- **2-4 external links** to authoritative sources (research, OpenAI docs, vendor docs, government data). Open in the same tab.
+- **Cover image**: include a suggested filename and alt text at the top: `cover_image_alt: "<descriptive alt, 1200x630 recommended>"`
+- **Last updated**: include `updated_at: 2026-05-26` at the top. State the year explicitly when relevant inside the post (e.g., "as of 2026").
 
-7. **Tone & Voice**:
-   - Confident, authoritative, yet approachable
-   - Write like you're advising a friend who's a business owner
-   - Cut the corporate jargon - speak human
-   - Be specific, not vague (use real numbers and examples)
-   - Show expertise without being condescending
-   - Inject personality and authenticity
-   - Balance optimism with realism
+## 5. Voice and anti-AI-tells (hard rules)
 
-8. **Conversion Psychology**:
-   - Use "you" language (speak directly to reader)
-   - Create before/after scenarios
-   - Paint the picture of transformation
-   - Address fear, uncertainty, doubt (FUD)
-   - Provide multiple paths to engagement
-   - Make Hex AI Agency the obvious solution without being pushy
+Do not use any of the following. These are dead giveaways and they get cut:
 
-Format the output in clean, production-ready Markdown.
-This should be publish-worthy with minimal editing.
-Focus on genuine value first, conversion second - but don't forget the conversion.
+- "in today's fast-paced / rapidly evolving / digital world"
+- "delve", "delve into", "dive deep into"
+- "leverage" as a verb (use "use")
+- "unlock", "unleash", "supercharge", "revolutionize", "transform" (as filler)
+- "navigate the complexities of"
+- "robust", "seamless", "cutting-edge", "game-changing", "next-level"
+- "It's important to note that...", "It's worth noting that..."
+- Power-word title patterns: "The Ultimate Guide to...", "Proven Strategies for...", "The Complete X"
+- Heading structures where every H2 starts with the same verb form
+- 4-bullet listicles in every single section
+- Restating the headline in the intro then padding
+- "Conclusion" sections that just repeat the article
+
+Also: **no em dashes (—) and no en dashes (–).** Use hyphens, commas, or two sentences instead. This is a brand rule.
+
+Brand spelling: **Hexa AI Agency** (with the "a"). Domain: **hexaaiagency.com**. Never "Hex AI Agency" or "hexaiagency.com".
+
+## 6. Conversion (subtle, not pushy)
+
+- "You" language. Speak directly to one reader.
+- 1-2 inline CTAs where natural ("If you want this built for your team, we do this for service businesses - here's how it works: [link]").
+- One stronger CTA at the end. Make the next step concrete.
+- No fake social proof. No invented stats. If you cite a number, it must come from the author context above or a linked source.
+
+## 7. Output format
+
+At the very top of the file, output this frontmatter block (YAML-style), then the post body:
+
+```
+title: <title>
+slug: <url-slug>
+meta_description: <140-160 chars>
+cover_image_alt: <alt text>
+updated_at: 2026-05-26
+primary_keyword: <keyword>
+secondary_keywords: [<kw1>, <kw2>, <kw3>]
+```
+
+Then the post body in clean Markdown: H1, intro, TL;DR, H2 sections, FAQ, conclusion.
+
+## 8. Self-check before returning (Google's Helpful Content rubric)
+
+Before you return the post, silently answer these. If any answer is no, revise and re-check:
+
+1. Does the post show first-hand experience or expertise (not just generic advice)?
+2. Is the primary purpose to help the reader, not to rank?
+3. Will someone reading this feel they got the answer they came for, without needing another article?
+4. Could a real named author put their name on this and defend every claim?
+5. Is anything in it factually wrong, invented, or unverifiable?
+6. Did I avoid every banned phrase in section 5?
+7. Did I include the TL;DR, FAQ, internal links, external links, and frontmatter?
+8. Brand name is "Hexa AI Agency" and domain is "hexaaiagency.com" everywhere?
+9. Zero em dashes or en dashes anywhere in the post?
+
+Only return the post once all nine are yes.

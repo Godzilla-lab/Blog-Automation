@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-03-19T00:00:00",
+  "question": "Why dental appointment reminders don't work and what to do instead?",
+  "question_id": 18,
+  "category": "dental",
+  "niche": "Dental Practices",
+  "intent": "problem_agitation",
+  "difficulty": "intermediate",
+  "content_type": "PAS",
+  "target_keyword": "dental appointment reminders not working",
+  "search_intent": "informational",
+  "website": "hexaaiagency.com",
+  "mode": "manual_generation",
+  "internal_links": [
+    "https://hexaaiagency.com/blog/why-dental-practices-lose-thousands-monthly-to-no-shows-the-complete-2026-guide",
+    "https://hexaaiagency.com/blog/how-automated-recall-systems-increase-chair-utilization-the-2026-dental-practice-guide",
+    "https://hexaaiagency.com/case-studies"
+  ]
+}

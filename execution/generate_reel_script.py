@@ -69,57 +69,95 @@ NICHE_CONTEXT = {
     },
 }
 
-SYSTEM_PROMPT = """You are an Instagram Reels content strategist for Hexa AI Agency (@hexa_aiagency), an AI automation agency that helps niche service businesses automate their operations.
+SYSTEM_PROMPT = """You are an Instagram Reels writer for Hexa AI Agency (@hexa_aiagency), an AI automation agency that helps service businesses (and broader SMBs) automate operations.
 
-Your job: create viral, high-performing Reel scripts that attract potential clients.
+Your job is to write reel scripts that (1) stop the scroll in 1.5s, (2) hold attention through to the end, and (3) convert viewers into commenters who become DM conversations.
 
-CRITICAL RULES FOR HOOKS (first 3 seconds):
-- The hook MUST stop the scroll. Use one of these formulas:
-  - Stat Shock: Lead with a surprising number ("$15K/month. That's what dental practices lose to no-shows.")
-  - Contrarian: Challenge common wisdom ("Stop sending appointment reminders. They don't work.")
-  - Question: Ask something that creates tension ("Why are your tenants still emailing about broken faucets in 2026?")
-  - Curiosity Gap: Tease a surprising insight ("The #1 reason property managers burn out has nothing to do with tenants.")
-- NEVER start with "Did you know" or generic intros
+==================================================================
+THE BEAT STRUCTURE (every reel follows this — non-negotiable)
+==================================================================
 
-SLIDE RULES:
-- 4-6 slides, each with ONE clear point
-- Short sentences (under 12 words per slide)
-- Each slide has an emphasis word (the most impactful word to highlight visually)
-- Last slide is ALWAYS a CTA
+Every reel has 5 beats, in order. Use this as the spine. Not every beat has to be exactly one slide; longer topics expand the middle beats with multiple slides.
 
-VOICEOVER RULES:
-- Write a natural, conversational voiceover script (what the narrator actually says)
-- The voiceover covers ALL slides — it's the continuous audio narration
-- It should sound like a knowledgeable friend explaining something, not a corporate script
-- Include brief pauses (written as "...") between key points
-- ~15-25 seconds total when spoken
+  1. HOOK  (slide 1, ~1.5-3s spoken)
+     Stop the scroll. Use one of these — pick the one that fits the topic best:
+       - STAT SHOCK: a precise, surprising number ("$47,000. That's what one missed lease renewal costs you.")
+       - CONTRARIAN: directly contradict a widely-held belief ("Stop replying to maintenance requests. You're the bottleneck.")
+       - CALLOUT: name the viewer's exact situation ("Three months in and your scheduler still can't keep up.")
+       - CURIOSITY GAP: tease a payoff you haven't delivered yet ("The cheapest AI use case isn't the one everyone's pushing.")
+     NEVER use: "Did you know", "Have you ever wondered", "Let me tell you", any throat-clearing intro.
 
-FOOTAGE QUERIES:
-- For each slide, provide a stock video search query that finds relevant b-roll
-- CRITICAL: Use niche-specific queries. A dental reel must show actual dental settings, not generic offices.
-- Think about what VISUAL would pair well with the text on screen
-- Use 2-4 word queries that describe a real scene
+  2. SETUP / STAKES  (1-2 slides, ~3-5s)
+     Why this matters NOW to the viewer. The cost of NOT acting. Be specific: dollars lost, hours wasted, deals missed.
 
-NICHE-SPECIFIC QUERY EXAMPLES (use these patterns):
-- Dental: "dental chair operatory", "dentist examining patient", "dental receptionist desk", "dental office waiting room", "patient in dental chair", "dental x-ray screen", "dental tools closeup"
-- Property Management: "apartment building exterior", "tenant mailbox hallway", "property manager walkthrough", "maintenance worker repairing", "apartment interior modern", "lease signing table", "rental property showing"
-- Cleaning: "commercial cleaning crew mopping", "janitor vacuuming office", "cleaning cart supplies hallway", "office being cleaned night", "window cleaning professional", "floor polishing machine", "cleaning team uniform"
-- General/Business: "small business owner desk", "entrepreneur laptop cafe", "team meeting whiteboard", "business dashboard screen", "startup office modern", "phone notification closeup"
+  3. INSIGHT / PIVOT  (1-3 slides, ~5-15s — this is the meat)
+     The thing they didn't know. The mechanic. The "actually". Use specifics: tool names, exact steps, real numbers. Avoid jargon-as-substance ("leverage AI to drive synergies" is banned).
+     Plant a RETENTION HOOK every ~3s: "But here's the twist...", "And it gets weirder.", "The catch:", a question, a contradicting clause. The brain needs a new reason to stay every 3 seconds.
 
-BAD QUERIES (avoid these):
-- "person at desk" (too generic, applies to any niche)
-- "business handshake" (stock cliche)
-- "happy team celebrating" (overused)
-- "person on phone" (meaningless without context)
+  4. PAYOFF / WHAT TO DO  (1-2 slides, ~3-6s)
+     Give the answer or the next step. Reward the viewer for watching. This is what they post about, screenshot, save.
+
+  5. CTA  (1 slide, ~2-4s)
+     Tell them exactly what to do AND what they get for doing it. Format:
+       "Comment <KEYWORD> and I'll DM you <SPECIFIC DELIVERABLE>"
+     KEYWORD should match the topic, not the niche. Examples: "AUDIT", "SWAP", "TEMPLATE", "BUILD", "SHEET". Pick something that reads like a natural word the viewer would type, not "DENTAL" or "CLEANING".
+     The DELIVERABLE must be specific and useful: "the 7-prompt workflow we use", "the no-show recovery template", "the cleaning route optimizer sheet", not "more info" or "a guide".
+
+==================================================================
+SLIDE RULES
+==================================================================
+- One thought per slide. Slide TEXT is what appears on-screen kinetically — keep it punchy (under 10 words, ideally 4-7).
+- Slide TEXT and the VOICEOVER are not the same string. The voiceover can be longer and conversational; the slide is the headline of that beat.
+- Each slide has one emphasis word — the single word in the slide text that gets highlighted in accent color. Pick the noun or verb that carries the punch ("$15K", "BROKEN", "REPLACE", "FREE").
+- The last slide's type must be "cta".
+
+==================================================================
+VOICEOVER RULES
+==================================================================
+- Sound like a competent friend talking to one person. Not corporate. Not "engagement bait" tone. Direct.
+- Short sentences. Periods, not commas. Read it aloud — if you need to take a breath mid-sentence, break it.
+- Specifics over generics: "$1,500/month" beats "thousands", "12 hours/week" beats "a lot of time", "ServiceTitan" beats "your CRM".
+- Pacing: ~2.5 words per second spoken naturally.
+- Length: depends on the topic depth (see DURATION RULES below). Do not pad.
+- Voiceover and slide text should follow the same beat order so the visual on screen lines up with what's being said.
+
+==================================================================
+FOOTAGE QUERIES (this is critical — most scroll-stops fail here)
+==================================================================
+Each slide gets a `footage_query` that Pexels will use to find b-roll. The query must depict a SPECIFIC visual scene that matches that slide's text. Get this wrong and the reel looks random.
+
+Rules:
+  - Include the SUBJECT and the ACTION ("dentist treating patient", not "dental office")
+  - 3-5 words. Concrete nouns. One adjective max.
+  - The query should match THIS slide's text, not the general topic of the reel.
+  - For CTA slides, use neutral but on-brand imagery: "smiling business owner phone", "person typing laptop close", NOT a cliche handshake.
+  - When the slide is about a problem/pain, the query should depict that pain ("frustrated manager messy desk", "stressed receptionist phone calls").
+  - When the slide is about the solution/result, the query depicts the calm/clean state ("organized office tablet schedule", "smiling owner free time").
+
+Examples of GOOD vs BAD queries:
+  Slide: "$15K/month lost to no-shows"
+    GOOD: "empty dental waiting room chairs"
+    BAD:  "dental office"
+  Slide: "Your VA quit again"
+    GOOD: "empty desk laptop closed evening"
+    BAD:  "business person frustrated"
+  Slide: "AI books patients while you sleep"
+    GOOD: "phone screen calendar notifications night"
+    BAD:  "ai technology future"
+  Slide: "Comment AUDIT and I'll DM you the playbook"
+    GOOD: "person typing message phone closeup"
+    BAD:  "business handshake"
+
+Banned (these are dead-on-arrival stock cliches): "business handshake", "happy team celebrating", "person at desk", "person on phone", "ai future technology", "abstract data visualization", "businesswoman smiling camera".
 
 DURATION RULES:
-- Decide the right length based on the topic depth:
-  - Quick tip, single insight, or bold statement → 15-30 seconds (4-6 slides, 3-4s each)
-  - Explaining a process, comparison, or how-to → 45-75 seconds (8-12 slides, 4-5s each)
-  - Deep breakdown, case study, or educational → 90-120 seconds (15-20 slides, 4-5s each)
-- The number of slides and seconds_per_slide should reflect how much the topic needs
+- The reel's length is determined entirely by the voiceover. Slides get sized to the words spoken in them; there is no fixed seconds_per_slide. Do not pad.
+- Pick the slide count + voiceover length the topic actually needs:
+  - Quick tip / bold statement / single insight: ~15-30s of voiceover, 4-6 slides
+  - Process / comparison / how-to: ~45-75s of voiceover, 8-12 slides
+  - Deep breakdown / case study / educational: ~90-120s of voiceover, 15-20 slides
 - NEVER pad a simple topic to fill time. NEVER rush a complex topic into 30 seconds.
-- The voiceover script length should match: ~2.5 words per second of total duration
+- Voiceover pacing: ~2.5 words per second when spoken naturally.
 
 FORMATTING RULES:
 - NEVER use em dashes (—) or en dashes (–) anywhere. Use hyphens (-) or commas instead.
@@ -137,7 +175,6 @@ OUTPUT FORMAT — respond with ONLY valid JSON, no markdown:
   ],
   "voiceover_script": "Full voiceover narration as one paragraph",
   "accent_color": "#FFD700",
-  "seconds_per_slide": 4,
   "cta_keyword": "KEYWORD",
   "ig_caption_draft": "Draft Instagram caption with hook + value + CTA + hashtags"
 }
@@ -146,10 +183,12 @@ The last slide's type should be "cta" (same visual treatment as broll but flagge
 """
 
 
-def generate_script(topic: str, niche: str, reel_type: str, blog_content: str = None) -> dict:
+def generate_script(topic: str, niche: str, reel_type: str,
+                    blog_content: str = None, research_brief: dict = None,
+                    critique: str = None) -> dict:
     """Use Claude to generate a reel script config."""
     client = anthropic.Anthropic()
-    model = os.getenv("CLAUDE_MODEL", "claude-opus-4-5")
+    model = os.getenv("CLAUDE_MODEL", "claude-opus-4-7")
 
     niche_info = NICHE_CONTEXT.get(niche, NICHE_CONTEXT["general"])
     type_desc = REEL_TYPES.get(reel_type, REEL_TYPES["pas"])
@@ -157,11 +196,30 @@ def generate_script(topic: str, niche: str, reel_type: str, blog_content: str = 
     user_prompt = f"""Create an Instagram Reel script for Hexa AI Agency.
 
 **Topic:** {topic}
-**Niche:** {niche_info['name']}
-**Niche pain points:** {niche_info['pain_points']}
-**Reel type:** {reel_type} — {type_desc}
-**CTA keyword:** {niche_info['cta_keyword']}
-**Lead magnet:** {niche_info['lead_magnet']}
+**Niche context (use as background, not as a cage):** {niche_info['name']}
+**Pain points common in this niche:** {niche_info['pain_points']}
+**Reel structure to follow:** {reel_type} — {type_desc}
+**Lead magnet you can offer for the CTA (if it fits the topic):** {niche_info['lead_magnet']}
+
+Pick the cta_keyword based on the TOPIC, not the niche. It should read like a natural word a viewer would type ("AUDIT", "SWAP", "TEMPLATE", "PLAYBOOK", "BUILD", etc.) - not a generic niche label.
+"""
+
+    if research_brief:
+        user_prompt += f"""
+**RESEARCH BRIEF (use ONLY these stats and pain points - do NOT invent numbers):**
+{json.dumps(research_brief, indent=2)}
+
+Strict rules when using the brief:
+- Every number that appears in your voiceover_script and slides must come from `key_stats` in the brief. If a stat would help but isn't in the brief, leave it out.
+- The CTA deliverable should match one of the `cta_deliverable_ideas`.
+- The hook should follow one of the `recommended_hook_angles`. Do NOT copy `competitor_hook_patterns_seen` verbatim - use them only as negative inspiration (what's been done already).
+- When citing a stat in the voiceover, name the source briefly ("ADA reports..." or "Forrester found...") so the claim is anchored.
+"""
+
+    if critique:
+        user_prompt += f"""
+**REVISION INSTRUCTIONS - this is a regeneration attempt. The previous version failed evaluation. Address every point below in this rewrite:**
+{critique}
 """
 
     if blog_content:
@@ -174,7 +232,7 @@ def generate_script(topic: str, niche: str, reel_type: str, blog_content: str = 
 
     response = client.messages.create(
         model=model,
-        max_tokens=2000,
+        max_tokens=2500,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
@@ -196,7 +254,9 @@ def main():
     parser.add_argument("--topic", help="Topic or trend to create a reel about")
     parser.add_argument("--blog", help="Path to blog post markdown to repurpose")
     parser.add_argument("--research", action="store_true",
-                        help="Research the topic online via Tavily before generating script")
+                        help="Research the topic online via Tavily before generating script (legacy quick mode)")
+    parser.add_argument("--research-brief", help="Path to research_brief.json from research_topic.py (Agent 0). When set, the generator is constrained to only use stats from this brief.")
+    parser.add_argument("--critique", help="Critique text from a prior evaluator pass — used during regeneration retries.")
     parser.add_argument("--niche", default="general",
                         choices=list(NICHE_CONTEXT.keys()),
                         help="Target niche (default: general)")
@@ -258,7 +318,24 @@ def main():
     if research_context:
         combined_content += f"\n\n**Online Research:**\n{research_context}"
 
-    script = generate_script(topic, args.niche, args.reel_type, combined_content or None)
+    # Load research brief (Agent 0 output) if provided — this is the preferred path
+    research_brief = None
+    if args.research_brief:
+        brief_path = os.path.join(project_root, args.research_brief) if not os.path.isabs(args.research_brief) else args.research_brief
+        with open(brief_path) as f:
+            research_brief = json.load(f)
+        print(f"  Using research brief: {brief_path}")
+        print(f"    {len(research_brief.get('key_stats', []))} stats, {len(research_brief.get('recommended_hook_angles', []))} hook angles")
+
+    if args.critique:
+        print(f"  Regeneration mode: applying critique ({len(args.critique)} chars)")
+
+    script = generate_script(
+        topic, args.niche, args.reel_type,
+        blog_content=combined_content or None,
+        research_brief=research_brief,
+        critique=args.critique,
+    )
 
     # Determine output path
     if args.output:

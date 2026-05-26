@@ -30,6 +30,7 @@ export interface SlideConfig {
   emphasis?: string;
   footage: string;
   type: 'broll' | 'talking_head' | 'cta';
+  durationFrames?: number;
 }
 
 export interface DailyReelProps {
@@ -105,7 +106,8 @@ export const DailyReel: React.FC<DailyReelProps> = ({
   bgMusicVolume = dailyReelDefaults.bgMusicVolume,
 }) => {
   const framesPerSlide = secondsPerSlide * FPS;
-  const getSlideFrames = (_i: number) => framesPerSlide;
+  const getSlideFrames = (i: number) =>
+    slides[i]?.durationFrames ?? framesPerSlide;
 
   // Calculate cumulative start frames with crossfade overlap
   const slideStarts: number[] = [];

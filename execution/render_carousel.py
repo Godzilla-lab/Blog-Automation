@@ -8,6 +8,7 @@ Each slide renders tweet cards with profile pic, name, handle, and text.
 import argparse
 import json
 import os
+import re
 import sys
 import textwrap
 from pathlib import Path
@@ -28,8 +29,14 @@ BADGE_SIZE = 28
 NAME_BADGE_GAP = 6
 BADGE_HANDLE_GAP = 8
 
+# Font sizes
+FONT_SIZE_NAME = 34
+FONT_SIZE_HANDLE = 28
+FONT_SIZE_TEXT = 38
+LINE_SPACING = 1.45
+
 # Spacing
-PROFILE_TEXT_GAP = 24  # gap between profile row and tweet text
+PROFILE_TEXT_GAP = 28  # gap between profile row and tweet text
 TWEET_IMAGE_GAP = 24   # gap between tweet text and embedded image
 DIVIDER_PADDING = 40    # vertical padding around divider for dual-tweet slides
 IMAGE_CORNER_RADIUS = 20
@@ -54,17 +61,20 @@ THEMES = {
     },
 }
 
-# Font paths (macOS)
-FONT_PATHS = {
-    "regular": [
-        "/System/Library/Fonts/SFNS.ttf",
-        "/System/Library/Fonts/Helvetica.ttc",
-    ],
-    "bold": [
-        ("/System/Library/Fonts/HelveticaNeue.ttc", 1),  # index 1 = Bold
-        "/System/Library/Fonts/SFNS.ttf",
-    ],
+# Bundled font directory (Inter)
+FONTS_DIR = Path(__file__).resolve().parent.parent / "skills" / "thread-to-carousel" / "assets" / "fonts"
+
+FONT_FILES = {
+    "regular": "Inter-Regular.ttf",
+    "medium": "Inter-Medium.ttf",
+    "semibold": "Inter-SemiBold.ttf",
+    "bold": "Inter-Bold.ttf",
 }
+
+SYSTEM_FONT_FALLBACKS = [
+    "/System/Library/Fonts/SFNS.ttf",
+    "/System/Library/Fonts/Helvetica.ttc",
+]
 
 
 def hex_to_rgb(hex_color):
@@ -74,27 +84,49 @@ def hex_to_rgb(hex_color):
 
 
 def load_font(style, size):
-    """Load a font with fallbacks."""
-    paths = FONT_PATHS.get(style, FONT_PATHS["regular"])
-    for entry in paths:
+    """Load a bundled Inter font with system fallbacks."""
+    # Try bundled font first
+    bundled = FONTS_DIR / FONT_FILES.get(style, FONT_FILES["regular"])
+    if bundled.exists():
         try:
-            if isinstance(entry, tuple):
-                path, index = entry
-                return ImageFont.truetype(path, size, index=index)
-            else:
-                return ImageFont.truetype(entry, size)
+            return ImageFont.truetype(str(bundled), size)
+        except (IOError, OSError):
+            pass
+    # System fallbacks
+    for path in SYSTEM_FONT_FALLBACKS:
+        try:
+            return ImageFont.truetype(path, size)
         except (IOError, OSError):
             continue
+    print(f"  Warning: No fonts found, using default bitmap font")
     return ImageFont.load_default()
 
 
-def load_fonts():
+def load_fonts(font_config=None):
     """Load all font variants needed for rendering."""
+    fc = font_config or {}
+    text_size = fc.get("text_size", FONT_SIZE_TEXT)
+    name_size = fc.get("name_size", FONT_SIZE_NAME)
+    handle_size = fc.get("handle_size", FONT_SIZE_HANDLE)
     return {
-        "name": load_font("bold", 30),
-        "handle": load_font("regular", 26),
-        "text": load_font("regular", 30),
+        "name": load_font("bold", name_size),
+        "handle": load_font("regular", handle_size),
+        "text": load_font("regular", text_size),
+        "text_bold": load_font("semibold", text_size),
     }
+
+
+def parse_bold_segments(text):
+    """Parse **bold** markers into (text, is_bold) segments."""
+    parts = re.split(r"(\*\*)", text)
+    segments = []
+    bold = False
+    for part in parts:
+        if part == "**":
+            bold = not bold
+        elif part:
+            segments.append((part, bold))
+    return segments if segments else [(text, False)]
 
 
 def create_circular_mask(size):
@@ -194,11 +226,12 @@ def word_wrap_text(text, font, max_width, draw_obj):
     return lines
 
 
-def measure_text_height(lines, font, line_spacing=1.4):
+def measure_text_height(lines, font, line_spacing=None):
     """Measure total height of wrapped text lines."""
     if not lines:
         return 0
-    line_height = font.size * line_spacing
+    spacing = line_spacing if line_spacing is not None else LINE_SPACING
+    line_height = font.size * spacing
     return int(line_height * len(lines))
 
 
@@ -248,15 +281,48 @@ def render_tweet_block(canvas, draw, x, y, tweet, config, fonts, theme, max_widt
     row_height = render_profile_row(canvas, draw, x, current_y, config, fonts, theme)
     current_y += row_height + PROFILE_TEXT_GAP
 
-    # Tweet text with emoji support
+    # Tweet text with emoji + bold support
     text = tweet.get("text", "")
-    lines = word_wrap_text(text, fonts["text"], max_width, draw)
+    # Strip bold markers for wrapping (use regular font metrics)
+    plain_text = re.sub(r"\*\*", "", text)
+    lines = word_wrap_text(plain_text, fonts["text"], max_width, draw)
     text_color = hex_to_rgb(colors["text"])
-    line_height = int(fonts["text"].size * 1.5)
+    line_height = int(fonts["text"].size * LINE_SPACING)
 
+    # Build a map of bold ranges from original text
+    bold_chars = set()
+    offset = 0
+    for segment_text, is_bold in parse_bold_segments(text):
+        if is_bold:
+            for j in range(len(segment_text)):
+                bold_chars.add(offset + j)
+        offset += len(segment_text)
+
+    # Render each line with mixed bold/regular.
+    # Walk plain_text with a pointer and skip over whitespace/newlines that word_wrap
+    # dropped, so each rendered char maps back to its true position in plain_text.
+    plain_pointer = 0
     with Pilmoji(canvas) as pilmoji:
         for line in lines:
-            pilmoji.text((x, current_y), line, font=fonts["text"], fill=text_color)
+            cursor_x = x
+            # Resolve the plain_text position for each character in this wrapped line
+            line_char_positions = []
+            for ch in line:
+                while plain_pointer < len(plain_text) and plain_text[plain_pointer] != ch:
+                    plain_pointer += 1
+                line_char_positions.append(plain_pointer)
+                plain_pointer += 1
+            # Split line into bold/regular runs using the mapped positions
+            i = 0
+            while i < len(line):
+                is_bold = line_char_positions[i] in bold_chars
+                run_start = i
+                while i < len(line) and (line_char_positions[i] in bold_chars) == is_bold:
+                    i += 1
+                run_text = line[run_start:i]
+                font = fonts["text_bold"] if is_bold else fonts["text"]
+                pilmoji.text((cursor_x, current_y), run_text, font=font, fill=text_color)
+                cursor_x += int(font.getlength(run_text))
             current_y += line_height
 
     # Embedded image
@@ -291,13 +357,13 @@ def measure_tweet_block(tweet, config, fonts, theme, max_width):
     """Measure the height a tweet block would take without rendering."""
     height = AVATAR_SIZE + PROFILE_TEXT_GAP  # profile row + gap
 
-    # Text height
-    text = tweet.get("text", "")
+    # Text height (strip bold markers for measurement)
+    text = re.sub(r"\*\*", "", tweet.get("text", ""))
     # Create a temporary image for measurement
     tmp = Image.new("RGB", (1, 1))
     tmp_draw = ImageDraw.Draw(tmp)
     lines = word_wrap_text(text, fonts["text"], max_width, tmp_draw)
-    line_height = int(fonts["text"].size * 1.5)
+    line_height = int(fonts["text"].size * LINE_SPACING)
     height += line_height * len(lines)
 
     # Image height
@@ -397,7 +463,8 @@ def render_carousel(config_path):
         output_dir = os.path.join(project_root, output_dir)
     os.makedirs(output_dir, exist_ok=True)
 
-    fonts = load_fonts()
+    font_config = config.get("fonts", {})
+    fonts = load_fonts(font_config)
     slides = config.get("slides", [])
 
     print(f"Rendering {len(slides)} slide(s)...")

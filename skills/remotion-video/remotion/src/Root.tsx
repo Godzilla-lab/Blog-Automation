@@ -25,7 +25,12 @@ export const RemotionRoot: React.FC = () => {
           const slides = (props.slides ?? dailyReelDefaults.slides) as DailyReelProps['slides'];
           const sps = (props.secondsPerSlide ?? dailyReelDefaults.secondsPerSlide) as number;
           const TRANSITION = 15; // must match TRANSITION_FRAMES in DailyReel
-          const totalFrames = slides.length * sps * FPS - (slides.length - 1) * TRANSITION;
+          const framesPerSlide = sps * FPS;
+          const sumDurations = slides.reduce(
+            (acc, s) => acc + ((s as { durationFrames?: number }).durationFrames ?? framesPerSlide),
+            0,
+          );
+          const totalFrames = sumDurations - (slides.length - 1) * TRANSITION;
           return { durationInFrames: totalFrames, props };
         }}
       />

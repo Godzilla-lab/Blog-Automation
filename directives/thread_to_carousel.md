@@ -24,7 +24,30 @@ Ask the user or receive pasted text. If writing, use the voice/tone from CLAUDE.
 - Present the breakdown to the user for approval
 
 ### 3. Source images
-Priority: user-provided > web search > live screenshot > AI-generated.
+Priority: user-provided > web search (Tavily) > live screenshot > AI-generated.
+
+**Step A: Try Tavily first**
+Use `execution/search_images.py` to search and download images via Tavily API:
+```bash
+python3 execution/search_images.py --query "dental office empty chair" --output workspace/carousels/YYYY-MM-DD-slug/reference/ --count 3 --download
+```
+
+**Step B: Screenshot fallback (if Tavily images don't match)**
+If Tavily returns no results or the images don't match the slide content, use `execution/screenshot_web.py` to take screenshots from the web:
+```bash
+# Screenshot a specific URL
+python3 execution/screenshot_web.py --url "https://example.com/relevant-page" --output workspace/carousels/YYYY-MM-DD-slug/reference/screenshot_1.png
+
+# Search and screenshot top results
+python3 execution/screenshot_web.py --query "dental office scheduling software dashboard" --output workspace/carousels/YYYY-MM-DD-slug/reference/ --count 2
+
+# Visit actual pages (not image search) and screenshot them
+python3 execution/screenshot_web.py --query "AI chatbot for property management" --output workspace/carousels/YYYY-MM-DD-slug/reference/ --count 2 --pages
+
+# Crop to a specific region
+python3 execution/screenshot_web.py --url "https://example.com" --output shot.png --crop 0,100,1080,800
+```
+
 Save all images to `workspace/carousels/YYYY-MM-DD-slug/reference/`.
 
 ### 4. Build config.json
@@ -39,9 +62,13 @@ python3 execution/render_carousel.py --config workspace/carousels/YYYY-MM-DD-slu
 ### 6. Review and iterate
 Show the user the output folder. Offer to swap images, edit text, or change theme and re-render.
 
+### 7. Generate caption.txt
+Always generate an Instagram caption for the carousel. Include a hook line, value summary, CTA with keyword trigger, and 15-25 hashtags. Save to `workspace/carousels/YYYY-MM-DD-slug/caption.txt`.
+
 ## Outputs
 - PNG slides at `workspace/carousels/YYYY-MM-DD-slug/slide_N.png`
 - Config file at `workspace/carousels/YYYY-MM-DD-slug/config.json`
+- Caption at `workspace/carousels/YYYY-MM-DD-slug/caption.txt`
 
 ## Edge Cases
 - If no headshot exists at `skills/thread-to-carousel/assets/headshot.png`, warn the user and render with placeholder
@@ -51,6 +78,9 @@ Show the user the output folder. Offer to swap images, edit text, or change them
 
 ## Learnings
 - `pilmoji` (not `pillmoji`) is the correct package name for emoji rendering
-- Font sizes: name=30px bold, handle=26px, text=30px for 1080px canvas
+- Bundled font: Inter (Regular, Medium, SemiBold, Bold) at `skills/thread-to-carousel/assets/fonts/`
+- Font sizes: name=34px bold, handle=28px, text=38px, line spacing=1.45x for 1080px canvas
 - Avatar size: 80px circular
-- macOS fonts: SF Pro at `/System/Library/Fonts/SFNS.ttf`, Helvetica Neue Bold at index 1 of `/System/Library/Fonts/HelveticaNeue.ttc`
+- **Bold text support**: Use `**bold**` markers in tweet text to render key phrases in SemiBold weight. Renderer handles inline bold across `\n\n` breaks and word-wrap — bold positions are resolved by walking `plain_text` with a pointer per wrapped char (not by counting `len(line)`), so bold lands in the right place even when word-wrap drops whitespace/newlines
+- Optional font size override in config.json: `"fonts": {"text_size": 42}` (backward compatible, omit for defaults)
+- Falls back to macOS system fonts (SF Pro, Helvetica) if bundled fonts missing

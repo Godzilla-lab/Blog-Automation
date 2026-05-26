@@ -1,0 +1,56 @@
+{
+  "template": "launch",
+  "aspect_ratio": "16:9",
+  "duration_seconds": 90,
+  "scenes": {
+    "hook": {
+      "text": "Your business is leaking money.",
+      "emphasis_word": "leaking"
+    },
+    "problem": {
+      "stats": [
+        { "value": "23%", "label": "of dental appointments end in no-shows" },
+        { "value": "68%", "label": "of cleaning contracts lost to communication" },
+        { "value": "$150K+", "label": "lost per year to inefficiency" }
+      ]
+    },
+    "reveal": {
+      "tagline": "AI Solutions for Service Businesses"
+    },
+    "services": [
+      {
+        "name": "AI Assistants",
+        "text": "24/7 customer response.\nZero missed leads.",
+        "accent": "#00e5cc"
+      },
+      {
+        "name": "Lead Generation",
+        "text": "Turn visitors into\nbooked appointments.",
+        "accent": "#00b4ff"
+      },
+      {
+        "name": "Workflow Automation",
+        "text": "Automate the tasks\nthat drain your team.",
+        "accent": "#7b61ff"
+      }
+    ],
+    "results": {
+      "stats": [
+        { "value": 100, "prefix": "$", "suffix": "K+", "label": "/year recovered" },
+        { "value": 40, "suffix": "%", "label": "fewer no-shows" },
+        { "value": 20, "suffix": "+", "label": "hours/week saved" }
+      ]
+    },
+    "cta": {
+      "headline": "Book a Free Strategy Call",
+      "url": "hexaiagency.com",
+      "handle": "@hexa_aiagency"
+    }
+  },
+  "audio": {
+    "music": "sfx/ambient-tech.mp3",
+    "whoosh": "sfx/whoosh.mp3",
+    "impact": "sfx/impact.mp3",
+    "music_attribution": "Endless Space by SolusLunes (CC-BY 3.0)"
+  }
+}

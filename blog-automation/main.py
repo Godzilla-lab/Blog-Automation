@@ -18,7 +18,7 @@ def print_banner():
     """Print welcome banner"""
     print("\n" + "="*60)
     print("   BLOG POST AUTOMATION SYSTEM")
-    print("   Powered by Claude AI | Hex AI Agency")
+    print("   Powered by Claude AI | Hexa AI Agency")
     print("="*60 + "\n")
 
 
@@ -312,7 +312,7 @@ def main():
     print("="*60 + "\n")
 
     metadata = {
-        'website': 'hexaiagency.com',
+        'website': 'hexaaiagency.com',
         'sitemap_urls_count': len(sitemap_urls) if sitemap_urls else 0
     }
 

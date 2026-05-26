@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-05-12T00:00:00",
+  "question": "How does AI roofing estimating software cut roofing sales cycles from 21 days to 7 days in 2026?",
+  "model": "claude-opus-4-7",
+  "website": "hexaaiagency.com",
+  "niche": "roofing",
+  "primary_keyword": "roofing estimating software",
+  "primary_kw_volume": 480,
+  "primary_kw_kd": 18,
+  "secondary_keywords": [
+    "AI roofing estimating software",
+    "roofing CRM",
+    "roofing CRM software",
+    "roofing sales cycle",
+    "commercial roofing estimating software",
+    "best roofing estimating software",
+    "crm software for roofing contractors",
+    "roofing proposal automation"
+  ],
+  "long_tail_captures": [
+    "how to shorten roofing sales cycle",
+    "AI roofing software"
+  ],
+  "internal_links": [
+    "https://hexaaiagency.com/case-studies/proposal-automation",
+    "https://hexaaiagency.com/case-studies",
+    "https://hexaaiagency.com"
+  ],
+  "blog_word_count": 2058,
+  "linkedin_word_count": 307,
+  "twitter_thread_tweets": 9,
+  "threads_word_count": 240,
+  "generation_mode": "direct_in_conversation",
+  "note": "Generated directly by Claude in conversation due to API key auth failure on .env credential. Full quality, hand-tuned to keyword strategy and Hex AI Agency expert answers."
+}

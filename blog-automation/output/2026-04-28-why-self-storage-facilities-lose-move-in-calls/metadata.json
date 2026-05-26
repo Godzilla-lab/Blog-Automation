@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-04-28T00:00:00",
+  "question": "Why do self-storage facilities lose 25-60% of move-in calls, and how can AI voice agents fix it in 2026?",
+  "model": "claude-opus-4-7 (direct authoring)",
+  "website": "hexaaiagency.com",
+  "niche": "self-storage",
+  "sitemap_urls_count": 5,
+  "mode": "direct_authoring_no_api",
+  "sources": [
+    "https://www.prnewswire.com/news-releases/storable-releases-2026-self-storage-industry-outlook-302619122.html",
+    "https://www.xpsusa.com/self-storage-staffing-crisis/",
+    "https://nextlevel.ai/voice-ai-trends-enterprise-adoption-roi/",
+    "https://www.invoca.com/blog/how-much-missed-sales-calls-cost-home-services-businesses",
+    "https://www.nextiva.com/blog/conversational-ai-statistics.html"
+  ],
+  "primary_keyword": "self-storage missed calls",
+  "secondary_keywords": [
+    "AI voice agent self-storage",
+    "self-storage call answer rate",
+    "SiteLink voice AI integration",
+    "storage facility move-in calls"
+  ],
+  "internal_links_suggested": 3
+}

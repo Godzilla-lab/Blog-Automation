@@ -42,9 +42,9 @@ def main():
         print(f"  {i}. {q}")
 
     # Pre-filled answers for demo
-    print("\n📝 Using demo answers about Hex AI Agency expertise...\n")
+    print("\n📝 Using demo answers about Hexa AI Agency expertise...\n")
     user_answers = {
-        qualifying_questions[0]: "At Hex AI Agency, we've implemented AI solutions across 50+ businesses including ChatGPT for customer service, Anthropic Claude for content generation, and custom AI models for data analysis. Results include 40% reduction in response time and 3x content output.",
+        qualifying_questions[0]: "At Hexa AI Agency, we've implemented AI solutions across 50+ businesses including ChatGPT for customer service, Anthropic Claude for content generation, and custom AI models for data analysis. Results include 40% reduction in response time and 3x content output.",
         qualifying_questions[1]: "We specialize in AI chatbots (Intercom AI, Drift), CRM automation (HubSpot AI, Salesforce Einstein), marketing tools (Jasper, Copy.ai), and analytics platforms (Tableau AI, Power BI). Each serves different business needs and scales.",
         qualifying_questions[2]: "Common mistakes include: 1) Not training AI on company data, 2) Over-automating customer interactions, 3) Ignoring data quality, 4) Lack of human oversight, 5) Not measuring ROI properly.",
         qualifying_questions[3]: "Small businesses see ROI within 3-6 months typically. Key metrics: time saved (50-70%), cost reduction (30-40%), revenue increase (20-30%). One client saved $50K annually using AI for invoice processing.",
@@ -124,7 +124,7 @@ def main():
     metadata = {
         'generated_at': datetime.now().isoformat(),
         'question': blog_question,
-        'website': 'hexaiagency.com',
+        'website': 'hexaaiagency.com',
         'sitemap_urls_count': len(sitemap_urls),
         'blog_length': len(blog_content),
         'mode': 'automated_demo'

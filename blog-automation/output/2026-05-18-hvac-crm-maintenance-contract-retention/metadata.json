@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-05-18T00:00:00",
+  "question": "How can HVAC contractors use a CRM to retain maintenance contract customers and stop losing 60% of one-time service customers after the first visit in 2026?",
+  "model": "claude-opus-4-7",
+  "website": "hexaaiagency.com",
+  "niche": "hvac",
+  "primary_keyword": "HVAC CRM",
+  "primary_kw_volume": 590,
+  "primary_kw_kd": 29,
+  "secondary_keywords": [
+    "CRM for HVAC",
+    "HVAC CRM software",
+    "CRM software for HVAC companies",
+    "Best HVAC CRM",
+    "HVAC CRM app",
+    "HVAC maintenance contract",
+    "HVAC customer retention",
+    "HVAC recurring revenue"
+  ],
+  "long_tail_captures": [
+    "best HVAC CRM software",
+    "CRM software for HVAC contractors",
+    "HVAC maintenance plan software"
+  ],
+  "cluster_total_volume": 4580,
+  "cluster_avg_kd": 20,
+  "internal_links": [
+    "https://hexaaiagency.com/case-studies/proposal-automation",
+    "https://hexaaiagency.com/case-studies",
+    "https://hexaaiagency.com"
+  ],
+  "blog_word_count": 2313,
+  "linkedin_word_count": 384,
+  "twitter_thread_tweets": 10,
+  "threads_word_count": 227,
+  "primary_kw_density_count": 18,
+  "primary_kw_density_pct": 0.78,
+  "em_dash_count": 0,
+  "generation_mode": "direct_in_conversation",
+  "note": "Anthropic API key auth failed (payment_issue from prior ElevenLabs context shares the same workspace). Content generated directly by Claude in conversation; run_hvac_post.py written for reproducibility once auth is restored."
+}

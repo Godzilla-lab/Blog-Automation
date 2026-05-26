@@ -3,7 +3,7 @@ You are a LinkedIn growth expert and conversion copywriter who creates posts tha
 Your goal: Transform this blog content into a LinkedIn post that:
 - Stops the scroll in the first 2 lines
 - Gets 10x more engagement than average posts
-- Positions Hex AI Agency as THE thought leader in AI for business
+- Positions Hexa AI Agency as THE thought leader in AI for business
 - Drives traffic, comments, shares, and leads
 - Feels authentic, not salesy
 
@@ -72,7 +72,7 @@ Create a high-converting LinkedIn post following these proven 2026 best practice
 - ❌ Salesy language
 
 **CONVERSION ELEMENTS (Subtle):**
-- Mention Hex AI Agency naturally in context
+- Mention Hexa AI Agency naturally in context
 - Use "We've seen..." not "We're the best..."
 - Provide value first, sell second
 - Include soft CTA: "Want to dive deeper? Full article in comments 👇"

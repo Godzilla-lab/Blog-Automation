@@ -2,13 +2,16 @@
 """
 Master orchestrator: generate N Instagram Reels per day.
 
-Full pipeline per reel:
-  1. Pick topic (from trends, blog posts, or evergreen)
-  2. Generate reel script (Claude → slides + voiceover + footage queries)
-  3. Download stock footage (Pexels API)
-  4. Generate voiceover audio (Edge TTS)
-  5. Render video (Remotion DailyReel)
-  6. Generate Instagram caption
+Full pipeline per reel (gated by 3 AI agents to keep the user out of the loop):
+  0. RESEARCH topic         — Tavily + Claude → research_brief.json
+  1. GENERATE reel script   — Claude (constrained by the brief) → config.json
+  1b. EVALUATE script        — Claude scores 9 dimensions; up to 2 retries with critique
+  2. DOWNLOAD stock footage  — Pexels (and Pixabay fallback)
+  3. GENERATE voiceover      — ElevenLabs / Edge TTS + word timestamps
+  4. RENDER video            — Remotion DailyReel
+  5. GENERATE IG caption
+  6. DETERMINISTIC QA        — review_reel.py (existing rule-based)
+  6b. REALITY QA (VISION)     — Claude vision on 6 sampled frames; one auto-rerender on fail
 
 Usage:
     python3 execution/run_daily_reels.py --count 3
@@ -156,16 +159,82 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
         "success": False,
     }
 
-    # Step 1: Generate script
+    # ---------------- Step 0: Research the topic ----------------
+    research_brief_path = os.path.join(reel_dir, "research_brief.json")
     if not run_step(
-        f"[Reel {index+1}] Generating script: {topic}",
-        ["python3", os.path.join(script_dir, "generate_reel_script.py"),
-         "--topic", topic, "--niche", niche, "--type", reel_type,
-         "--output", config_path],
+        f"[Reel {index+1}] Researching: {topic}",
+        ["python3", os.path.join(script_dir, "research_topic.py"),
+         "--niche", niche, "--topic", topic, "--reel-type", reel_type,
+         "--output", research_brief_path],
     ):
+        result["research_failed"] = True
+        if os.path.exists(research_brief_path):
+            try:
+                with open(research_brief_path) as f:
+                    rb = json.load(f)
+                result["research_warnings"] = rb.get("warnings", [])
+            except Exception:
+                pass
         return result
 
-    # Load the generated config
+    # ---------------- Steps 1 + 1b: Generate + Evaluate (with retry loop) ----------------
+    eval_path = os.path.join(reel_dir, "script_eval.json")
+    MAX_SCRIPT_RETRIES = int(os.getenv("SCRIPT_EVAL_MAX_RETRIES", "2"))
+    critique = None
+    eval_result = None
+    for attempt in range(MAX_SCRIPT_RETRIES + 1):
+        attempt_label = "initial" if attempt == 0 else f"retry {attempt}/{MAX_SCRIPT_RETRIES}"
+        gen_cmd = [
+            "python3", os.path.join(script_dir, "generate_reel_script.py"),
+            "--topic", topic, "--niche", niche, "--type", reel_type,
+            "--output", config_path,
+            "--research-brief", research_brief_path,
+        ]
+        if critique:
+            gen_cmd += ["--critique", critique]
+        if not run_step(
+            f"[Reel {index+1}] Generating script ({attempt_label}): {topic}",
+            gen_cmd,
+        ):
+            result["script_generation_failed"] = True
+            return result
+
+        # Evaluate (do not treat non-zero exit as fatal — the JSON tells us)
+        eval_cmd = [
+            "python3", os.path.join(script_dir, "evaluate_reel_script.py"),
+            "--script", config_path,
+            "--research-brief", research_brief_path,
+            "--niche", niche, "--topic", topic, "--reel-type", reel_type,
+            "--output", eval_path,
+        ]
+        subprocess.run(eval_cmd, capture_output=True, text=True, cwd=project_root)
+
+        if not os.path.exists(eval_path):
+            result["script_eval_failed"] = True
+            result["script_eval_reason"] = "evaluator did not produce output"
+            return result
+
+        with open(eval_path) as f:
+            eval_result = json.load(f)
+        print(f"  Eval: passed={eval_result.get('passed')} avg={eval_result.get('overall_score')} "
+              f"min_dim={eval_result.get('min_dimension_score')}")
+
+        if eval_result.get("passed"):
+            break
+        if not eval_result.get("regenerate"):
+            result["script_eval_failed"] = True
+            result["script_eval_reason"] = eval_result.get("critique", "hard fail")
+            print(f"  Hard fail. No retry. Critique: {eval_result.get('critique', '')[:200]}")
+            return result
+        critique = eval_result.get("critique", "")
+        print(f"  Soft fail. Will retry with critique ({len(critique)} chars).")
+    else:
+        # Loop completed without break — retries exhausted
+        result["script_eval_failed"] = True
+        result["script_eval_reason"] = f"exhausted {MAX_SCRIPT_RETRIES} retries; last critique: {critique[:300] if critique else ''}"
+        return result
+
+    # Load the (now-passing) generated config
     with open(config_path, "r") as f:
         config = json.load(f)
 
@@ -211,18 +280,11 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
         if not library_hit and not run_step(
             f"[Reel {index+1}] Downloading footage {i+1}/{len(slides)}: '{query}'",
             ["python3", os.path.join(script_dir, "download_pexels_video.py"),
-             "--query", query, "--output", footage_dir, "--count", "1",
+             "--query", query, "--output", footage_dir,
+             "--filename", f"clip-{i+1}.mp4",
              "--orientation", "portrait"],
         ):
             print(f"  Warning: Footage download failed for slide {i+1}, using fallback")
-
-        # Rename the downloaded clip + frame to match expected path
-        generic_clip = os.path.join(footage_dir, "clip-1.mp4")
-        generic_frame = os.path.join(footage_dir, "clip-1.jpg")
-        if os.path.exists(generic_clip) and generic_clip != clip_path:
-            os.rename(generic_clip, clip_path)
-        if os.path.exists(generic_frame) and generic_frame != frame_path:
-            os.rename(generic_frame, frame_path)
 
         # Use .mp4 for Remotion (OffthreadVideo decodes via FFmpeg, not Chrome)
         slide["footage"] = f"reels/{today}-{slug}/clip-{i+1}.mp4"
@@ -242,10 +304,20 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
         ):
             config["voiceover"] = f"reels/{today}-{slug}/voiceover.mp3"
 
-            # Load word timestamps
+            # Load word timestamps and size each slide to its spoken segment.
+            # Reel total = voiceover duration + transitions + small tail. No padding.
             if os.path.exists(timestamps_path):
                 with open(timestamps_path, "r") as f:
                     config["word_timestamps"] = json.load(f)
+                sys.path.insert(0, script_dir)
+                from sync_slides_to_voice import sync_slides_to_voice
+                durations, total_frames = sync_slides_to_voice(
+                    config["slides"], config["word_timestamps"]
+                )
+                for slide, frames in zip(config["slides"], durations):
+                    slide["durationFrames"] = frames
+                voice_s = config["word_timestamps"][-1]["endMs"] / 1000
+                print(f"  Synced slides to voice: {total_frames/30:.2f}s reel for {voice_s:.2f}s voice")
 
     # Pick background music based on reel type (randomly from available tracks per mood)
     BG_MUSIC_MAP = {
@@ -293,6 +365,101 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
         result["output"] = reel_output
         result["size_mb"] = round(size_mb, 1)
         print(f"\n  Reel {index+1} complete: {reel_output} ({size_mb:.1f} MB)")
+
+    # ---------------- Step 6: Deterministic QA (existing review_reel.py) ----------------
+    review_result = subprocess.run(
+        ["python3", os.path.join(script_dir, "review_reel.py"), reel_dir],
+        capture_output=True, text=True, cwd=project_root,
+    )
+    if review_result.stdout:
+        print(review_result.stdout)
+    deterministic_qa_passed = (review_result.returncode == 0)
+    if not deterministic_qa_passed:
+        print(f"  [Reel {index+1}] Deterministic QA FAILED — review errors above")
+    result["deterministic_qa_passed"] = deterministic_qa_passed
+
+    # ---------------- Step 6b: RealityQA (vision) + auto-rerender on fail ----------------
+    reality_qa_path = os.path.join(reel_dir, "reality_qa.json")
+    rqa_cmd = [
+        "python3", os.path.join(script_dir, "reality_qa_reel.py"),
+        "--config", config_path,
+        "--reel", reel_output,
+        "--output", reality_qa_path,
+    ]
+    print(f"\n{'='*60}\n  [Reel {index+1}] Running RealityQA (vision)\n{'='*60}")
+    rqa_proc = subprocess.run(rqa_cmd, capture_output=True, text=True, cwd=project_root)
+    if rqa_proc.stdout:
+        print(rqa_proc.stdout)
+
+    rqa_result = {}
+    if os.path.exists(reality_qa_path):
+        with open(reality_qa_path) as f:
+            rqa_result = json.load(f)
+
+    reality_qa_passed = rqa_result.get("passed", False)
+
+    # Auto-rerender once if RealityQA failed AND the fix is footage-level (not config-level)
+    if not reality_qa_passed:
+        hints = rqa_result.get("rerender_hints", {})
+        swap_clips = hints.get("swap_clips", [])
+        fix_config = hints.get("fix_config", [])
+
+        if swap_clips and not fix_config:
+            print(f"\n  [Reel {index+1}] RealityQA flagged footage issues on slides {swap_clips}. "
+                  f"Auto-rerendering once.")
+
+            for slide_idx in swap_clips:
+                # 1-indexed in the rubric
+                slide = config["slides"][slide_idx - 1] if 0 < slide_idx <= len(config["slides"]) else None
+                if not slide:
+                    continue
+                query = slide.get("footage_query", slide.get("text", "business")[:30])
+                # Re-download (Pexels rotates, so a fresh search picks a different clip)
+                run_step(
+                    f"[Reel {index+1}] Re-downloading footage for slide {slide_idx}: '{query}'",
+                    ["python3", os.path.join(script_dir, "download_pexels_video.py"),
+                     "--query", query, "--output", footage_dir,
+                     "--filename", f"clip-{slide_idx}.mp4",
+                     "--orientation", "portrait"],
+                )
+
+            # Re-render
+            run_step(
+                f"[Reel {index+1}] Re-rendering after footage swap",
+                ["python3", os.path.join(script_dir, "generate_reel.py"),
+                 "--config", config_path, "--output", reel_output],
+                env=env,
+            )
+
+            # Re-run RealityQA once
+            print(f"  [Reel {index+1}] Re-running RealityQA after rerender")
+            rqa_proc2 = subprocess.run(rqa_cmd, capture_output=True, text=True, cwd=project_root)
+            if rqa_proc2.stdout:
+                print(rqa_proc2.stdout)
+            if os.path.exists(reality_qa_path):
+                with open(reality_qa_path) as f:
+                    rqa_result = json.load(f)
+            reality_qa_passed = rqa_result.get("passed", False)
+        elif fix_config:
+            print(f"  [Reel {index+1}] RealityQA flagged config-level issues; no auto-rerender. "
+                  f"Surfacing to user: {fix_config}")
+
+    result["reality_qa_passed"] = reality_qa_passed
+    if not reality_qa_passed:
+        result["reality_qa_failed"] = True
+        result["reality_qa_reason"] = {
+            "overall_score": rqa_result.get("overall_score"),
+            "frame_issues": rqa_result.get("frame_issues", []),
+            "fix_config": rqa_result.get("rerender_hints", {}).get("fix_config", []),
+        }
+
+    # Final composite QA flag: BOTH gates must pass
+    result["qa_passed"] = deterministic_qa_passed and reality_qa_passed
+    if not result["qa_passed"]:
+        print(f"  [Reel {index+1}] FINAL QA: failed (deterministic={deterministic_qa_passed}, "
+              f"reality={reality_qa_passed})")
+    else:
+        print(f"  [Reel {index+1}] FINAL QA: PASSED")
 
     return result
 
@@ -358,9 +525,27 @@ def main():
         print(f"    {r['index']+1}. [{r['niche']}] {r['topic'][:50]} -> {r.get('output', '?')}")
 
     if failed:
-        print(f"\n  Failed:")
+        print(f"\n  Failed (never rendered):")
         for r in failed:
-            print(f"    {r['index']+1}. [{r['niche']}] {r['topic'][:50]}")
+            reason = "unknown"
+            if r.get("research_failed"):
+                reason = "research"
+            elif r.get("script_eval_failed"):
+                reason = f"script_eval: {r.get('script_eval_reason', '')[:120]}"
+            elif r.get("script_generation_failed"):
+                reason = "script_gen"
+            print(f"    {r['index']+1}. [{r['niche']}] {r['topic'][:50]} - {reason}")
+
+    qa_failed = [r for r in successful if not r.get("qa_passed", True)]
+    if qa_failed:
+        print(f"\n  QA Failed ({len(qa_failed)} rendered but did not pass both gates):")
+        for r in qa_failed:
+            det = "OK" if r.get("deterministic_qa_passed") else "FAIL"
+            rea = "OK" if r.get("reality_qa_passed") else "FAIL"
+            print(f"    {r['index']+1}. [{r['niche']}] {r['topic'][:50]} - "
+                  f"deterministic={det} reality={rea}")
+            if r.get("reality_qa_reason", {}).get("fix_config"):
+                print(f"       config issues: {r['reality_qa_reason']['fix_config']}")
 
     # Save run log
     log_path = os.path.join(args.output, f"run-{date.today().isoformat()}.json")

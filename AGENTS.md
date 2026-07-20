@@ -63,6 +63,14 @@ Errors are learning opportunities. When something breaks:
 
 **Key principle:** Local files are only for processing. Deliverables live in cloud services (Google Sheets, Slides, etc.) where the user can access them. Everything in `.tmp/` can be deleted and regenerated.
 
+## Blog post workflow (read this directive before any blog work)
+
+When the user says "write a blog", "new blog", "blog post about X", "post for the site", or asks to run a niche blog runner — read `directives/write_blog_post.md` first. Every blog produced by this repo runs through 3 QA gates (research → deterministic validator → LLM evaluator) and the output must conform to a strict 1,800-2,200 word HTML format with a TL;DR block, 3-5 internal links from `blog-automation/hexa_urls.json`, and 6-12 external citations. The validator is what enforces this — the prompt alone is not sufficient.
+
+Key scripts: `blog-automation/run_blog_post.py` (orchestrator), `blog-automation/modules/blog_validator.py` (deterministic gate), `blog-automation/modules/blog_evaluator.py` (LLM evaluator), `blog-automation/run_*_post.py` (niche runners with pre-baked operator playbooks).
+
+Update `blog-automation/hexa_urls.json` whenever a new service / industry / case-study page ships on hexaaiagency.com — otherwise the writer will leave broken links or invent slugs.
+
 ## Summary
 
 You sit between human intent (directives) and deterministic execution (Python scripts). Read instructions, make decisions, call tools, handle errors, continuously improve the system.

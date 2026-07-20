@@ -46,17 +46,36 @@ EDGE_VOICES = {
 EDGE_DEFAULT_VOICE = EDGE_VOICES["emma"]
 
 ELEVENLABS_API_BASE = "https://api.elevenlabs.io/v1"
-ELEVENLABS_DEFAULT_MODEL = os.getenv("ELEVENLABS_MODEL", "eleven_multilingual_v2")
+ELEVENLABS_DEFAULT_MODEL = os.getenv("ELEVENLABS_MODEL", "eleven_v3")
+ELEVENLABS_FALLBACK_MODEL = "eleven_multilingual_v2"
 ELEVENLABS_VOICE_SETTINGS = {
-    "stability": 0.45,
-    "similarity_boost": 0.7,
-    "style": 0.35,
+    "stability": 0.30,
+    "similarity_boost": 0.75,
+    "style": 0.65,
     "use_speaker_boost": True,
 }
 
+# Inline audio tags consumed by ElevenLabs v3 for prosody control. If any of
+# these leak into the word-timestamps response (different v3 versions behave
+# differently here), they get filtered out before saving — otherwise they
+# would render as visible captions and break slide-to-voice sync.
+KNOWN_AUDIO_TAGS = {
+    "serious", "whispers", "shouting", "excited", "pause",
+    "sigh", "laughs", "stern", "gentle", "playful", "warm",
+    "low", "deliberate", "matter-of-fact", "building", "grounded",
+    "firm", "soft", "loud", "punchy", "dramatic", "slow",
+    "fast", "curious", "hesitant", "emphasis", "calm",
+}
 
-def generate_elevenlabs(text: str, output_path: str, voice_id: str, api_key: str) -> list:
-    """Call ElevenLabs /text-to-speech/{voice_id}/with-timestamps and return word timestamps."""
+
+def generate_elevenlabs(text: str, output_path: str, voice_id: str, api_key: str,
+                        model_id: str = None) -> list:
+    """Call ElevenLabs /text-to-speech/{voice_id}/with-timestamps and return word timestamps.
+
+    If `model_id` is None, uses ELEVENLABS_DEFAULT_MODEL. On HTTP 400 indicating
+    an unknown model (typical when v3 is not yet available on the account),
+    automatically retries once with ELEVENLABS_FALLBACK_MODEL and logs loudly.
+    """
     import requests
 
     url = f"{ELEVENLABS_API_BASE}/text-to-speech/{voice_id}/with-timestamps"
@@ -65,16 +84,28 @@ def generate_elevenlabs(text: str, output_path: str, voice_id: str, api_key: str
         "Content-Type": "application/json",
         "Accept": "application/json",
     }
+    use_model = model_id or ELEVENLABS_DEFAULT_MODEL
     body = {
         "text": text,
-        "model_id": ELEVENLABS_DEFAULT_MODEL,
+        "model_id": use_model,
         "voice_settings": ELEVENLABS_VOICE_SETTINGS,
     }
     params = {"output_format": "mp3_44100_128"}
 
     resp = requests.post(url, headers=headers, json=body, params=params, timeout=120)
+
+    # Graceful fallback when the configured model isn't available on this account.
+    if resp.status_code == 400:
+        body_text = resp.text.lower()
+        if ("model_id" in body_text or "model not found" in body_text or "invalid model" in body_text) \
+                and use_model != ELEVENLABS_FALLBACK_MODEL:
+            print(f"  [voiceover] model '{use_model}' rejected (400). Falling back to '{ELEVENLABS_FALLBACK_MODEL}'.")
+            body["model_id"] = ELEVENLABS_FALLBACK_MODEL
+            use_model = ELEVENLABS_FALLBACK_MODEL
+            resp = requests.post(url, headers=headers, json=body, params=params, timeout=120)
+
     if resp.status_code != 200:
-        raise RuntimeError(f"ElevenLabs {resp.status_code}: {resp.text[:400]}")
+        raise RuntimeError(f"ElevenLabs {resp.status_code} (model={use_model}): {resp.text[:400]}")
 
     payload = resp.json()
     audio_b64 = payload.get("audio_base64")
@@ -86,7 +117,36 @@ def generate_elevenlabs(text: str, output_path: str, voice_id: str, api_key: str
     with open(output_path, "wb") as f:
         f.write(base64.b64decode(audio_b64))
 
-    return _chars_to_words(alignment)
+    words = _chars_to_words(alignment)
+    words = _filter_audio_tag_words(words)
+    return words
+
+
+def _filter_audio_tag_words(words: list) -> list:
+    """Drop word entries that look like leaked ElevenLabs v3 audio tags.
+
+    Three patterns are filtered:
+      1. Word is literally bracketed:  "[serious]"  or  "[matter-of-fact]"
+      2. Word is in KNOWN_AUDIO_TAGS and has duration < 50 ms (real spoken
+         words almost never go that short; near-zero-duration entries are how
+         v3 acknowledges a tag without speaking it).
+      3. Word is an empty string after stripping non-alphanumerics
+         (occasional artifact when brackets are stripped by the API).
+    """
+    filtered = []
+    for w in words:
+        raw = w.get("word", "")
+        text = raw.strip().lower()
+        if not text:
+            continue
+        if text.startswith("[") and text.endswith("]"):
+            continue
+        # Strip surrounding punctuation for tag-lookup but keep the original token
+        stripped = "".join(ch for ch in text if ch.isalnum() or ch == "-")
+        if stripped in KNOWN_AUDIO_TAGS and (w.get("endMs", 0) - w.get("startMs", 0)) < 50:
+            continue
+        filtered.append(w)
+    return filtered
 
 
 def _chars_to_words(alignment: dict) -> list:
@@ -171,6 +231,7 @@ def main():
     parser.add_argument("--engine", default="auto", choices=["auto", "elevenlabs", "edge"],
                         help="auto picks ElevenLabs if ELEVENLABS_API_KEY is set, else Edge TTS")
     parser.add_argument("--voice-id", help="ElevenLabs voice ID (overrides ELEVENLABS_VOICE_ID)")
+    parser.add_argument("--model", help="ElevenLabs model_id override (default: ELEVENLABS_MODEL env or 'eleven_v3'). Falls back to 'eleven_multilingual_v2' if rejected.")
     parser.add_argument("--voice", default=EDGE_DEFAULT_VOICE,
                         help=f"Edge TTS voice (default {EDGE_DEFAULT_VOICE}). Shortcuts: {', '.join(EDGE_VOICES)}")
     parser.add_argument("--list-voices", action="store_true", help="List Edge TTS voices and exit")
@@ -211,9 +272,10 @@ def main():
         if not el_voice:
             print("Error: ELEVENLABS_VOICE_ID not set in .env and --voice-id not provided")
             sys.exit(1)
-        print(f"Generating voiceover ({len(text)} chars, engine: ElevenLabs, voice_id: {el_voice}, model: {ELEVENLABS_DEFAULT_MODEL})")
+        model_to_use = args.model or ELEVENLABS_DEFAULT_MODEL
+        print(f"Generating voiceover ({len(text)} chars, engine: ElevenLabs, voice_id: {el_voice}, model: {model_to_use})")
         try:
-            words = generate_elevenlabs(text, args.output, el_voice, el_key)
+            words = generate_elevenlabs(text, args.output, el_voice, el_key, model_id=model_to_use)
         except Exception as e:
             print(f"ElevenLabs failed: {e}")
             if args.engine == "elevenlabs":

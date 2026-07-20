@@ -115,11 +115,40 @@ SLIDE RULES
 VOICEOVER RULES
 ==================================================================
 - Sound like a competent friend talking to one person. Not corporate. Not "engagement bait" tone. Direct.
-- Short sentences. Periods, not commas. Read it aloud — if you need to take a breath mid-sentence, break it.
+- Short sentences. Periods, not commas. Read it aloud, if you need to take a breath mid-sentence, break it.
 - Specifics over generics: "$1,500/month" beats "thousands", "12 hours/week" beats "a lot of time", "ServiceTitan" beats "your CRM".
 - Pacing: ~2.5 words per second spoken naturally.
 - Length: depends on the topic depth (see DURATION RULES below). Do not pad.
 - Voiceover and slide text should follow the same beat order so the visual on screen lines up with what's being said.
+
+==================================================================
+VOICEOVER PROSODY MARKUP (in voiceover_script ONLY)
+==================================================================
+The voiceover_script field is delivered through ElevenLabs v3, which honors inline audio tags. Use them to shape delivery so the voice matches the meaning — pauses where a person would pause, loudness where a person would lean in, warmth on the CTA. Tags do NOT appear on screen; slide "text" fields stay 100% clean.
+
+PLACEMENT RULES:
+- Tag at the START of a sentence shapes that whole sentence's delivery.
+- "[pause]" between sentences creates a beat. Use after stat reveals and before punchlines. Cap at 4 per reel; overuse kills pacing.
+- "..." (three dots) creates a shorter natural hesitation than [pause].
+- CAPITALIZE one or two words per beat to push volume (e.g. "85 percent of AI projects FAIL"). Use sparingly, ideally on the same word that's the slide's emphasis.
+- Match each tag to the BEAT, not every sentence. A typical 30s reel uses 5-8 tags total.
+
+ALLOWED TAGS:
+[serious]        — flat, grim weight. Use on damning stats.
+[firm]           — assertive but not angry. Use on rebuttals.
+[matter-of-fact] — "this is just how it is" energy. Use on data citations.
+[deliberate]     — slow, weighted. Use when planting an insight.
+[building]       — energy ramping up. Use into the payoff.
+[punchy]         — short, sharp. Use on punchlines.
+[grounded]       — settled, confident. Use after the punchline.
+[warm]           — inviting, friendly. Use on the CTA.
+[curious]        — leaning in, asking. Use on questions.
+[pause]          — explicit 0.5s beat. Use sparingly between sentences.
+
+EXAMPLE (matches the AI vendor reel):
+"voiceover_script": "[serious] If you dropped 5K on AI last year... and you can't tell me what number it moved... [firm] listen up. [matter-of-fact] Gartner says 85 percent of AI projects FAIL. [firm] Not because the tech is broken. [deliberate] Because nobody measures the ROI. No baseline. No attribution. No proof. [building] Forrester data: chatbots with no attribution retain at 31 percent. [pause] With attribution? [punchy] 87. [grounded] Same tech. The measurement is the moat. [warm] Comment VET and I'll DM the 3-question vendor checklist we use at Hexa AI Agency."
+
+CRITICAL: slide "text" fields stay tag-free. The hook slide is "YOU SPENT $5K ON AI. IT'S DEAD." NOT "[serious] YOU SPENT $5K ON AI. IT'S DEAD." Tags are voiceover-only.
 
 ==================================================================
 FOOTAGE QUERIES (this is critical — most scroll-stops fail here)

@@ -21,7 +21,9 @@ import { FootageBackground } from './FootageBackground';
 interface BRollSlideProps {
   text: string;
   emphasis?: string;
-  footageSrc: string;
+  footageSrc?: string;
+  footageSrcs?: string[];
+  durationInFrames?: number;
   accentColor: string;
   handle?: string;
 }
@@ -30,6 +32,8 @@ export const BRollSlide: React.FC<BRollSlideProps> = ({
   text,
   emphasis,
   footageSrc,
+  footageSrcs,
+  durationInFrames,
   accentColor,
   handle,
 }) => {
@@ -43,16 +47,13 @@ export const BRollSlide: React.FC<BRollSlideProps> = ({
     extrapolateRight: 'clamp',
   });
 
-  // Slide entry flash
-  const flashOpacity = interpolate(frame, [0, 4, 10], [0.15, 0.15, 0], {
-    extrapolateRight: 'clamp',
-  });
-
   return (
     <AbsoluteFill>
       {/* Background footage with slow zoom (Ken Burns effect) */}
       <FootageBackground
         src={footageSrc}
+        srcs={footageSrcs}
+        durationInFrames={durationInFrames}
         style={{
           transform: `scale(${zoom})`,
         }}
@@ -92,7 +93,7 @@ export const BRollSlide: React.FC<BRollSlideProps> = ({
         >
           {words.map((word, i) => {
             const wordSpring = spring({
-              frame: frame - 8 - i * 2,
+              frame: frame - i * 1,
               fps,
               config: { mass: 1, damping: 20, stiffness: 150 },
               durationInFrames: 15,
@@ -145,16 +146,6 @@ export const BRollSlide: React.FC<BRollSlideProps> = ({
         </div>
       )}
 
-      {/* Entry flash */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundColor: '#ffffff',
-          opacity: flashOpacity,
-          pointerEvents: 'none',
-        }}
-      />
     </AbsoluteFill>
   );
 };

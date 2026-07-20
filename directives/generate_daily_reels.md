@@ -105,6 +105,44 @@ All gates must pass for a reel to be shippable. Each gate writes its own JSON to
 ### Niche Rotation
 Don't post 2+ reels for the same niche in a row. The orchestrator handles this automatically.
 
+### Multi-Clip Slides (visual variety on long beats)
+ElevenLabs v3 prosody pauses make voiceovers ~15% longer than v2, which pushes some slides past the **6-second threshold** where a single Pexels clip starts to feel frozen. The renderer (`skills/remotion-video/remotion/src/reels/scenes/FootageBackground.tsx`) supports an array of footage clips per slide and rotates between them evenly.
+
+| Slide duration | Clips needed | Config field |
+|---|---|---|
+| ≤ 6.0s | 1 | `"footage": "clip-N.mp4"` (legacy) |
+| 6.0s - 9.0s | 2 | `"footages": ["clip-Na.mp4", "clip-Nb.mp4"]` |
+| > 9.0s | 2-3 | `"footages": ["clip-Na.mp4", "clip-Nb.mp4", "clip-Nc.mp4"]` |
+
+`run_daily_reels.py` handles this automatically:
+1. After `sync_slides_to_voice` computes per-slide `durationFrames`, identify slides with `durationFrames > 180` (6s @ 30fps).
+2. For each: rename existing `clip-N.mp4` → `clip-Na.mp4`, download a 2nd clip (same `footage_query`, Pexels rotates results) as `clip-Nb.mp4`.
+3. Set `slide.footages = [clip-Na.mp4, clip-Nb.mp4]`; drop `slide.footage`.
+4. The renderer divides each slide's window evenly across the array.
+
+The `<Video>` element in `FootageBackground.tsx` uses `loop` so even if a Pexels clip is shorter than its sub-window, it restarts cleanly instead of freezing.
+
+If RealityQA flags a multi-clip slide's footage, the auto-rerender only re-downloads `clip-Na.mp4` (keeps the second clip, halves the Pexels spend on retries).
+
+### Voiceover Prosody (ElevenLabs v3 inline tags)
+The voiceover is rendered through ElevenLabs **v3** (`ELEVENLABS_MODEL=eleven_v3` in `.env`) with prosody-tuned settings. The script generator emits inline audio tags inside `voiceover_script` so the voice pauses, leans in, and shifts energy with the meaning. **Tags only ever appear in `voiceover_script` — slide `text` fields stay clean** (otherwise they'd render as visible captions).
+
+Allowed tags:
+| Tag | When to use |
+|---|---|
+| `[serious]` | Damning stats. Flat, grim weight. |
+| `[firm]` | Rebuttals. Assertive but not angry. |
+| `[matter-of-fact]` | Citing data ("Gartner says..."). |
+| `[deliberate]` | Planting an insight. Slow, weighted. |
+| `[building]` | Energy ramping into the payoff. |
+| `[punchy]` | Punchlines. Short and sharp. |
+| `[grounded]` | The resolve after a punchline. |
+| `[warm]` | The CTA. Inviting, friendly. |
+| `[curious]` | Questions. Leaning in. |
+| `[pause]` | Explicit 0.5s beat. Cap at 4 per reel. |
+
+Plus: `...` (three dots) for short hesitation, ALL-CAPS on the emphasis word for volume. `execution/generate_voiceover.py` strips any tag tokens that leak into `word_timestamps.json` before save, so SyncedCaptions never displays them. If v3 isn't available on the account, the script falls back to `eleven_multilingual_v2` and the audio sounds like the old monotone Ellen.
+
 ## Content Sources (in priority order)
 1. **Trending topics** — from `scrape_ai_trends.py` (Reddit + Tavily web search)
 2. **Blog post repurposing** — from `blog-automation/output/` (16K+ word articles → 4-6 slide reels)

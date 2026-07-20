@@ -16,6 +16,8 @@ import glob
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -23,6 +25,15 @@ from pathlib import Path
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 REMOTION_PUBLIC = os.path.join(PROJECT_ROOT, "skills", "remotion-video", "remotion", "public")
+FFMPEG_BIN = (
+    shutil.which("ffmpeg")
+    or os.path.expanduser("~/.local/node-v22.22.2-darwin-arm64/bin/ffmpeg")
+)
+# Mean Y-plane brightness floor (0-255). A pure-black background averages ~10
+# even with overlay text + watermark. Real Pexels footage with dark overlay
+# averages 40-90. Slide that drops to <BLACK_FRAME_BRIGHTNESS_FLOOR almost
+# always means b-roll didn't paint (FootageBackground rendered null).
+BLACK_FRAME_BRIGHTNESS_FLOOR = 18
 
 # Thresholds
 MIN_REEL_SIZE_MB = 3
@@ -90,6 +101,7 @@ class ReelReview:
             text = slide.get("text", "")
             emphasis = slide.get("emphasis", "")
             footage = slide.get("footage", "")
+            footages = slide.get("footages") or []
 
             if not text:
                 self.error(f"Slide {num}: empty text")
@@ -97,7 +109,7 @@ class ReelReview:
                 self.warn(f"Slide {num}: no emphasis word set")
             elif emphasis.lower() not in text.lower():
                 self.warn(f"Slide {num}: emphasis '{emphasis}' not found in text")
-            if not footage:
+            if not footage and not footages:
                 self.error(f"Slide {num}: no footage path")
 
             # Check for bad characters
@@ -121,14 +133,17 @@ class ReelReview:
         """Verify all referenced footage files actually exist."""
         slides = self.config.get("slides", [])
         for i, slide in enumerate(slides):
-            footage = slide.get("footage", "")
-            if not footage:
-                continue
-            full_path = os.path.join(REMOTION_PUBLIC, footage)
-            if not os.path.exists(full_path):
-                self.error(f"Slide {i+1}: footage missing at {footage}")
-            elif os.path.getsize(full_path) < 10000:  # <10KB is suspicious
-                self.warn(f"Slide {i+1}: footage suspiciously small ({os.path.getsize(full_path)} bytes)")
+            paths = []
+            if slide.get("footage"):
+                paths.append(slide["footage"])
+            if slide.get("footages"):
+                paths.extend(slide["footages"])
+            for footage in paths:
+                full_path = os.path.join(REMOTION_PUBLIC, footage)
+                if not os.path.exists(full_path):
+                    self.error(f"Slide {i+1}: footage missing at {footage}")
+                elif os.path.getsize(full_path) < 10000:  # <10KB is suspicious
+                    self.warn(f"Slide {i+1}: footage suspiciously small ({os.path.getsize(full_path)} bytes)")
 
     def check_voiceover_sync(self):
         """Critical: verify video duration >= voiceover duration."""
@@ -233,6 +248,85 @@ class ReelReview:
         if len(first_line) > 150:
             self.warn(f"First line is {len(first_line)} chars - may get truncated in feed")
 
+    def check_rendered_frames(self):
+        """Sample one frame per slide from reel.mp4 and confirm it has b-roll.
+
+        This is the deterministic substitute for Agent 2 (reality_qa_reel.py)
+        — it catches the failure mode where multi-clip or single-clip slides
+        render with a pure-black background because the footage prop was
+        silently dropped or the file resolved to nothing. Runs without any
+        Anthropic dependency so it works when the API key is down.
+        """
+        reel_mp4 = os.path.join(self.reel_dir, "reel.mp4")
+        if not os.path.exists(reel_mp4):
+            return
+        if not FFMPEG_BIN or not os.path.exists(FFMPEG_BIN):
+            self.warn("ffmpeg not found — skipping rendered-frame brightness check")
+            return
+
+        slides = self.config.get("slides", [])
+        if not slides:
+            return
+
+        FPS = 30
+        TRANSITION_FRAMES = 15
+        sps = self.config.get("seconds_per_slide", 4)
+        frames_per_slide_fallback = sps * FPS
+
+        # Compute each slide's visible window midpoint in seconds, matching
+        # DailyReel's actual layout (transitions subtract 15f per gap).
+        cursor_frames = 0
+        slide_midpoints = []
+        for i, slide in enumerate(slides):
+            df = slide.get("durationFrames", frames_per_slide_fallback)
+            mid_frames = cursor_frames + df // 2
+            slide_midpoints.append(mid_frames / FPS)
+            cursor_frames += df
+            if i < len(slides) - 1:
+                cursor_frames -= TRANSITION_FRAMES
+
+        qa_dir = os.path.join(self.reel_dir, ".qa_frames")
+        os.makedirs(qa_dir, exist_ok=True)
+        for i, t in enumerate(slide_midpoints):
+            slide = slides[i]
+            has_footage = bool(slide.get("footage") or slide.get("footages"))
+            if not has_footage:
+                continue
+
+            frame_path = os.path.join(qa_dir, f"slide-{i+1}.jpg")
+            # signalstats writes YAVG (mean Y-plane brightness) to log via -f null
+            cmd = [
+                FFMPEG_BIN, "-hide_banner", "-loglevel", "info",
+                "-ss", f"{t:.3f}", "-i", reel_mp4,
+                "-vf", "select=eq(n\\,0),signalstats,metadata=print",
+                "-frames:v", "1", "-y", frame_path,
+            ]
+            proc = subprocess.run(cmd, capture_output=True, text=True)
+            # YAVG appears in stderr as "lavfi.signalstats.YAVG=<float>"
+            m = re.search(r"YAVG=([\d.]+)", proc.stderr or "")
+            if not m:
+                # Fall back: use ffmpeg's blackdetect on a 0.1s clip at midpoint
+                bd_cmd = [
+                    FFMPEG_BIN, "-hide_banner", "-loglevel", "info",
+                    "-ss", f"{t:.3f}", "-t", "0.1", "-i", reel_mp4,
+                    "-vf", "blackdetect=d=0.05:pic_th=0.95", "-f", "null", "-",
+                ]
+                bd = subprocess.run(bd_cmd, capture_output=True, text=True)
+                if "black_start" in (bd.stderr or ""):
+                    self.error(
+                        f"Slide {i+1}: rendered frame at t={t:.1f}s is mostly black — "
+                        f"b-roll did not paint. Check FootageBackground wiring."
+                    )
+                continue
+
+            yavg = float(m.group(1))
+            if yavg < BLACK_FRAME_BRIGHTNESS_FLOOR:
+                self.error(
+                    f"Slide {i+1}: rendered frame at t={t:.1f}s has mean brightness "
+                    f"{yavg:.1f} (<{BLACK_FRAME_BRIGHTNESS_FLOOR}) — b-roll likely missing. "
+                    f"Sample saved to {frame_path}."
+                )
+
     def check_bg_music(self):
         """Verify background music is set and exists."""
         bg = self.config.get("bg_music", "")
@@ -258,6 +352,7 @@ class ReelReview:
         self.check_branding()
         self.check_caption()
         self.check_bg_music()
+        self.check_rendered_frames()
 
         return self.errors, self.warnings
 

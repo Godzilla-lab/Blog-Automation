@@ -18,7 +18,8 @@ Turn a Twitter/X thread into a set of Instagram carousel slides (1080x1350 PNG i
 Ask the user or receive pasted text. If writing, use the voice/tone from CLAUDE.md.
 
 ### 2. Apply slide breakdown rules
-- Hook tweet (first) → own slide, always has an image
+- **Write the cover hook (slide 1) using `directives/carousel_hooks.md` — this is mandatory, not optional.** The cover decides whether the carousel is seen at all. NEVER open with a bare `[round stat] + [pain]` line (the old formula that got ~no views). Use an open-loop framework (story, hidden leak, contrarian, callout) and run the 3-second swipe test. Default vertical = law firms unless told otherwise.
+- Hook tweet (first) → own slide, always has an image (a pattern-interrupt visual, not generic smiling stock)
 - Tweets >200 chars or with images → own slide
 - Two consecutive short tweets (<150 chars each, no images) → combine on one slide with gray divider
 - Present the breakdown to the user for approval

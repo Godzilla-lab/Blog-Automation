@@ -8,10 +8,79 @@ import { FAQ } from './highlights/FAQ';
 import { BookACall } from './highlights/BookACall';
 import { Launch } from './reels/Launch';
 import { DailyReel, DailyReelProps, dailyReelDefaults } from './reels/DailyReel';
+import { SabiDashboard } from './explainer/SabiDashboard';
+import { SabiWorkflow } from './explainer/SabiWorkflow';
+import { SabiUiAd } from './explainer/SabiUiAd';
+import { SabiExplainer, EXPLAINER_FRAMES } from './explainer/SabiExplainer';
+import { SabiLogoReveal } from './explainer/SabiLogoReveal';
+import { SabiStory, STORY_FRAMES } from './explainer/SabiStory';
+import { SabiStoryVertical } from './explainer/SabiStoryVertical';
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* Sabi "One Story" — MacBook Apple-style explainer, 16:9, ~41s */}
+      <Composition
+        id="SabiStory"
+        component={SabiStory}
+        durationInFrames={STORY_FRAMES}
+        fps={30}
+        width={LANDSCAPE_WIDTH}
+        height={LANDSCAPE_HEIGHT}
+      />
+
+      {/* Sabi "One Story" — 9:16 vertical cut */}
+      <Composition
+        id="SabiStoryVertical"
+        component={SabiStoryVertical}
+        durationInFrames={STORY_FRAMES}
+        fps={30}
+        width={WIDTH}
+        height={HEIGHT}
+      />
+
+      {/* Sabi full explainer — 3 scenes + VO + ambient bed + SFX, 16:9, ~35s */}
+      <Composition
+        id="SabiExplainer"
+        component={SabiExplainer}
+        durationInFrames={EXPLAINER_FRAMES}
+        fps={30}
+        width={LANDSCAPE_WIDTH}
+        height={LANDSCAPE_HEIGHT}
+      />
+      {/* Sabi explainer scenes (standalone) */}
+      <Composition
+        id="SabiDashboard"
+        component={SabiDashboard}
+        durationInFrames={330}
+        fps={30}
+        width={LANDSCAPE_WIDTH}
+        height={LANDSCAPE_HEIGHT}
+      />
+      <Composition
+        id="SabiWorkflow"
+        component={SabiWorkflow}
+        durationInFrames={345}
+        fps={30}
+        width={LANDSCAPE_WIDTH}
+        height={LANDSCAPE_HEIGHT}
+      />
+      <Composition
+        id="SabiUiAd"
+        component={SabiUiAd}
+        durationInFrames={375}
+        fps={30}
+        width={LANDSCAPE_WIDTH}
+        height={LANDSCAPE_HEIGHT}
+      />
+      <Composition
+        id="SabiLogoReveal"
+        component={SabiLogoReveal}
+        durationInFrames={165}
+        fps={30}
+        width={LANDSCAPE_WIDTH}
+        height={LANDSCAPE_HEIGHT}
+      />
       {/* Daily Reel — 15-30s+, 9:16 portrait, props via --props flag */}
       <Composition
         id="DailyReel"

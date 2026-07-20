@@ -16,7 +16,9 @@ import { FootageBackground } from './FootageBackground';
 interface TalkingHeadSlideProps {
   text: string;
   emphasis?: string;
-  footageSrc: string;
+  footageSrc?: string;
+  footageSrcs?: string[];
+  durationInFrames?: number;
   accentColor: string;
   handle?: string;
 }
@@ -25,6 +27,8 @@ export const TalkingHeadSlide: React.FC<TalkingHeadSlideProps> = ({
   text,
   emphasis,
   footageSrc,
+  footageSrcs,
+  durationInFrames,
   accentColor,
   handle,
 }) => {
@@ -44,7 +48,11 @@ export const TalkingHeadSlide: React.FC<TalkingHeadSlideProps> = ({
   return (
     <AbsoluteFill style={{ backgroundColor: '#000000' }}>
       {/* Talking head footage — fills the frame */}
-      <FootageBackground src={footageSrc} />
+      <FootageBackground
+        src={footageSrc}
+        srcs={footageSrcs}
+        durationInFrames={durationInFrames}
+      />
 
       {/* Text banner — top portion */}
       <div

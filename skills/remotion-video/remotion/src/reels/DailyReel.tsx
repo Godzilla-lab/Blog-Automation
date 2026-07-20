@@ -28,7 +28,11 @@ const TRANSITION_FRAMES = 15; // 0.5s crossfade
 export interface SlideConfig {
   text: string;
   emphasis?: string;
-  footage: string;
+  /** Single footage clip (legacy / back-compat). Use `footages` for multi-clip slides. */
+  footage?: string;
+  /** Multi-clip slide: 2-3 footage paths that rotate evenly within the slide's window.
+   *  Recommended when the slide's voiceover segment is >6s so a single clip doesn't feel frozen. */
+  footages?: string[];
   type: 'broll' | 'talking_head' | 'cta';
   durationFrames?: number;
 }
@@ -169,6 +173,8 @@ export const DailyReel: React.FC<DailyReelProps> = ({
                 text={slide.text}
                 emphasis={slide.emphasis}
                 footageSrc={slide.footage}
+                footageSrcs={slide.footages}
+                durationInFrames={durationInFrames}
                 accentColor={accentColor}
                 handle={handle}
               />

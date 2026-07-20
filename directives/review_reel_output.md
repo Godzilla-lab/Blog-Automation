@@ -30,7 +30,7 @@ python3 execution/review_reel.py --date 2026-04-10
 ### Critical (errors - blocks delivery)
 - **File existence**: config.json, reel.mp4, caption.txt all present
 - **Audio sync**: voiceover duration <= video duration (the #1 recurring bug)
-- **Footage integrity**: every slide's footage file exists and isn't empty
+- **Footage integrity**: every slide's footage file exists and isn't empty. Slides may use either `footage` (single clip) or `footages` (array of clips for multi-clip slides > 6s); the reviewer validates whichever is present.
 - **Slide content**: no empty text, no em/en dashes
 - **Branding**: handle is @hexa_aiagency
 - **Hook quality**: no "Did you know" or weak openers

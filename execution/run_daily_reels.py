@@ -319,6 +319,43 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
                 voice_s = config["word_timestamps"][-1]["endMs"] / 1000
                 print(f"  Synced slides to voice: {total_frames/30:.2f}s reel for {voice_s:.2f}s voice")
 
+                # ---- Multi-clip slides: any slide whose voiceover segment is >6s
+                # gets a second Pexels clip so the visual doesn't sit on one frame.
+                # The renderer (FootageBackground) divides the slide window evenly
+                # between sub-clips. Threshold matches feedback_multi_clip_slides.md.
+                MULTI_CLIP_THRESHOLD_FRAMES = 180  # 6s @ 30fps
+                for i, slide in enumerate(config["slides"]):
+                    if slide.get("durationFrames", 0) <= MULTI_CLIP_THRESHOLD_FRAMES:
+                        continue
+                    query = slide.get("footage_query", slide.get("text", "business")[:30])
+                    clip_a = os.path.join(footage_dir, f"clip-{i+1}.mp4")
+                    clip_a_renamed = os.path.join(footage_dir, f"clip-{i+1}a.mp4")
+                    clip_b = os.path.join(footage_dir, f"clip-{i+1}b.mp4")
+                    if not os.path.exists(clip_a):
+                        continue  # primary clip missing — skip variant
+                    if not os.path.exists(clip_a_renamed):
+                        os.rename(clip_a, clip_a_renamed)
+                    if not os.path.exists(clip_b):
+                        run_step(
+                            f"[Reel {index+1}] Slide {i+1} is {slide['durationFrames']/30:.1f}s — "
+                            f"downloading 2nd clip for visual variety",
+                            ["python3", os.path.join(script_dir, "download_pexels_video.py"),
+                             "--query", query, "--output", footage_dir,
+                             "--filename", f"clip-{i+1}b.mp4",
+                             "--orientation", "portrait"],
+                        )
+                    if os.path.exists(clip_b):
+                        slide.pop("footage", None)
+                        slide["footages"] = [
+                            f"reels/{today}-{slug}/clip-{i+1}a.mp4",
+                            f"reels/{today}-{slug}/clip-{i+1}b.mp4",
+                        ]
+                    else:
+                        # 2nd clip didn't land — keep single-clip path with rename undone
+                        if os.path.exists(clip_a_renamed) and not os.path.exists(clip_a):
+                            os.rename(clip_a_renamed, clip_a)
+                        slide["footage"] = f"reels/{today}-{slug}/clip-{i+1}.mp4"
+
     # Pick background music based on reel type (randomly from available tracks per mood)
     BG_MUSIC_MAP = {
         "pas": "bg-dramatic",         # problem-agitation-solution: serious tone
@@ -414,12 +451,18 @@ def generate_one_reel(index: int, niche: str, reel_type: str, topic: str, output
                 if not slide:
                     continue
                 query = slide.get("footage_query", slide.get("text", "business")[:30])
-                # Re-download (Pexels rotates, so a fresh search picks a different clip)
+                # Multi-clip slide? Swap the FIRST clip in the array (clip-Na.mp4);
+                # the second (clip-Nb.mp4) stays so we don't waste credits.
+                # Single-clip slide? Swap the legacy clip-N.mp4 in place.
+                if slide.get("footages"):
+                    swap_filename = f"clip-{slide_idx}a.mp4"
+                else:
+                    swap_filename = f"clip-{slide_idx}.mp4"
                 run_step(
-                    f"[Reel {index+1}] Re-downloading footage for slide {slide_idx}: '{query}'",
+                    f"[Reel {index+1}] Re-downloading footage for slide {slide_idx} ({swap_filename}): '{query}'",
                     ["python3", os.path.join(script_dir, "download_pexels_video.py"),
                      "--query", query, "--output", footage_dir,
-                     "--filename", f"clip-{slide_idx}.mp4",
+                     "--filename", swap_filename,
                      "--orientation", "portrait"],
                 )
 

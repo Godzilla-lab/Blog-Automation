@@ -1,0 +1,210 @@
+{
+  "_comment": "Concept N: VARIED offer phrasing opener. 'Got a product to sell? Drop your link, we send back a free hyper-real ad.' Female voice.",
+  "slides": [
+    {
+      "text": "Got a product to sell?",
+      "emphasis": "product",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 56
+    },
+    {
+      "text": "Drop your link. Free sample.",
+      "emphasis": "Free",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 111
+    },
+    {
+      "text": "No card. No studio.",
+      "emphasis": "No card",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-10-showreel.mp4",
+      "durationFrames": 111
+    },
+    {
+      "text": "From your photo. 48 hours.",
+      "emphasis": "48",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 127
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 68
+    }
+  ],
+  "voiceover_script": "[firm]Got a product to sell? [punchy]Drop your link, we send back a free hyper-real ad. [deliberate]No card. No studio. No shoot day. [building]Cinematic. AI. From one of your photos. [warm]Free sample below.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-corporate.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/n-opener-varied/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "Got",
+      "startMs": 0,
+      "endMs": 240
+    },
+    {
+      "word": "a",
+      "startMs": 280,
+      "endMs": 320
+    },
+    {
+      "word": "product",
+      "startMs": 360,
+      "endMs": 640
+    },
+    {
+      "word": "to",
+      "startMs": 667,
+      "endMs": 720
+    },
+    {
+      "word": "sell?",
+      "startMs": 800,
+      "endMs": 1360
+    },
+    {
+      "word": "Drop",
+      "startMs": 1480,
+      "endMs": 1763
+    },
+    {
+      "word": "your",
+      "startMs": 1795,
+      "endMs": 1923
+    },
+    {
+      "word": "link,",
+      "startMs": 1987,
+      "endMs": 2403
+    },
+    {
+      "word": "we",
+      "startMs": 2456,
+      "endMs": 2563
+    },
+    {
+      "word": "send",
+      "startMs": 2627,
+      "endMs": 2883
+    },
+    {
+      "word": "back",
+      "startMs": 2931,
+      "endMs": 3123
+    },
+    {
+      "word": "a",
+      "startMs": 3163,
+      "endMs": 3203
+    },
+    {
+      "word": "free",
+      "startMs": 3267,
+      "endMs": 3523
+    },
+    {
+      "word": "hyper-real",
+      "startMs": 3590,
+      "endMs": 4163
+    },
+    {
+      "word": "ad.",
+      "startMs": 4270,
+      "endMs": 4563
+    },
+    {
+      "word": "No",
+      "startMs": 4803,
+      "endMs": 5123
+    },
+    {
+      "word": "card.",
+      "startMs": 5235,
+      "endMs": 5843
+    },
+    {
+      "word": "No",
+      "startMs": 5896,
+      "endMs": 6003
+    },
+    {
+      "word": "studio.",
+      "startMs": 6094,
+      "endMs": 6843
+    },
+    {
+      "word": "No",
+      "startMs": 6910,
+      "endMs": 7043
+    },
+    {
+      "word": "shoot",
+      "startMs": 7110,
+      "endMs": 7443
+    },
+    {
+      "word": "day.",
+      "startMs": 7503,
+      "endMs": 7763
+    },
+    {
+      "word": "Cinematic.",
+      "startMs": 8042,
+      "endMs": 9363
+    },
+    {
+      "word": "AI.",
+      "startMs": 9496,
+      "endMs": 10003
+    },
+    {
+      "word": "From",
+      "startMs": 10051,
+      "endMs": 10243
+    },
+    {
+      "word": "one",
+      "startMs": 10283,
+      "endMs": 10403
+    },
+    {
+      "word": "of",
+      "startMs": 10430,
+      "endMs": 10483
+    },
+    {
+      "word": "your",
+      "startMs": 10515,
+      "endMs": 10643
+    },
+    {
+      "word": "photos.",
+      "startMs": 10723,
+      "endMs": 11483
+    },
+    {
+      "word": "Free",
+      "startMs": 11623,
+      "endMs": 11923
+    },
+    {
+      "word": "sample",
+      "startMs": 11980,
+      "endMs": 12323
+    },
+    {
+      "word": "below.",
+      "startMs": 12403,
+      "endMs": 12963
+    }
+  ]
+}

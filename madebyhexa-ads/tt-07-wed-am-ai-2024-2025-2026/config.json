@@ -1,0 +1,191 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-07-wed-am-ai-2024-2025-2026. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "am",
+    "comment_keyword": "SAMPLE",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/07-wed-am-ai-2024-2025-2026.md"
+  },
+  "slides": [
+    {
+      "text": "AI in 2024.",
+      "emphasis": "2024",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-23-showreel.mp4",
+      "durationFrames": 89
+    },
+    {
+      "text": "AI in 2025.",
+      "emphasis": "2025",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-21-showreel.mp4",
+      "durationFrames": 87
+    },
+    {
+      "text": "AI in 2026.",
+      "emphasis": "2026",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 101
+    },
+    {
+      "text": "Same product. One photo.",
+      "emphasis": "One photo",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 94
+    },
+    {
+      "text": "$59. 48 hours.",
+      "emphasis": "$59",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 109
+    },
+    {
+      "text": "Comment SAMPLE \u2193",
+      "emphasis": "SAMPLE",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 101
+    }
+  ],
+  "voiceover_script": "[firm]AI video in 2024. AI video in 2025. AI video in 2026. [deliberate]Same product. One photo. [punchy]Fifty-nine dollars. Forty-eight hours. [warm]Comment SAMPLE for yours.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "SAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-dramatic.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-07-wed-am-ai-2024-2025-2026/voiceover.mp3",
+  "_end_word_indices": [
+    3,
+    7,
+    11,
+    15,
+    19,
+    23
+  ],
+  "word_timestamps": [
+    {
+      "word": "AI",
+      "startMs": 0,
+      "endMs": 320
+    },
+    {
+      "word": "video",
+      "startMs": 387,
+      "endMs": 720
+    },
+    {
+      "word": "in",
+      "startMs": 800,
+      "endMs": 960
+    },
+    {
+      "word": "2024.",
+      "startMs": 1040,
+      "endMs": 2480
+    },
+    {
+      "word": "AI",
+      "startMs": 2667,
+      "endMs": 3040
+    },
+    {
+      "word": "video",
+      "startMs": 3107,
+      "endMs": 3440
+    },
+    {
+      "word": "in",
+      "startMs": 3520,
+      "endMs": 3680
+    },
+    {
+      "word": "2025.",
+      "startMs": 3760,
+      "endMs": 4880
+    },
+    {
+      "word": "AI",
+      "startMs": 5200,
+      "endMs": 5840
+    },
+    {
+      "word": "video",
+      "startMs": 5920,
+      "endMs": 6320
+    },
+    {
+      "word": "in",
+      "startMs": 6373,
+      "endMs": 6480
+    },
+    {
+      "word": "2026.",
+      "startMs": 6640,
+      "endMs": 7760
+    },
+    {
+      "word": "Same",
+      "startMs": 8240,
+      "endMs": 8881
+    },
+    {
+      "word": "product.",
+      "startMs": 8941,
+      "endMs": 9441
+    },
+    {
+      "word": "One",
+      "startMs": 9521,
+      "endMs": 9761
+    },
+    {
+      "word": "photo.",
+      "startMs": 9854,
+      "endMs": 10401
+    },
+    {
+      "word": "Fifty-nine",
+      "startMs": 10601,
+      "endMs": 11205
+    },
+    {
+      "word": "dollars.",
+      "startMs": 11285,
+      "endMs": 12085
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 12125,
+      "endMs": 12485
+    },
+    {
+      "word": "hours.",
+      "startMs": 12592,
+      "endMs": 13525
+    },
+    {
+      "word": "Comment",
+      "startMs": 13725,
+      "endMs": 14248
+    },
+    {
+      "word": "SAMPLE",
+      "startMs": 14374,
+      "endMs": 15128
+    },
+    {
+      "word": "for",
+      "startMs": 15188,
+      "endMs": 15368
+    },
+    {
+      "word": "yours.",
+      "startMs": 15461,
+      "endMs": 16088
+    }
+  ]
+}

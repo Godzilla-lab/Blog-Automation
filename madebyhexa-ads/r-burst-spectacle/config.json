@@ -1,0 +1,158 @@
+{
+  "_comment": "Concept R: DEMONSTRATION/SPECTACLE hook cloned from Burst Creatine (575-day live winner, top 1% longevity). Math-equals-spectacle pattern: 'X + Y = absurd-volume result'.",
+  "_modeled_after": {
+    "ad_id": "2559024980964576",
+    "page_name": "Burst Creatine",
+    "days_active": 575,
+    "library_url": "https://www.facebook.com/ads/library/?id=2559024980964576",
+    "archetype": "demonstration",
+    "analyzed_on": "2026-06-18"
+  },
+  "slides": [
+    {
+      "text": "One product photo.",
+      "emphasis": "One",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 58
+    },
+    {
+      "text": "Plus 48 hours.",
+      "emphasis": "48",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-34-hyper-motion.mp4",
+      "durationFrames": 76
+    },
+    {
+      "text": "Equals this.",
+      "emphasis": "this",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 60
+    },
+    {
+      "text": "A $8,000 product ad. For $59.",
+      "emphasis": "$59",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 137
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 82
+    }
+  ],
+  "voiceover_script": "[firm]One product photo. [punchy]Plus forty-eight hours. [building]Equals this. [deliberate]An eight thousand dollar product ad. For fifty-nine dollars. [warm]Free sample below.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-upbeat-2.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/r-burst-spectacle/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "One",
+      "startMs": 0,
+      "endMs": 320
+    },
+    {
+      "word": "product",
+      "startMs": 400,
+      "endMs": 960
+    },
+    {
+      "word": "photo.",
+      "startMs": 1027,
+      "endMs": 1440
+    },
+    {
+      "word": "Plus",
+      "startMs": 1600,
+      "endMs": 2083
+    },
+    {
+      "word": "forty-eight",
+      "startMs": 2163,
+      "endMs": 2643
+    },
+    {
+      "word": "hours.",
+      "startMs": 2750,
+      "endMs": 3483
+    },
+    {
+      "word": "Equals",
+      "startMs": 3583,
+      "endMs": 4089
+    },
+    {
+      "word": "this.",
+      "startMs": 4217,
+      "endMs": 4969
+    },
+    {
+      "word": "An",
+      "startMs": 5089,
+      "endMs": 5289
+    },
+    {
+      "word": "eight",
+      "startMs": 5329,
+      "endMs": 5529
+    },
+    {
+      "word": "thousand",
+      "startMs": 5573,
+      "endMs": 5929
+    },
+    {
+      "word": "dollar",
+      "startMs": 5975,
+      "endMs": 6249
+    },
+    {
+      "word": "product",
+      "startMs": 6309,
+      "endMs": 6729
+    },
+    {
+      "word": "ad.",
+      "startMs": 6836,
+      "endMs": 7129
+    },
+    {
+      "word": "For",
+      "startMs": 7249,
+      "endMs": 7609
+    },
+    {
+      "word": "fifty-nine",
+      "startMs": 7689,
+      "endMs": 8329
+    },
+    {
+      "word": "dollars.",
+      "startMs": 8419,
+      "endMs": 9049
+    },
+    {
+      "word": "Free",
+      "startMs": 9489,
+      "endMs": 10089
+    },
+    {
+      "word": "sample",
+      "startMs": 10135,
+      "endMs": 10409
+    },
+    {
+      "word": "below.",
+      "startMs": 10476,
+      "endMs": 10969
+    }
+  ]
+}

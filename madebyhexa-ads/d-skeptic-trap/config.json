@@ -1,0 +1,216 @@
+{
+  "_comment": "Concept D: Skeptic Trap. 1.5s silent intro (slide 1 empty text). Then 'Bet you think this is real' \u2192 'It's 100% AI' payoff.",
+  "slides": [
+    {
+      "text": "",
+      "type": "broll",
+      "durationFrames": 45,
+      "footage": "madebyhexa-ads/videos/portfolio-35-ugc.mp4"
+    },
+    {
+      "text": "Bet you think this is real.",
+      "emphasis": "real",
+      "type": "broll",
+      "durationFrames": 61,
+      "footage": "madebyhexa-ads/videos/portfolio-05-showreel.mp4"
+    },
+    {
+      "text": "It's 100% AI.",
+      "emphasis": "100%",
+      "type": "broll",
+      "durationFrames": 73,
+      "footage": "madebyhexa-ads/videos/portfolio-28-photo-to-video.mp4"
+    },
+    {
+      "text": "From one photo.",
+      "emphasis": "photo",
+      "type": "broll",
+      "durationFrames": 56,
+      "footage": "madebyhexa-ads/videos/portfolio-33-ai-photos.mp4"
+    },
+    {
+      "text": "48 hours. No studio.",
+      "emphasis": "48",
+      "type": "broll",
+      "durationFrames": 82,
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4"
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "durationFrames": 144,
+      "footage": "madebyhexa-ads/videos/portfolio-23-showreel.mp4"
+    }
+  ],
+  "voiceover_script": "[silent 1.5s] [curious]Bet you think this is real. [punchy]It's one hundred percent AI. [deliberate]Made from one photo. [firm]Forty-eight hours. No studio. [warm]See what your product looks like as a cinematic ad. Free sample below.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-corporate-2.mp3",
+  "bg_music_volume": 0.08,
+  "voiceover": "madebyhexa-ads/d-skeptic-trap/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "Bet",
+      "startMs": 1500,
+      "endMs": 1663
+    },
+    {
+      "word": "you",
+      "startMs": 1703,
+      "endMs": 1823
+    },
+    {
+      "word": "think",
+      "startMs": 1863,
+      "endMs": 2063
+    },
+    {
+      "word": "this",
+      "startMs": 2095,
+      "endMs": 2223
+    },
+    {
+      "word": "is",
+      "startMs": 2276,
+      "endMs": 2382
+    },
+    {
+      "word": "real.",
+      "startMs": 2462,
+      "endMs": 2942
+    },
+    {
+      "word": "It's",
+      "startMs": 3022,
+      "endMs": 3342
+    },
+    {
+      "word": "one",
+      "startMs": 3362,
+      "endMs": 3422
+    },
+    {
+      "word": "hundred",
+      "startMs": 3462,
+      "endMs": 3742
+    },
+    {
+      "word": "percent",
+      "startMs": 3792,
+      "endMs": 4142
+    },
+    {
+      "word": "AI.",
+      "startMs": 4329,
+      "endMs": 4863
+    },
+    {
+      "word": "Made",
+      "startMs": 4943,
+      "endMs": 5101
+    },
+    {
+      "word": "from",
+      "startMs": 5149,
+      "endMs": 5341
+    },
+    {
+      "word": "one",
+      "startMs": 5401,
+      "endMs": 5581
+    },
+    {
+      "word": "photo.",
+      "startMs": 5661,
+      "endMs": 6141
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 6301,
+      "endMs": 6779
+    },
+    {
+      "word": "hours.",
+      "startMs": 6846,
+      "endMs": 7581
+    },
+    {
+      "word": "No",
+      "startMs": 7634,
+      "endMs": 7740
+    },
+    {
+      "word": "studio.",
+      "startMs": 7809,
+      "endMs": 8303
+    },
+    {
+      "word": "See",
+      "startMs": 8543,
+      "endMs": 8944
+    },
+    {
+      "word": "what",
+      "startMs": 8960,
+      "endMs": 9024
+    },
+    {
+      "word": "your",
+      "startMs": 9056,
+      "endMs": 9184
+    },
+    {
+      "word": "product",
+      "startMs": 9234,
+      "endMs": 9584
+    },
+    {
+      "word": "looks",
+      "startMs": 9611,
+      "endMs": 9746
+    },
+    {
+      "word": "like",
+      "startMs": 9794,
+      "endMs": 9986
+    },
+    {
+      "word": "as",
+      "startMs": 10013,
+      "endMs": 10067
+    },
+    {
+      "word": "a",
+      "startMs": 10107,
+      "endMs": 10147
+    },
+    {
+      "word": "cinematic",
+      "startMs": 10203,
+      "endMs": 10707
+    },
+    {
+      "word": "ad.",
+      "startMs": 10814,
+      "endMs": 11108
+    },
+    {
+      "word": "Free",
+      "startMs": 11204,
+      "endMs": 11588
+    },
+    {
+      "word": "sample",
+      "startMs": 11634,
+      "endMs": 11910
+    },
+    {
+      "word": "below.",
+      "startMs": 11963,
+      "endMs": 12548
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-16-sat-am-which-is-real-challenge. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "am",
+    "comment_keyword": "SAMPLE",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/16-sat-am-which-is-real-challenge.md"
+  },
+  "slides": [
+    {
+      "text": "Which is real?",
+      "emphasis": "real",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-15-showreel.mp4",
+      "durationFrames": 38
+    },
+    {
+      "text": "Guess below \u2193",
+      "emphasis": "Guess",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 127
+    },
+    {
+      "text": "Two were AI. From one photo.",
+      "emphasis": "one photo",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 110
+    },
+    {
+      "text": "48 hours. $59.",
+      "emphasis": "$59",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 123
+    },
+    {
+      "text": "Comment SAMPLE \u2193",
+      "emphasis": "SAMPLE",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 85
+    }
+  ],
+  "voiceover_script": "[curious]Which one is real? [deliberate]Take a guess. Drop your answer below. [punchy]Two of these were made from one photo. Forty-eight hours. Fifty-nine dollars. [warm]Comment SAMPLE for yours.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "SAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-dramatic-2.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-16-sat-am-which-is-real-challenge/voiceover.mp3",
+  "_end_word_indices": [
+    3,
+    10,
+    18,
+    22,
+    26
+  ],
+  "word_timestamps": [
+    {
+      "word": "Which",
+      "startMs": 0,
+      "endMs": 208
+    },
+    {
+      "word": "one",
+      "startMs": 219,
+      "endMs": 280
+    },
+    {
+      "word": "is",
+      "startMs": 320,
+      "endMs": 400
+    },
+    {
+      "word": "real?",
+      "startMs": 453,
+      "endMs": 752
+    },
+    {
+      "word": "Take",
+      "startMs": 816,
+      "endMs": 2161
+    },
+    {
+      "word": "a",
+      "startMs": 2201,
+      "endMs": 2241
+    },
+    {
+      "word": "guess.",
+      "startMs": 2321,
+      "endMs": 2921
+    },
+    {
+      "word": "Drop",
+      "startMs": 2961,
+      "endMs": 3121
+    },
+    {
+      "word": "your",
+      "startMs": 3153,
+      "endMs": 3281
+    },
+    {
+      "word": "answer",
+      "startMs": 3327,
+      "endMs": 3601
+    },
+    {
+      "word": "below.",
+      "startMs": 3681,
+      "endMs": 4481
+    },
+    {
+      "word": "Two",
+      "startMs": 4681,
+      "endMs": 5041
+    },
+    {
+      "word": "of",
+      "startMs": 5094,
+      "endMs": 5201
+    },
+    {
+      "word": "these",
+      "startMs": 5254,
+      "endMs": 5521
+    },
+    {
+      "word": "were",
+      "startMs": 5553,
+      "endMs": 5681
+    },
+    {
+      "word": "made",
+      "startMs": 5745,
+      "endMs": 6001
+    },
+    {
+      "word": "from",
+      "startMs": 6049,
+      "endMs": 6241
+    },
+    {
+      "word": "one",
+      "startMs": 6321,
+      "endMs": 6561
+    },
+    {
+      "word": "photo.",
+      "startMs": 6641,
+      "endMs": 7641
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 7741,
+      "endMs": 8401
+    },
+    {
+      "word": "hours.",
+      "startMs": 8508,
+      "endMs": 9041
+    },
+    {
+      "word": "Fifty-nine",
+      "startMs": 9174,
+      "endMs": 10081
+    },
+    {
+      "word": "dollars.",
+      "startMs": 10171,
+      "endMs": 11241
+    },
+    {
+      "word": "Comment",
+      "startMs": 11461,
+      "endMs": 12001
+    },
+    {
+      "word": "SAMPLE",
+      "startMs": 12070,
+      "endMs": 12481
+    },
+    {
+      "word": "for",
+      "startMs": 12521,
+      "endMs": 12641
+    },
+    {
+      "word": "yours.",
+      "startMs": 12734,
+      "endMs": 13281
+    }
+  ]
+}

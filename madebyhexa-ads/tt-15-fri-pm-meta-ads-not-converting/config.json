@@ -1,0 +1,421 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-15-fri-pm-meta-ads-not-converting. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "pm",
+    "comment_keyword": "$59",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/15-fri-pm-meta-ads-not-converting.md"
+  },
+  "slides": [
+    {
+      "text": "Meta ads not converting?",
+      "emphasis": "not converting",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-25-lip-sync.mp4",
+      "durationFrames": 166
+    },
+    {
+      "text": "Algo wants new creative every 5-7 days.",
+      "emphasis": "5-7",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-21-showreel.mp4",
+      "durationFrames": 142
+    },
+    {
+      "text": "10 variants minimum.",
+      "emphasis": "10",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 152
+    },
+    {
+      "text": "$80K studio. $590 Hexa.",
+      "emphasis": "$590",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 267
+    },
+    {
+      "text": "Same answer. Different cost.",
+      "emphasis": "Different",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-15-showreel.mp4",
+      "durationFrames": 70
+    },
+    {
+      "text": "Comment $59 \u2193",
+      "emphasis": "$59",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 74
+    }
+  ],
+  "voiceover_script": "[firm]Your Meta ads aren't converting. It's not the targeting. It's the creative. Here's why. [deliberate]Meta's algorithm rewards new creative every five to seven days. [punchy]You can't ship one ad and scale it. You need ten variants minimum to find the winner. [building]At eight thousand dollars per variant, you're spending eighty thousand to find one winner. [grounded]At fifty-nine dollars, you spend five hundred and ninety. [warm]Same answer. Different cost. Comment fifty-nine.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "59",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-corporate-3.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-15-fri-pm-meta-ads-not-converting/voiceover.mp3",
+  "_end_word_indices": [
+    13,
+    23,
+    40,
+    63,
+    67,
+    69
+  ],
+  "word_timestamps": [
+    {
+      "word": "Your",
+      "startMs": 0,
+      "endMs": 160
+    },
+    {
+      "word": "Meta",
+      "startMs": 208,
+      "endMs": 400
+    },
+    {
+      "word": "ads",
+      "startMs": 480,
+      "endMs": 720
+    },
+    {
+      "word": "aren't",
+      "startMs": 752,
+      "endMs": 960
+    },
+    {
+      "word": "converting.",
+      "startMs": 1010,
+      "endMs": 1840
+    },
+    {
+      "word": "It's",
+      "startMs": 1867,
+      "endMs": 2000
+    },
+    {
+      "word": "not",
+      "startMs": 2040,
+      "endMs": 2160
+    },
+    {
+      "word": "the",
+      "startMs": 2180,
+      "endMs": 2240
+    },
+    {
+      "word": "targeting.",
+      "startMs": 2296,
+      "endMs": 3120
+    },
+    {
+      "word": "It's",
+      "startMs": 3147,
+      "endMs": 3280
+    },
+    {
+      "word": "the",
+      "startMs": 3300,
+      "endMs": 3360
+    },
+    {
+      "word": "creative.",
+      "startMs": 3431,
+      "endMs": 4280
+    },
+    {
+      "word": "Here's",
+      "startMs": 4336,
+      "endMs": 4640
+    },
+    {
+      "word": "why.",
+      "startMs": 4720,
+      "endMs": 5040
+    },
+    {
+      "word": "Meta's",
+      "startMs": 5280,
+      "endMs": 5841
+    },
+    {
+      "word": "algorithm",
+      "startMs": 5897,
+      "endMs": 6401
+    },
+    {
+      "word": "rewards",
+      "startMs": 6451,
+      "endMs": 6801
+    },
+    {
+      "word": "new",
+      "startMs": 6841,
+      "endMs": 6961
+    },
+    {
+      "word": "creative",
+      "startMs": 7023,
+      "endMs": 7521
+    },
+    {
+      "word": "every",
+      "startMs": 7561,
+      "endMs": 7761
+    },
+    {
+      "word": "five",
+      "startMs": 7825,
+      "endMs": 8080
+    },
+    {
+      "word": "to",
+      "startMs": 8161,
+      "endMs": 8321
+    },
+    {
+      "word": "seven",
+      "startMs": 8348,
+      "endMs": 8481
+    },
+    {
+      "word": "days.",
+      "startMs": 8561,
+      "endMs": 9280
+    },
+    {
+      "word": "You",
+      "startMs": 9281,
+      "endMs": 9366
+    },
+    {
+      "word": "can't",
+      "startMs": 9406,
+      "endMs": 9606
+    },
+    {
+      "word": "ship",
+      "startMs": 9654,
+      "endMs": 9846
+    },
+    {
+      "word": "one",
+      "startMs": 9906,
+      "endMs": 10086
+    },
+    {
+      "word": "ad",
+      "startMs": 10219,
+      "endMs": 10486
+    },
+    {
+      "word": "and",
+      "startMs": 10506,
+      "endMs": 10566
+    },
+    {
+      "word": "scale",
+      "startMs": 10619,
+      "endMs": 10886
+    },
+    {
+      "word": "it.",
+      "startMs": 10939,
+      "endMs": 11286
+    },
+    {
+      "word": "You",
+      "startMs": 11306,
+      "endMs": 11366
+    },
+    {
+      "word": "need",
+      "startMs": 11414,
+      "endMs": 11606
+    },
+    {
+      "word": "ten",
+      "startMs": 11666,
+      "endMs": 11846
+    },
+    {
+      "word": "variants",
+      "startMs": 11899,
+      "endMs": 12326
+    },
+    {
+      "word": "minimum",
+      "startMs": 12376,
+      "endMs": 12726
+    },
+    {
+      "word": "to",
+      "startMs": 12779,
+      "endMs": 12886
+    },
+    {
+      "word": "find",
+      "startMs": 12934,
+      "endMs": 13126
+    },
+    {
+      "word": "the",
+      "startMs": 13146,
+      "endMs": 13206
+    },
+    {
+      "word": "winner.",
+      "startMs": 13263,
+      "endMs": 13846
+    },
+    {
+      "word": "At",
+      "startMs": 13966,
+      "endMs": 14246
+    },
+    {
+      "word": "eight",
+      "startMs": 14259,
+      "endMs": 14326
+    },
+    {
+      "word": "thousand",
+      "startMs": 14370,
+      "endMs": 14726
+    },
+    {
+      "word": "dollars",
+      "startMs": 14776,
+      "endMs": 15126
+    },
+    {
+      "word": "per",
+      "startMs": 15146,
+      "endMs": 15206
+    },
+    {
+      "word": "variant,",
+      "startMs": 15266,
+      "endMs": 15926
+    },
+    {
+      "word": "you're",
+      "startMs": 15946,
+      "endMs": 16085
+    },
+    {
+      "word": "spending",
+      "startMs": 16139,
+      "endMs": 16566
+    },
+    {
+      "word": "eighty",
+      "startMs": 16600,
+      "endMs": 16806
+    },
+    {
+      "word": "thousand",
+      "startMs": 16859,
+      "endMs": 17286
+    },
+    {
+      "word": "to",
+      "startMs": 17366,
+      "endMs": 17526
+    },
+    {
+      "word": "find",
+      "startMs": 17590,
+      "endMs": 17846
+    },
+    {
+      "word": "one",
+      "startMs": 17926,
+      "endMs": 18166
+    },
+    {
+      "word": "winner.",
+      "startMs": 18223,
+      "endMs": 18646
+    },
+    {
+      "word": "At",
+      "startMs": 18926,
+      "endMs": 19372
+    },
+    {
+      "word": "fifty-nine",
+      "startMs": 19412,
+      "endMs": 19772
+    },
+    {
+      "word": "dollars,",
+      "startMs": 19822,
+      "endMs": 20332
+    },
+    {
+      "word": "you",
+      "startMs": 20352,
+      "endMs": 20412
+    },
+    {
+      "word": "spend",
+      "startMs": 20465,
+      "endMs": 20732
+    },
+    {
+      "word": "five",
+      "startMs": 20780,
+      "endMs": 20972
+    },
+    {
+      "word": "hundred",
+      "startMs": 21002,
+      "endMs": 21212
+    },
+    {
+      "word": "and",
+      "startMs": 21252,
+      "endMs": 21372
+    },
+    {
+      "word": "ninety.",
+      "startMs": 21418,
+      "endMs": 22252
+    },
+    {
+      "word": "Same",
+      "startMs": 22265,
+      "endMs": 22492
+    },
+    {
+      "word": "answer.",
+      "startMs": 22561,
+      "endMs": 23252
+    },
+    {
+      "word": "Different",
+      "startMs": 23280,
+      "endMs": 23532
+    },
+    {
+      "word": "cost.",
+      "startMs": 23628,
+      "endMs": 24092
+    },
+    {
+      "word": "Comment",
+      "startMs": 24182,
+      "endMs": 24812
+    },
+    {
+      "word": "fifty-nine.",
+      "startMs": 24879,
+      "endMs": 25772
+    }
+  ]
+}

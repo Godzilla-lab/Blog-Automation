@@ -1,0 +1,142 @@
+[
+  {
+    "word": "One",
+    "startMs": 0,
+    "endMs": 240
+  },
+  {
+    "word": "of",
+    "startMs": 293,
+    "endMs": 400
+  },
+  {
+    "word": "these",
+    "startMs": 440,
+    "endMs": 640
+  },
+  {
+    "word": "is",
+    "startMs": 693,
+    "endMs": 800
+  },
+  {
+    "word": "real.",
+    "startMs": 880,
+    "endMs": 1640
+  },
+  {
+    "word": "Three",
+    "startMs": 1713,
+    "endMs": 2080
+  },
+  {
+    "word": "are",
+    "startMs": 2180,
+    "endMs": 2480
+  },
+  {
+    "word": "AI.",
+    "startMs": 2640,
+    "endMs": 3040
+  },
+  {
+    "word": "Which",
+    "startMs": 3173,
+    "endMs": 3840
+  },
+  {
+    "word": "one?",
+    "startMs": 3920,
+    "endMs": 4600
+  },
+  {
+    "word": "The",
+    "startMs": 4820,
+    "endMs": 5120
+  },
+  {
+    "word": "answer",
+    "startMs": 5166,
+    "endMs": 5440
+  },
+  {
+    "word": "is",
+    "startMs": 5520,
+    "endMs": 5680
+  },
+  {
+    "word": "in",
+    "startMs": 5733,
+    "endMs": 5840
+  },
+  {
+    "word": "the",
+    "startMs": 5860,
+    "endMs": 5920
+  },
+  {
+    "word": "comments.",
+    "startMs": 5982,
+    "endMs": 6560
+  },
+  {
+    "word": "All",
+    "startMs": 7160,
+    "endMs": 7920
+  },
+  {
+    "word": "three",
+    "startMs": 7973,
+    "endMs": 8240
+  },
+  {
+    "word": "AI",
+    "startMs": 8373,
+    "endMs": 8640
+  },
+  {
+    "word": "ones",
+    "startMs": 8704,
+    "endMs": 8960
+  },
+  {
+    "word": "cost",
+    "startMs": 9008,
+    "endMs": 9200
+  },
+  {
+    "word": "fifty-nine",
+    "startMs": 9253,
+    "endMs": 9680
+  },
+  {
+    "word": "dollars",
+    "startMs": 9730,
+    "endMs": 10080
+  },
+  {
+    "word": "each.",
+    "startMs": 10160,
+    "endMs": 10720
+  },
+  {
+    "word": "Comment",
+    "startMs": 10840,
+    "endMs": 11200
+  },
+  {
+    "word": "SAMPLE",
+    "startMs": 11269,
+    "endMs": 11680
+  },
+  {
+    "word": "for",
+    "startMs": 11740,
+    "endMs": 11920
+  },
+  {
+    "word": "yours.",
+    "startMs": 12000,
+    "endMs": 12560
+  }
+]

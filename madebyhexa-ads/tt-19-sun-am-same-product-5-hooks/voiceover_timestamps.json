@@ -1,0 +1,107 @@
+[
+  {
+    "word": "One",
+    "startMs": 0,
+    "endMs": 320
+  },
+  {
+    "word": "product.",
+    "startMs": 390,
+    "endMs": 1120
+  },
+  {
+    "word": "Five",
+    "startMs": 1168,
+    "endMs": 1360
+  },
+  {
+    "word": "ads.",
+    "startMs": 1480,
+    "endMs": 2080
+  },
+  {
+    "word": "Five",
+    "startMs": 2128,
+    "endMs": 2320
+  },
+  {
+    "word": "hooks.",
+    "startMs": 2400,
+    "endMs": 3040
+  },
+  {
+    "word": "All",
+    "startMs": 3100,
+    "endMs": 3280
+  },
+  {
+    "word": "AI.",
+    "startMs": 3440,
+    "endMs": 3840
+  },
+  {
+    "word": "Same",
+    "startMs": 4120,
+    "endMs": 4560
+  },
+  {
+    "word": "photo.",
+    "startMs": 4640,
+    "endMs": 5240
+  },
+  {
+    "word": "Five",
+    "startMs": 5280,
+    "endMs": 5440
+  },
+  {
+    "word": "variants.",
+    "startMs": 5511,
+    "endMs": 6320
+  },
+  {
+    "word": "Forty-eight",
+    "startMs": 6360,
+    "endMs": 6640
+  },
+  {
+    "word": "hours.",
+    "startMs": 6720,
+    "endMs": 7280
+  },
+  {
+    "word": "Fifty-nine",
+    "startMs": 7320,
+    "endMs": 7680
+  },
+  {
+    "word": "dollars",
+    "startMs": 7730,
+    "endMs": 8080
+  },
+  {
+    "word": "each.",
+    "startMs": 8144,
+    "endMs": 8720
+  },
+  {
+    "word": "Comment",
+    "startMs": 8880,
+    "endMs": 9363
+  },
+  {
+    "word": "SAMPLE",
+    "startMs": 9432,
+    "endMs": 9843
+  },
+  {
+    "word": "for",
+    "startMs": 9903,
+    "endMs": 10083
+  },
+  {
+    "word": "yours.",
+    "startMs": 10163,
+    "endMs": 10643
+  }
+]

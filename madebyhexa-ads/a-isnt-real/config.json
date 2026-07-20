@@ -1,0 +1,202 @@
+{
+  "_comment": "Concept A v2: Cost-stack hook + Hormozi If/Then qualifier. Target = DTC ad-runners scaling past $10K/mo.",
+  "slides": [
+    {
+      "text": "$8K. 6 weeks.",
+      "emphasis": "$8K",
+      "type": "broll",
+      "durationFrames": 81,
+      "footage": "madebyhexa-ads/videos/portfolio-14-showreel.mp4"
+    },
+    {
+      "text": "For one product video.",
+      "emphasis": "one",
+      "type": "broll",
+      "durationFrames": 62,
+      "footage": "madebyhexa-ads/videos/portfolio-15-showreel.mp4"
+    },
+    {
+      "text": "Or 48 hours.",
+      "emphasis": "48",
+      "type": "broll",
+      "durationFrames": 75,
+      "footage": "madebyhexa-ads/videos/portfolio-34-hyper-motion.mp4"
+    },
+    {
+      "text": "AI. Indistinguishable.",
+      "emphasis": "Indistinguishable",
+      "type": "broll",
+      "durationFrames": 74,
+      "footage": "madebyhexa-ads/videos/portfolio-30-lip-sync.mp4"
+    },
+    {
+      "text": "Scaling past $10K/mo?",
+      "emphasis": "$10K",
+      "type": "broll",
+      "durationFrames": 63,
+      "footage": "madebyhexa-ads/videos/portfolio-29-dance.mp4"
+    },
+    {
+      "text": "madebyhexa.co/offer",
+      "emphasis": "madebyhexa.co/offer",
+      "type": "cta",
+      "durationFrames": 121,
+      "footage": "madebyhexa-ads/videos/portfolio-09-showreel.mp4"
+    }
+  ],
+  "voiceover_script": "[punchy]Eight grand. Six weeks. [deliberate]For one product video. [firm]Or, forty-eight hours. [grounded]AI. Indistinguishable. [warm]Scaling past ten K a month? [punchy]Ship your hero product to MadeByHexa dot co slash offer.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/ambient-tech.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/a-isnt-real/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "Eight",
+      "startMs": 0,
+      "endMs": 160
+    },
+    {
+      "word": "grand.",
+      "startMs": 240,
+      "endMs": 720
+    },
+    {
+      "word": "Six",
+      "startMs": 900,
+      "endMs": 1440
+    },
+    {
+      "word": "weeks.",
+      "startMs": 1507,
+      "endMs": 1920
+    },
+    {
+      "word": "For",
+      "startMs": 2200,
+      "endMs": 2561
+    },
+    {
+      "word": "one",
+      "startMs": 2621,
+      "endMs": 2801
+    },
+    {
+      "word": "product",
+      "startMs": 2851,
+      "endMs": 3201
+    },
+    {
+      "word": "video.",
+      "startMs": 3254,
+      "endMs": 3601
+    },
+    {
+      "word": "Or,",
+      "startMs": 3761,
+      "endMs": 4441
+    },
+    {
+      "word": "forty-eight",
+      "startMs": 4488,
+      "endMs": 4801
+    },
+    {
+      "word": "hours.",
+      "startMs": 4881,
+      "endMs": 5601
+    },
+    {
+      "word": "AI.",
+      "startMs": 5761,
+      "endMs": 6601
+    },
+    {
+      "word": "Indistinguishable.",
+      "startMs": 6671,
+      "endMs": 7601
+    },
+    {
+      "word": "Scaling",
+      "startMs": 7721,
+      "endMs": 8081
+    },
+    {
+      "word": "past",
+      "startMs": 8129,
+      "endMs": 8321
+    },
+    {
+      "word": "ten",
+      "startMs": 8361,
+      "endMs": 8481
+    },
+    {
+      "word": "K",
+      "startMs": 8561,
+      "endMs": 8641
+    },
+    {
+      "word": "a",
+      "startMs": 8681,
+      "endMs": 8721
+    },
+    {
+      "word": "month?",
+      "startMs": 8774,
+      "endMs": 9121
+    },
+    {
+      "word": "Ship",
+      "startMs": 9321,
+      "endMs": 9681
+    },
+    {
+      "word": "your",
+      "startMs": 9697,
+      "endMs": 9761
+    },
+    {
+      "word": "hero",
+      "startMs": 9809,
+      "endMs": 10001
+    },
+    {
+      "word": "product",
+      "startMs": 10051,
+      "endMs": 10401
+    },
+    {
+      "word": "to",
+      "startMs": 10428,
+      "endMs": 10481
+    },
+    {
+      "word": "MadeByHexa",
+      "startMs": 10529,
+      "endMs": 11121
+    },
+    {
+      "word": "dot",
+      "startMs": 11141,
+      "endMs": 11201
+    },
+    {
+      "word": "co",
+      "startMs": 11308,
+      "endMs": 11521
+    },
+    {
+      "word": "slash",
+      "startMs": 11601,
+      "endMs": 12001
+    },
+    {
+      "word": "offer.",
+      "startMs": 12068,
+      "endMs": 12561
+    }
+  ]
+}

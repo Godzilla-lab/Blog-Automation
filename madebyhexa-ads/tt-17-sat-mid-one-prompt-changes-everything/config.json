@@ -1,0 +1,248 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-17-sat-mid-one-prompt-changes-everything. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "mid",
+    "comment_keyword": "HOW",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/17-sat-mid-one-prompt-changes-everything.md"
+  },
+  "slides": [
+    {
+      "text": "The 1 prompt we always use.",
+      "emphasis": "1 prompt",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-21-showreel.mp4",
+      "durationFrames": 145
+    },
+    {
+      "text": "Cinematic hero. Soft rim light.",
+      "emphasis": "Cinematic",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 161
+    },
+    {
+      "text": "Kitchen lifestyle backdrop.",
+      "emphasis": "Kitchen",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-15-showreel.mp4",
+      "durationFrames": 61
+    },
+    {
+      "text": "That's the secret.",
+      "emphasis": "secret",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-21-showreel.mp4",
+      "durationFrames": 98
+    },
+    {
+      "text": "Comment HOW \u2193",
+      "emphasis": "HOW",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 112
+    }
+  ],
+  "voiceover_script": "[curious]One prompt. Changes the entire output. Here's the one we always use. [deliberate]Cinematic product hero, soft rim light, shallow depth of field, kitchen lifestyle backdrop. [punchy]That's it. That's the secret. [warm]Apply it to your photo? Comment HOW.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "HOW",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-chill-2.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-17-sat-mid-one-prompt-changes-everything/voiceover.mp3",
+  "_end_word_indices": [
+    11,
+    21,
+    24,
+    29,
+    36
+  ],
+  "word_timestamps": [
+    {
+      "word": "One",
+      "startMs": 0,
+      "endMs": 160
+    },
+    {
+      "word": "prompt.",
+      "startMs": 229,
+      "endMs": 720
+    },
+    {
+      "word": "Changes",
+      "startMs": 790,
+      "endMs": 1280
+    },
+    {
+      "word": "the",
+      "startMs": 1300,
+      "endMs": 1360
+    },
+    {
+      "word": "entire",
+      "startMs": 1440,
+      "endMs": 1920
+    },
+    {
+      "word": "output.",
+      "startMs": 1989,
+      "endMs": 2480
+    },
+    {
+      "word": "Here's",
+      "startMs": 2608,
+      "endMs": 3200
+    },
+    {
+      "word": "the",
+      "startMs": 3220,
+      "endMs": 3280
+    },
+    {
+      "word": "one",
+      "startMs": 3320,
+      "endMs": 3440
+    },
+    {
+      "word": "we",
+      "startMs": 3493,
+      "endMs": 3600
+    },
+    {
+      "word": "always",
+      "startMs": 3646,
+      "endMs": 3920
+    },
+    {
+      "word": "use.",
+      "startMs": 4000,
+      "endMs": 4320
+    },
+    {
+      "word": "Cinematic",
+      "startMs": 4680,
+      "endMs": 5520
+    },
+    {
+      "word": "product",
+      "startMs": 5570,
+      "endMs": 5920
+    },
+    {
+      "word": "hero,",
+      "startMs": 6000,
+      "endMs": 6321
+    },
+    {
+      "word": "soft",
+      "startMs": 6432,
+      "endMs": 6880
+    },
+    {
+      "word": "rim",
+      "startMs": 6940,
+      "endMs": 7120
+    },
+    {
+      "word": "light,",
+      "startMs": 7173,
+      "endMs": 7760
+    },
+    {
+      "word": "shallow",
+      "startMs": 7800,
+      "endMs": 8080
+    },
+    {
+      "word": "depth",
+      "startMs": 8119,
+      "endMs": 8320
+    },
+    {
+      "word": "of",
+      "startMs": 8347,
+      "endMs": 8400
+    },
+    {
+      "word": "field,",
+      "startMs": 8480,
+      "endMs": 9200
+    },
+    {
+      "word": "kitchen",
+      "startMs": 9240,
+      "endMs": 9520
+    },
+    {
+      "word": "lifestyle",
+      "startMs": 9568,
+      "endMs": 10000
+    },
+    {
+      "word": "backdrop.",
+      "startMs": 10062,
+      "endMs": 10720
+    },
+    {
+      "word": "That's",
+      "startMs": 11040,
+      "endMs": 11520
+    },
+    {
+      "word": "it.",
+      "startMs": 11600,
+      "endMs": 12120
+    },
+    {
+      "word": "That's",
+      "startMs": 12192,
+      "endMs": 12560
+    },
+    {
+      "word": "the",
+      "startMs": 12580,
+      "endMs": 12640
+    },
+    {
+      "word": "secret.",
+      "startMs": 12709,
+      "endMs": 13480
+    },
+    {
+      "word": "Apply",
+      "startMs": 13660,
+      "endMs": 14080
+    },
+    {
+      "word": "it",
+      "startMs": 14133,
+      "endMs": 14240
+    },
+    {
+      "word": "to",
+      "startMs": 14267,
+      "endMs": 14320
+    },
+    {
+      "word": "your",
+      "startMs": 14352,
+      "endMs": 14480
+    },
+    {
+      "word": "photo?",
+      "startMs": 14547,
+      "endMs": 15320
+    },
+    {
+      "word": "Comment",
+      "startMs": 15375,
+      "endMs": 15760
+    },
+    {
+      "word": "HOW.",
+      "startMs": 15880,
+      "endMs": 16400
+    }
+  ]
+}

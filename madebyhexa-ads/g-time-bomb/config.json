@@ -1,0 +1,160 @@
+{
+  "_comment": "Concept G: Time Bomb. Higgsfield-generated 48:00:00 clock as hook image, simulates countdown via 2 dramatic stills + payoff reveal.",
+  "slides": [
+    {
+      "text": "48:00:00",
+      "emphasis": "48:00:00",
+      "type": "broll",
+      "durationFrames": 56,
+      "footage": "madebyhexa-ads/videos/portfolio-33-ai-photos.mp4"
+    },
+    {
+      "text": "This is how long it took.",
+      "emphasis": "long",
+      "type": "broll",
+      "durationFrames": 73,
+      "footage": "madebyhexa-ads/assets/clock-48h.png"
+    },
+    {
+      "text": "Cinematic. AI. No crew.",
+      "emphasis": "Cinematic",
+      "type": "broll",
+      "durationFrames": 111,
+      "footage": "madebyhexa-ads/videos/portfolio-18-showreel.mp4"
+    },
+    {
+      "text": "From your photo.",
+      "emphasis": "your",
+      "type": "broll",
+      "durationFrames": 63,
+      "footage": "madebyhexa-ads/videos/portfolio-25-lip-sync.mp4"
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "durationFrames": 81,
+      "footage": "madebyhexa-ads/videos/portfolio-14-showreel.mp4"
+    }
+  ],
+  "voiceover_script": "[curious]Forty-eight hours. [punchy]This is how long it took. [deliberate]Cinematic. AI. No crew. [firm]From one of your photos. [warm]Tap below. Get yours free.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-energetic.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/g-time-bomb/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "Forty-eight",
+      "startMs": 0,
+      "endMs": 396
+    },
+    {
+      "word": "hours.",
+      "startMs": 489,
+      "endMs": 1234
+    },
+    {
+      "word": "This",
+      "startMs": 1374,
+      "endMs": 1754
+    },
+    {
+      "word": "is",
+      "startMs": 1887,
+      "endMs": 2153
+    },
+    {
+      "word": "how",
+      "startMs": 2173,
+      "endMs": 2233
+    },
+    {
+      "word": "long",
+      "startMs": 2281,
+      "endMs": 2473
+    },
+    {
+      "word": "it",
+      "startMs": 2526,
+      "endMs": 2632
+    },
+    {
+      "word": "took.",
+      "startMs": 2696,
+      "endMs": 3032
+    },
+    {
+      "word": "Cinematic.",
+      "startMs": 3312,
+      "endMs": 4636
+    },
+    {
+      "word": "AI.",
+      "startMs": 4796,
+      "endMs": 5396
+    },
+    {
+      "word": "No",
+      "startMs": 5489,
+      "endMs": 5675
+    },
+    {
+      "word": "crew.",
+      "startMs": 5771,
+      "endMs": 6395
+    },
+    {
+      "word": "From",
+      "startMs": 6515,
+      "endMs": 6718
+    },
+    {
+      "word": "one",
+      "startMs": 6758,
+      "endMs": 6878
+    },
+    {
+      "word": "of",
+      "startMs": 6905,
+      "endMs": 6959
+    },
+    {
+      "word": "your",
+      "startMs": 6991,
+      "endMs": 7119
+    },
+    {
+      "word": "photos.",
+      "startMs": 7199,
+      "endMs": 7959
+    },
+    {
+      "word": "Tap",
+      "startMs": 8099,
+      "endMs": 8398
+    },
+    {
+      "word": "below.",
+      "startMs": 8465,
+      "endMs": 9000
+    },
+    {
+      "word": "Get",
+      "startMs": 9050,
+      "endMs": 9200
+    },
+    {
+      "word": "yours",
+      "startMs": 9253,
+      "endMs": 9518
+    },
+    {
+      "word": "free.",
+      "startMs": 9566,
+      "endMs": 9998
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-13-fri-am-5-videos-0-to-film. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "am",
+    "comment_keyword": "SAMPLE",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/13-fri-am-5-videos-0-to-film.md"
+  },
+  "slides": [
+    {
+      "text": "5 videos. $0 filmed.",
+      "emphasis": "$0",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 140
+    },
+    {
+      "text": "All from one photo.",
+      "emphasis": "one photo",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 99
+    },
+    {
+      "text": "48 hours.",
+      "emphasis": "48",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 54
+    },
+    {
+      "text": "Comment SAMPLE \u2193",
+      "emphasis": "SAMPLE",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 94
+    }
+  ],
+  "voiceover_script": "[firm]Five product videos. Zero filmed. Fifty-nine dollars each. [punchy]All five from one product photo. [deliberate]Forty-eight hours. [warm]Comment SAMPLE for yours.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "SAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-upbeat-2.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-13-fri-am-5-videos-0-to-film/voiceover.mp3",
+  "_end_word_indices": [
+    7,
+    13,
+    15,
+    19
+  ],
+  "word_timestamps": [
+    {
+      "word": "Five",
+      "startMs": 0,
+      "endMs": 240
+    },
+    {
+      "word": "product",
+      "startMs": 300,
+      "endMs": 720
+    },
+    {
+      "word": "videos.",
+      "startMs": 800,
+      "endMs": 1680
+    },
+    {
+      "word": "Zero",
+      "startMs": 1728,
+      "endMs": 1920
+    },
+    {
+      "word": "filmed.",
+      "startMs": 2000,
+      "endMs": 2800
+    },
+    {
+      "word": "Fifty-nine",
+      "startMs": 2840,
+      "endMs": 3280
+    },
+    {
+      "word": "dollars",
+      "startMs": 3330,
+      "endMs": 3680
+    },
+    {
+      "word": "each.",
+      "startMs": 3760,
+      "endMs": 4160
+    },
+    {
+      "word": "All",
+      "startMs": 4440,
+      "endMs": 4880
+    },
+    {
+      "word": "five",
+      "startMs": 4944,
+      "endMs": 5200
+    },
+    {
+      "word": "from",
+      "startMs": 5264,
+      "endMs": 5520
+    },
+    {
+      "word": "one",
+      "startMs": 5580,
+      "endMs": 5760
+    },
+    {
+      "word": "product",
+      "startMs": 5810,
+      "endMs": 6160
+    },
+    {
+      "word": "photo.",
+      "startMs": 6240,
+      "endMs": 6960
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 7120,
+      "endMs": 7685
+    },
+    {
+      "word": "hours.",
+      "startMs": 7765,
+      "endMs": 8245
+    },
+    {
+      "word": "Comment",
+      "startMs": 8445,
+      "endMs": 9048
+    },
+    {
+      "word": "SAMPLE",
+      "startMs": 9139,
+      "endMs": 9688
+    },
+    {
+      "word": "for",
+      "startMs": 9748,
+      "endMs": 9928
+    },
+    {
+      "word": "yours.",
+      "startMs": 10008,
+      "endMs": 10568
+    }
+  ]
+}

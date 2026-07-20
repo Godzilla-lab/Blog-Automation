@@ -1,0 +1,227 @@
+{
+  "_comment": "Concept O: FULL verbatim opener. Uses the user's exact line. Female voice. Most explicit buyer+offer callout test.",
+  "slides": [
+    {
+      "text": "Got a product to sell?",
+      "emphasis": "product",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 53
+    },
+    {
+      "text": "Hyper-real video.",
+      "emphasis": "Hyper-real",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 89
+    },
+    {
+      "text": "Free sample. No card.",
+      "emphasis": "Free",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-10-showreel.mp4",
+      "durationFrames": 70
+    },
+    {
+      "text": "48 hrs. From your photo.",
+      "emphasis": "48",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 100
+    },
+    {
+      "text": "100\u00d7 cheaper than a shoot.",
+      "emphasis": "100\u00d7",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 91
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-15-showreel.mp4",
+      "durationFrames": 74
+    }
+  ],
+  "voiceover_script": "[firm]Got a product to sell? [punchy]We'll turn it into a hyper-real video. [warm]Free sample. No card. [deliberate]Forty-eight hours. From one of your photos. [building]One hundred times cheaper than a studio shoot. [warm]Free sample below.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-dramatic.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/o-opener-full/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "Got",
+      "startMs": 0,
+      "endMs": 160
+    },
+    {
+      "word": "a",
+      "startMs": 260,
+      "endMs": 360
+    },
+    {
+      "word": "product",
+      "startMs": 385,
+      "endMs": 560
+    },
+    {
+      "word": "to",
+      "startMs": 587,
+      "endMs": 640
+    },
+    {
+      "word": "sell?",
+      "startMs": 720,
+      "endMs": 1280
+    },
+    {
+      "word": "We'll",
+      "startMs": 1400,
+      "endMs": 1680
+    },
+    {
+      "word": "turn",
+      "startMs": 1728,
+      "endMs": 1920
+    },
+    {
+      "word": "it",
+      "startMs": 1947,
+      "endMs": 2000
+    },
+    {
+      "word": "into",
+      "startMs": 2064,
+      "endMs": 2320
+    },
+    {
+      "word": "a",
+      "startMs": 2360,
+      "endMs": 2400
+    },
+    {
+      "word": "hyper-real",
+      "startMs": 2467,
+      "endMs": 3200
+    },
+    {
+      "word": "video.",
+      "startMs": 3280,
+      "endMs": 3760
+    },
+    {
+      "word": "Free",
+      "startMs": 4000,
+      "endMs": 4400
+    },
+    {
+      "word": "sample.",
+      "startMs": 4457,
+      "endMs": 4880
+    },
+    {
+      "word": "No",
+      "startMs": 4987,
+      "endMs": 5200
+    },
+    {
+      "word": "card.",
+      "startMs": 5280,
+      "endMs": 5601
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 5920,
+      "endMs": 6560
+    },
+    {
+      "word": "hours.",
+      "startMs": 6640,
+      "endMs": 7200
+    },
+    {
+      "word": "From",
+      "startMs": 7232,
+      "endMs": 7360
+    },
+    {
+      "word": "one",
+      "startMs": 7400,
+      "endMs": 7520
+    },
+    {
+      "word": "of",
+      "startMs": 7547,
+      "endMs": 7600
+    },
+    {
+      "word": "your",
+      "startMs": 7616,
+      "endMs": 7680
+    },
+    {
+      "word": "photos.",
+      "startMs": 7760,
+      "endMs": 8440
+    },
+    {
+      "word": "One",
+      "startMs": 8540,
+      "endMs": 8920
+    },
+    {
+      "word": "hundred",
+      "startMs": 8945,
+      "endMs": 9120
+    },
+    {
+      "word": "times",
+      "startMs": 9187,
+      "endMs": 9520
+    },
+    {
+      "word": "cheaper",
+      "startMs": 9570,
+      "endMs": 9920
+    },
+    {
+      "word": "than",
+      "startMs": 9936,
+      "endMs": 10000
+    },
+    {
+      "word": "a",
+      "startMs": 10040,
+      "endMs": 10080
+    },
+    {
+      "word": "studio",
+      "startMs": 10149,
+      "endMs": 10560
+    },
+    {
+      "word": "shoot.",
+      "startMs": 10613,
+      "endMs": 10960
+    },
+    {
+      "word": "Free",
+      "startMs": 11240,
+      "endMs": 11680
+    },
+    {
+      "word": "sample",
+      "startMs": 11737,
+      "endMs": 12080
+    },
+    {
+      "word": "below.",
+      "startMs": 12147,
+      "endMs": 12640
+    }
+  ]
+}

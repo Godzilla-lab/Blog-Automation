@@ -1,0 +1,262 @@
+{
+  "_comment": "Concept I: Hook 1 template \u2014 Permission Ask. 'Give me 60 seconds to explain how we can [OFFER + OUTCOME].'",
+  "slides": [
+    {
+      "text": "Give me 60 seconds.",
+      "emphasis": "60",
+      "type": "broll",
+      "durationFrames": 46,
+      "footage": "madebyhexa-ads/videos/portfolio-25-lip-sync.mp4"
+    },
+    {
+      "text": "Cinematic ad. From your photo.",
+      "emphasis": "Cinematic",
+      "type": "broll",
+      "durationFrames": 122,
+      "footage": "madebyhexa-ads/videos/portfolio-20-showreel.mp4"
+    },
+    {
+      "text": "48 hours. No studio.",
+      "emphasis": "48",
+      "type": "broll",
+      "durationFrames": 69,
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4"
+    },
+    {
+      "text": "No crew. No shoot day.",
+      "emphasis": "crew",
+      "type": "broll",
+      "durationFrames": 70,
+      "footage": "madebyhexa-ads/videos/portfolio-05-showreel.mp4"
+    },
+    {
+      "text": "See your product as a real ad.",
+      "emphasis": "your",
+      "type": "broll",
+      "durationFrames": 107,
+      "footage": "madebyhexa-ads/videos/portfolio-30-lip-sync.mp4"
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "durationFrames": 52,
+      "footage": "madebyhexa-ads/videos/portfolio-09-showreel.mp4"
+    }
+  ],
+  "voiceover_script": "[firm]Give me sixty seconds [deliberate]to show you how we make a cinematic ad from one of your product photos. [punchy]Forty-eight hours. No studio. [firm]No crew. No shoot day. [warm]See what your product looks like as a real ad. [building]Free sample below.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-upbeat-2.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/i-60-seconds/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "Give",
+      "startMs": 0,
+      "endMs": 163
+    },
+    {
+      "word": "me",
+      "startMs": 216,
+      "endMs": 322
+    },
+    {
+      "word": "sixty",
+      "startMs": 375,
+      "endMs": 640
+    },
+    {
+      "word": "seconds",
+      "startMs": 690,
+      "endMs": 1040
+    },
+    {
+      "word": "to",
+      "startMs": 1048,
+      "endMs": 1198
+    },
+    {
+      "word": "show",
+      "startMs": 1214,
+      "endMs": 1278
+    },
+    {
+      "word": "you",
+      "startMs": 1298,
+      "endMs": 1358
+    },
+    {
+      "word": "how",
+      "startMs": 1398,
+      "endMs": 1518
+    },
+    {
+      "word": "we",
+      "startMs": 1545,
+      "endMs": 1599
+    },
+    {
+      "word": "make",
+      "startMs": 1631,
+      "endMs": 1759
+    },
+    {
+      "word": "a",
+      "startMs": 1839,
+      "endMs": 1919
+    },
+    {
+      "word": "cinematic",
+      "startMs": 1967,
+      "endMs": 2399
+    },
+    {
+      "word": "ad",
+      "startMs": 2532,
+      "endMs": 2798
+    },
+    {
+      "word": "from",
+      "startMs": 2830,
+      "endMs": 2958
+    },
+    {
+      "word": "one",
+      "startMs": 2998,
+      "endMs": 3118
+    },
+    {
+      "word": "of",
+      "startMs": 3145,
+      "endMs": 3199
+    },
+    {
+      "word": "your",
+      "startMs": 3263,
+      "endMs": 3519
+    },
+    {
+      "word": "product",
+      "startMs": 3559,
+      "endMs": 3839
+    },
+    {
+      "word": "photos.",
+      "startMs": 3908,
+      "endMs": 4562
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 4602,
+      "endMs": 4960
+    },
+    {
+      "word": "hours.",
+      "startMs": 5027,
+      "endMs": 5522
+    },
+    {
+      "word": "No",
+      "startMs": 5575,
+      "endMs": 5681
+    },
+    {
+      "word": "studio.",
+      "startMs": 5750,
+      "endMs": 6404
+    },
+    {
+      "word": "No",
+      "startMs": 6417,
+      "endMs": 6565
+    },
+    {
+      "word": "crew.",
+      "startMs": 6645,
+      "endMs": 7045
+    },
+    {
+      "word": "No",
+      "startMs": 7178,
+      "endMs": 7444
+    },
+    {
+      "word": "shoot",
+      "startMs": 7484,
+      "endMs": 7684
+    },
+    {
+      "word": "day.",
+      "startMs": 7744,
+      "endMs": 8004
+    },
+    {
+      "word": "See",
+      "startMs": 8244,
+      "endMs": 8645
+    },
+    {
+      "word": "what",
+      "startMs": 8677,
+      "endMs": 8805
+    },
+    {
+      "word": "your",
+      "startMs": 8821,
+      "endMs": 8885
+    },
+    {
+      "word": "product",
+      "startMs": 8925,
+      "endMs": 9205
+    },
+    {
+      "word": "looks",
+      "startMs": 9245,
+      "endMs": 9445
+    },
+    {
+      "word": "like",
+      "startMs": 9509,
+      "endMs": 9765
+    },
+    {
+      "word": "as",
+      "startMs": 9845,
+      "endMs": 10005
+    },
+    {
+      "word": "a",
+      "startMs": 10045,
+      "endMs": 10085
+    },
+    {
+      "word": "real",
+      "startMs": 10165,
+      "endMs": 10485
+    },
+    {
+      "word": "ad.",
+      "startMs": 10618,
+      "endMs": 11284
+    },
+    {
+      "word": "Free",
+      "startMs": 11294,
+      "endMs": 11360
+    },
+    {
+      "word": "sample",
+      "startMs": 11417,
+      "endMs": 11759
+    },
+    {
+      "word": "below.",
+      "startMs": 11812,
+      "endMs": 12237
+    }
+  ]
+}

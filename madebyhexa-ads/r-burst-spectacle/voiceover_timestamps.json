@@ -1,0 +1,102 @@
+[
+  {
+    "word": "One",
+    "startMs": 0,
+    "endMs": 320
+  },
+  {
+    "word": "product",
+    "startMs": 400,
+    "endMs": 960
+  },
+  {
+    "word": "photo.",
+    "startMs": 1027,
+    "endMs": 1440
+  },
+  {
+    "word": "Plus",
+    "startMs": 1600,
+    "endMs": 2083
+  },
+  {
+    "word": "forty-eight",
+    "startMs": 2163,
+    "endMs": 2643
+  },
+  {
+    "word": "hours.",
+    "startMs": 2750,
+    "endMs": 3483
+  },
+  {
+    "word": "Equals",
+    "startMs": 3583,
+    "endMs": 4089
+  },
+  {
+    "word": "this.",
+    "startMs": 4217,
+    "endMs": 4969
+  },
+  {
+    "word": "An",
+    "startMs": 5089,
+    "endMs": 5289
+  },
+  {
+    "word": "eight",
+    "startMs": 5329,
+    "endMs": 5529
+  },
+  {
+    "word": "thousand",
+    "startMs": 5573,
+    "endMs": 5929
+  },
+  {
+    "word": "dollar",
+    "startMs": 5975,
+    "endMs": 6249
+  },
+  {
+    "word": "product",
+    "startMs": 6309,
+    "endMs": 6729
+  },
+  {
+    "word": "ad.",
+    "startMs": 6836,
+    "endMs": 7129
+  },
+  {
+    "word": "For",
+    "startMs": 7249,
+    "endMs": 7609
+  },
+  {
+    "word": "fifty-nine",
+    "startMs": 7689,
+    "endMs": 8329
+  },
+  {
+    "word": "dollars.",
+    "startMs": 8419,
+    "endMs": 9049
+  },
+  {
+    "word": "Free",
+    "startMs": 9489,
+    "endMs": 10089
+  },
+  {
+    "word": "sample",
+    "startMs": 10135,
+    "endMs": 10409
+  },
+  {
+    "word": "below.",
+    "startMs": 10476,
+    "endMs": 10969
+  }
+]

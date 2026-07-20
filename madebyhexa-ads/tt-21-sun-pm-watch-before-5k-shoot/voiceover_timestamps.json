@@ -1,0 +1,387 @@
+[
+  {
+    "word": "Watch",
+    "startMs": 0,
+    "endMs": 400
+  },
+  {
+    "word": "this",
+    "startMs": 464,
+    "endMs": 720
+  },
+  {
+    "word": "before",
+    "startMs": 766,
+    "endMs": 1040
+  },
+  {
+    "word": "you",
+    "startMs": 1060,
+    "endMs": 1120
+  },
+  {
+    "word": "spend",
+    "startMs": 1173,
+    "endMs": 1440
+  },
+  {
+    "word": "five",
+    "startMs": 1504,
+    "endMs": 1760
+  },
+  {
+    "word": "thousand",
+    "startMs": 1796,
+    "endMs": 2080
+  },
+  {
+    "word": "dollars",
+    "startMs": 2140,
+    "endMs": 2560
+  },
+  {
+    "word": "on",
+    "startMs": 2613,
+    "endMs": 2720
+  },
+  {
+    "word": "your",
+    "startMs": 2752,
+    "endMs": 2880
+  },
+  {
+    "word": "next",
+    "startMs": 2960,
+    "endMs": 3280
+  },
+  {
+    "word": "product",
+    "startMs": 3330,
+    "endMs": 3680
+  },
+  {
+    "word": "video.",
+    "startMs": 3760,
+    "endMs": 4600
+  },
+  {
+    "word": "I'm",
+    "startMs": 4820,
+    "endMs": 5205
+  },
+  {
+    "word": "not",
+    "startMs": 5245,
+    "endMs": 5365
+  },
+  {
+    "word": "saying",
+    "startMs": 5411,
+    "endMs": 5685
+  },
+  {
+    "word": "don't",
+    "startMs": 5765,
+    "endMs": 6085
+  },
+  {
+    "word": "hire",
+    "startMs": 6149,
+    "endMs": 6405
+  },
+  {
+    "word": "a",
+    "startMs": 6445,
+    "endMs": 6485
+  },
+  {
+    "word": "studio.",
+    "startMs": 6565,
+    "endMs": 7125
+  },
+  {
+    "word": "Some",
+    "startMs": 7205,
+    "endMs": 7525
+  },
+  {
+    "word": "products",
+    "startMs": 7569,
+    "endMs": 7925
+  },
+  {
+    "word": "need",
+    "startMs": 7973,
+    "endMs": 8164
+  },
+  {
+    "word": "it.",
+    "startMs": 8245,
+    "endMs": 8645
+  },
+  {
+    "word": "But",
+    "startMs": 8765,
+    "endMs": 9008
+  },
+  {
+    "word": "if",
+    "startMs": 9021,
+    "endMs": 9048
+  },
+  {
+    "word": "your",
+    "startMs": 9080,
+    "endMs": 9208
+  },
+  {
+    "word": "product",
+    "startMs": 9258,
+    "endMs": 9608
+  },
+  {
+    "word": "is",
+    "startMs": 9661,
+    "endMs": 9768
+  },
+  {
+    "word": "on",
+    "startMs": 9821,
+    "endMs": 9928
+  },
+  {
+    "word": "a",
+    "startMs": 9968,
+    "endMs": 10008
+  },
+  {
+    "word": "flat",
+    "startMs": 10072,
+    "endMs": 10328
+  },
+  {
+    "word": "background,",
+    "startMs": 10379,
+    "endMs": 11048
+  },
+  {
+    "word": "a",
+    "startMs": 11088,
+    "endMs": 11128
+  },
+  {
+    "word": "model",
+    "startMs": 11181,
+    "endMs": 11448
+  },
+  {
+    "word": "holding",
+    "startMs": 11498,
+    "endMs": 11848
+  },
+  {
+    "word": "it,",
+    "startMs": 11901,
+    "endMs": 12168
+  },
+  {
+    "word": "or",
+    "startMs": 12195,
+    "endMs": 12248
+  },
+  {
+    "word": "a",
+    "startMs": 12288,
+    "endMs": 12328
+  },
+  {
+    "word": "lifestyle",
+    "startMs": 12384,
+    "endMs": 12888
+  },
+  {
+    "word": "scene",
+    "startMs": 12955,
+    "endMs": 13288
+  },
+  {
+    "word": "\u2014",
+    "startMs": 13568,
+    "endMs": 13848
+  },
+  {
+    "word": "AI",
+    "startMs": 13955,
+    "endMs": 14168
+  },
+  {
+    "word": "can",
+    "startMs": 14208,
+    "endMs": 14328
+  },
+  {
+    "word": "do",
+    "startMs": 14381,
+    "endMs": 14488
+  },
+  {
+    "word": "it",
+    "startMs": 14515,
+    "endMs": 14568
+  },
+  {
+    "word": "for",
+    "startMs": 14608,
+    "endMs": 14728
+  },
+  {
+    "word": "fifty-nine",
+    "startMs": 14808,
+    "endMs": 15368
+  },
+  {
+    "word": "dollars.",
+    "startMs": 15438,
+    "endMs": 16328
+  },
+  {
+    "word": "Forty-eight",
+    "startMs": 16381,
+    "endMs": 16888
+  },
+  {
+    "word": "hours.",
+    "startMs": 16995,
+    "endMs": 18008
+  },
+  {
+    "word": "Test",
+    "startMs": 18048,
+    "endMs": 18328
+  },
+  {
+    "word": "the",
+    "startMs": 18368,
+    "endMs": 18488
+  },
+  {
+    "word": "cheap",
+    "startMs": 18541,
+    "endMs": 18808
+  },
+  {
+    "word": "option",
+    "startMs": 18865,
+    "endMs": 19208
+  },
+  {
+    "word": "first.",
+    "startMs": 19288,
+    "endMs": 19768
+  },
+  {
+    "word": "If",
+    "startMs": 19901,
+    "endMs": 20168
+  },
+  {
+    "word": "it",
+    "startMs": 20195,
+    "endMs": 20248
+  },
+  {
+    "word": "doesn't",
+    "startMs": 20275,
+    "endMs": 20488
+  },
+  {
+    "word": "work,",
+    "startMs": 20568,
+    "endMs": 20968
+  },
+  {
+    "word": "you've",
+    "startMs": 21008,
+    "endMs": 21208
+  },
+  {
+    "word": "lost",
+    "startMs": 21272,
+    "endMs": 21528
+  },
+  {
+    "word": "fifty-nine",
+    "startMs": 21581,
+    "endMs": 22088
+  },
+  {
+    "word": "dollars.",
+    "startMs": 22168,
+    "endMs": 23208
+  },
+  {
+    "word": "If",
+    "startMs": 23248,
+    "endMs": 23401
+  },
+  {
+    "word": "it",
+    "startMs": 23418,
+    "endMs": 23454
+  },
+  {
+    "word": "works,",
+    "startMs": 23534,
+    "endMs": 24174
+  },
+  {
+    "word": "you've",
+    "startMs": 24214,
+    "endMs": 24494
+  },
+  {
+    "word": "saved",
+    "startMs": 24547,
+    "endMs": 24814
+  },
+  {
+    "word": "five",
+    "startMs": 24894,
+    "endMs": 25214
+  },
+  {
+    "word": "thousand.",
+    "startMs": 25285,
+    "endMs": 25934
+  },
+  {
+    "word": "Comment",
+    "startMs": 26254,
+    "endMs": 26894
+  },
+  {
+    "word": "fifty-nine",
+    "startMs": 26947,
+    "endMs": 27534
+  },
+  {
+    "word": "to",
+    "startMs": 27614,
+    "endMs": 27774
+  },
+  {
+    "word": "test",
+    "startMs": 27822,
+    "endMs": 28014
+  },
+  {
+    "word": "it",
+    "startMs": 28067,
+    "endMs": 28174
+  },
+  {
+    "word": "free.",
+    "startMs": 28254,
+    "endMs": 28734
+  }
+]

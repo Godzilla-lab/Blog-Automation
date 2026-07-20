@@ -1,0 +1,193 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-01-mon-am-photo-vs-hexa-split. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "am",
+    "comment_keyword": "SAMPLE",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/01-mon-am-photo-vs-hexa-split.md"
+  },
+  "slides": [
+    {
+      "text": "Your product photo.",
+      "emphasis": "photo",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-23-showreel.mp4",
+      "durationFrames": 61
+    },
+    {
+      "text": "Your product photo + Hexa.",
+      "emphasis": "Hexa",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 110
+    },
+    {
+      "text": "Same product. One photo.",
+      "emphasis": "One photo",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 74
+    },
+    {
+      "text": "48 hours.",
+      "emphasis": "48",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 51
+    },
+    {
+      "text": "Comment SAMPLE \u2193",
+      "emphasis": "SAMPLE",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 125
+    }
+  ],
+  "voiceover_script": "[firm]This is your product photo. [punchy]This is your product photo plus Hexa. [deliberate]Same product. One photo. Forty-eight hours. [warm]Comment SAMPLE and we'll send you yours free.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "SAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-upbeat.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-01-mon-am-photo-vs-hexa-split/voiceover.mp3",
+  "_end_word_indices": [
+    4,
+    11,
+    15,
+    17,
+    25
+  ],
+  "word_timestamps": [
+    {
+      "word": "This",
+      "startMs": 0,
+      "endMs": 320
+    },
+    {
+      "word": "is",
+      "startMs": 373,
+      "endMs": 480
+    },
+    {
+      "word": "your",
+      "startMs": 496,
+      "endMs": 560
+    },
+    {
+      "word": "product",
+      "startMs": 620,
+      "endMs": 1040
+    },
+    {
+      "word": "photo.",
+      "startMs": 1107,
+      "endMs": 1520
+    },
+    {
+      "word": "This",
+      "startMs": 1920,
+      "endMs": 2480
+    },
+    {
+      "word": "is",
+      "startMs": 2533,
+      "endMs": 2640
+    },
+    {
+      "word": "your",
+      "startMs": 2656,
+      "endMs": 2720
+    },
+    {
+      "word": "product",
+      "startMs": 2770,
+      "endMs": 3120
+    },
+    {
+      "word": "photo",
+      "startMs": 3173,
+      "endMs": 3440
+    },
+    {
+      "word": "plus",
+      "startMs": 3520,
+      "endMs": 3840
+    },
+    {
+      "word": "Hexa.",
+      "startMs": 3920,
+      "endMs": 4680
+    },
+    {
+      "word": "Same",
+      "startMs": 4860,
+      "endMs": 5200
+    },
+    {
+      "word": "product.",
+      "startMs": 5270,
+      "endMs": 5960
+    },
+    {
+      "word": "One",
+      "startMs": 6010,
+      "endMs": 6160
+    },
+    {
+      "word": "photo.",
+      "startMs": 6227,
+      "endMs": 6640
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 6720,
+      "endMs": 7200
+    },
+    {
+      "word": "hours.",
+      "startMs": 7293,
+      "endMs": 7840
+    },
+    {
+      "word": "Comment",
+      "startMs": 8200,
+      "endMs": 8880
+    },
+    {
+      "word": "SAMPLE",
+      "startMs": 8949,
+      "endMs": 9360
+    },
+    {
+      "word": "and",
+      "startMs": 9400,
+      "endMs": 9520
+    },
+    {
+      "word": "we'll",
+      "startMs": 9547,
+      "endMs": 9680
+    },
+    {
+      "word": "send",
+      "startMs": 9728,
+      "endMs": 9920
+    },
+    {
+      "word": "you",
+      "startMs": 9960,
+      "endMs": 10080
+    },
+    {
+      "word": "yours",
+      "startMs": 10133,
+      "endMs": 10400
+    },
+    {
+      "word": "free.",
+      "startMs": 10480,
+      "endMs": 11200
+    }
+  ]
+}

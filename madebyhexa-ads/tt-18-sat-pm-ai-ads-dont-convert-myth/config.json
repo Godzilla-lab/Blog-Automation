@@ -1,0 +1,378 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-18-sat-pm-ai-ads-dont-convert-myth. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "pm",
+    "comment_keyword": "$59",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/18-sat-pm-ai-ads-dont-convert-myth.md"
+  },
+  "slides": [
+    {
+      "text": "\"AI ads don't convert.\"",
+      "emphasis": "convert",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-25-lip-sync.mp4",
+      "durationFrames": 178
+    },
+    {
+      "text": "4.8% CTR. $2.10 CPC.",
+      "emphasis": "4.8%",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-21-showreel.mp4",
+      "durationFrames": 161
+    },
+    {
+      "text": "143% ROAS.",
+      "emphasis": "143%",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 104
+    },
+    {
+      "text": "All from one $59 ad.",
+      "emphasis": "$59",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 87
+    },
+    {
+      "text": "Comment $59 \u2193",
+      "emphasis": "$59",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 259
+    }
+  ],
+  "voiceover_script": "[firm]Everyone says AI ads don't convert. Here's our highest performer's actual stats. [deliberate]Four point eight percent click-through rate. Two point one dollars cost per click. One hundred and forty-three percent return on ad spend. [punchy]All from a fifty-nine dollar Hexa ad. [grounded]I'm not saying every AI ad will hit these numbers. I'm saying the ones that do exist. [warm]Comment fifty-nine to test it.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "59",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-energetic.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-18-sat-pm-ai-ads-dont-convert-myth/voiceover.mp3",
+  "_end_word_indices": [
+    11,
+    24,
+    33,
+    40,
+    62
+  ],
+  "word_timestamps": [
+    {
+      "word": "Everyone",
+      "startMs": 0,
+      "endMs": 400
+    },
+    {
+      "word": "says",
+      "startMs": 496,
+      "endMs": 880
+    },
+    {
+      "word": "AI",
+      "startMs": 1040,
+      "endMs": 1360
+    },
+    {
+      "word": "ads",
+      "startMs": 1460,
+      "endMs": 1760
+    },
+    {
+      "word": "don't",
+      "startMs": 1800,
+      "endMs": 2080
+    },
+    {
+      "word": "convert.",
+      "startMs": 2140,
+      "endMs": 2840
+    },
+    {
+      "word": "Here's",
+      "startMs": 2896,
+      "endMs": 3200
+    },
+    {
+      "word": "our",
+      "startMs": 3240,
+      "endMs": 3360
+    },
+    {
+      "word": "highest",
+      "startMs": 3400,
+      "endMs": 3680
+    },
+    {
+      "word": "performer's",
+      "startMs": 3720,
+      "endMs": 4320
+    },
+    {
+      "word": "actual",
+      "startMs": 4377,
+      "endMs": 4720
+    },
+    {
+      "word": "stats.",
+      "startMs": 4813,
+      "endMs": 5440
+    },
+    {
+      "word": "Four",
+      "startMs": 5640,
+      "endMs": 5920
+    },
+    {
+      "word": "point",
+      "startMs": 5987,
+      "endMs": 6320
+    },
+    {
+      "word": "eight",
+      "startMs": 6333,
+      "endMs": 6400
+    },
+    {
+      "word": "percent",
+      "startMs": 6450,
+      "endMs": 6800
+    },
+    {
+      "word": "click-through",
+      "startMs": 6840,
+      "endMs": 7280
+    },
+    {
+      "word": "rate.",
+      "startMs": 7344,
+      "endMs": 8000
+    },
+    {
+      "word": "Two",
+      "startMs": 8020,
+      "endMs": 8080
+    },
+    {
+      "word": "point",
+      "startMs": 8132,
+      "endMs": 8400
+    },
+    {
+      "word": "one",
+      "startMs": 8440,
+      "endMs": 8560
+    },
+    {
+      "word": "dollars",
+      "startMs": 8610,
+      "endMs": 8960
+    },
+    {
+      "word": "cost",
+      "startMs": 9040,
+      "endMs": 9360
+    },
+    {
+      "word": "per",
+      "startMs": 9400,
+      "endMs": 9520
+    },
+    {
+      "word": "click.",
+      "startMs": 9587,
+      "endMs": 10320
+    },
+    {
+      "word": "One",
+      "startMs": 10360,
+      "endMs": 10480
+    },
+    {
+      "word": "hundred",
+      "startMs": 10520,
+      "endMs": 10800
+    },
+    {
+      "word": "and",
+      "startMs": 10860,
+      "endMs": 11040
+    },
+    {
+      "word": "forty-three",
+      "startMs": 11067,
+      "endMs": 11440
+    },
+    {
+      "word": "percent",
+      "startMs": 11500,
+      "endMs": 11920
+    },
+    {
+      "word": "return",
+      "startMs": 11989,
+      "endMs": 12400
+    },
+    {
+      "word": "on",
+      "startMs": 12453,
+      "endMs": 12560
+    },
+    {
+      "word": "ad",
+      "startMs": 12640,
+      "endMs": 12800
+    },
+    {
+      "word": "spend.",
+      "startMs": 12867,
+      "endMs": 13280
+    },
+    {
+      "word": "All",
+      "startMs": 13480,
+      "endMs": 13840
+    },
+    {
+      "word": "from",
+      "startMs": 13872,
+      "endMs": 14000
+    },
+    {
+      "word": "a",
+      "startMs": 14080,
+      "endMs": 14160
+    },
+    {
+      "word": "fifty-nine",
+      "startMs": 14200,
+      "endMs": 14640
+    },
+    {
+      "word": "dollar",
+      "startMs": 14686,
+      "endMs": 14960
+    },
+    {
+      "word": "Hexa",
+      "startMs": 15040,
+      "endMs": 15440
+    },
+    {
+      "word": "ad.",
+      "startMs": 15493,
+      "endMs": 15680
+    },
+    {
+      "word": "I'm",
+      "startMs": 16040,
+      "endMs": 16560
+    },
+    {
+      "word": "not",
+      "startMs": 16580,
+      "endMs": 16640
+    },
+    {
+      "word": "saying",
+      "startMs": 16686,
+      "endMs": 16960
+    },
+    {
+      "word": "every",
+      "startMs": 17013,
+      "endMs": 17280
+    },
+    {
+      "word": "AI",
+      "startMs": 17413,
+      "endMs": 17680
+    },
+    {
+      "word": "ad",
+      "startMs": 17760,
+      "endMs": 17920
+    },
+    {
+      "word": "will",
+      "startMs": 17952,
+      "endMs": 18080
+    },
+    {
+      "word": "hit",
+      "startMs": 18120,
+      "endMs": 18240
+    },
+    {
+      "word": "these",
+      "startMs": 18267,
+      "endMs": 18400
+    },
+    {
+      "word": "numbers.",
+      "startMs": 18460,
+      "endMs": 18960
+    },
+    {
+      "word": "I'm",
+      "startMs": 19160,
+      "endMs": 19520
+    },
+    {
+      "word": "saying",
+      "startMs": 19543,
+      "endMs": 19680
+    },
+    {
+      "word": "the",
+      "startMs": 19720,
+      "endMs": 19840
+    },
+    {
+      "word": "ones",
+      "startMs": 19888,
+      "endMs": 20080
+    },
+    {
+      "word": "that",
+      "startMs": 20112,
+      "endMs": 20240
+    },
+    {
+      "word": "do",
+      "startMs": 20320,
+      "endMs": 20480
+    },
+    {
+      "word": "exist.",
+      "startMs": 20573,
+      "endMs": 21120
+    },
+    {
+      "word": "Comment",
+      "startMs": 21440,
+      "endMs": 22080
+    },
+    {
+      "word": "fifty-nine",
+      "startMs": 22120,
+      "endMs": 22560
+    },
+    {
+      "word": "to",
+      "startMs": 22613,
+      "endMs": 22720
+    },
+    {
+      "word": "test",
+      "startMs": 22784,
+      "endMs": 23040
+    },
+    {
+      "word": "it.",
+      "startMs": 23093,
+      "endMs": 23520
+    }
+  ]
+}

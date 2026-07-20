@@ -1,0 +1,225 @@
+{
+  "_comment": "Concept Q: FOUNDER-CRED hook cloned from Davie Fogarty (194-day live winner). Stacked '$X founder exposes' headline + identity tag pattern. Specific big-number figure in first 3 words.",
+  "_modeled_after": {
+    "ad_id": "2042421206613863",
+    "page_name": "Davie Fogarty",
+    "days_active": 194,
+    "library_url": "https://www.facebook.com/ads/library/?id=2042421206613863",
+    "archetype": "founder-cred",
+    "analyzed_on": "2026-06-18"
+  },
+  "slides": [
+    {
+      "text": "Hexa founder exposes:",
+      "emphasis": "exposes",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-25-lip-sync.mp4",
+      "durationFrames": 61
+    },
+    {
+      "text": "How to make an $8K product ad for $59.",
+      "emphasis": "$59",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-30-lip-sync.mp4",
+      "durationFrames": 140
+    },
+    {
+      "text": "From one product photo.",
+      "emphasis": "one",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 56
+    },
+    {
+      "text": "48 hours. No crew. No studio.",
+      "emphasis": "48",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-10-showreel.mp4",
+      "durationFrames": 121
+    },
+    {
+      "text": "I'll see you inside.",
+      "emphasis": "you",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 62
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 59
+    }
+  ],
+  "voiceover_script": "[firm]Hexa founder exposes: [punchy]How to make an eight thousand dollar product ad for fifty-nine dollars. [deliberate]From one product photo. [grounded]Forty-eight hours. No crew. No studio. [warm]I'll see you inside. Free sample below.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-dramatic-2.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/q-davie-founder/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "Hexa",
+      "startMs": 0,
+      "endMs": 320
+    },
+    {
+      "word": "founder",
+      "startMs": 370,
+      "endMs": 720
+    },
+    {
+      "word": "exposes:",
+      "startMs": 810,
+      "endMs": 1520
+    },
+    {
+      "word": "How",
+      "startMs": 1720,
+      "endMs": 2003
+    },
+    {
+      "word": "to",
+      "startMs": 2029,
+      "endMs": 2083
+    },
+    {
+      "word": "make",
+      "startMs": 2131,
+      "endMs": 2323
+    },
+    {
+      "word": "an",
+      "startMs": 2376,
+      "endMs": 2483
+    },
+    {
+      "word": "eight",
+      "startMs": 2510,
+      "endMs": 2643
+    },
+    {
+      "word": "thousand",
+      "startMs": 2679,
+      "endMs": 2963
+    },
+    {
+      "word": "dollar",
+      "startMs": 3009,
+      "endMs": 3283
+    },
+    {
+      "word": "product",
+      "startMs": 3333,
+      "endMs": 3683
+    },
+    {
+      "word": "ad",
+      "startMs": 3763,
+      "endMs": 3923
+    },
+    {
+      "word": "for",
+      "startMs": 3983,
+      "endMs": 4163
+    },
+    {
+      "word": "fifty-nine",
+      "startMs": 4230,
+      "endMs": 4803
+    },
+    {
+      "word": "dollars.",
+      "startMs": 4873,
+      "endMs": 5683
+    },
+    {
+      "word": "From",
+      "startMs": 5696,
+      "endMs": 5843
+    },
+    {
+      "word": "one",
+      "startMs": 5923,
+      "endMs": 6163
+    },
+    {
+      "word": "product",
+      "startMs": 6213,
+      "endMs": 6563
+    },
+    {
+      "word": "photo.",
+      "startMs": 6630,
+      "endMs": 7043
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 7483,
+      "endMs": 8243
+    },
+    {
+      "word": "hours.",
+      "startMs": 8336,
+      "endMs": 8963
+    },
+    {
+      "word": "No",
+      "startMs": 9016,
+      "endMs": 9123
+    },
+    {
+      "word": "crew.",
+      "startMs": 9219,
+      "endMs": 9763
+    },
+    {
+      "word": "No",
+      "startMs": 9816,
+      "endMs": 9923
+    },
+    {
+      "word": "studio.",
+      "startMs": 10003,
+      "endMs": 10563
+    },
+    {
+      "word": "I'll",
+      "startMs": 10763,
+      "endMs": 11126
+    },
+    {
+      "word": "see",
+      "startMs": 11166,
+      "endMs": 11286
+    },
+    {
+      "word": "you",
+      "startMs": 11306,
+      "endMs": 11366
+    },
+    {
+      "word": "inside.",
+      "startMs": 11435,
+      "endMs": 12126
+    },
+    {
+      "word": "Free",
+      "startMs": 12182,
+      "endMs": 12406
+    },
+    {
+      "word": "sample",
+      "startMs": 12463,
+      "endMs": 12806
+    },
+    {
+      "word": "below.",
+      "startMs": 12873,
+      "endMs": 13286
+    }
+  ]
+}

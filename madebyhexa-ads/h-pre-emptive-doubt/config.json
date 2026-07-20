@@ -1,0 +1,200 @@
+{
+  "_comment": "Concept H: Pre-Emptive Doubt. AI character looks at camera, text says 'I'm not a real person.' Maximum disruption.",
+  "slides": [
+    {
+      "text": "I'm not a real person.",
+      "emphasis": "not",
+      "type": "broll",
+      "durationFrames": 65,
+      "footage": "madebyhexa-ads/videos/portfolio-25-lip-sync.mp4"
+    },
+    {
+      "text": "But I could be in your ad.",
+      "emphasis": "your",
+      "type": "broll",
+      "durationFrames": 77,
+      "footage": "madebyhexa-ads/videos/portfolio-26-dance.mp4"
+    },
+    {
+      "text": "Made from your photos.",
+      "emphasis": "your",
+      "type": "broll",
+      "durationFrames": 82,
+      "footage": "madebyhexa-ads/videos/portfolio-33-ai-photos.mp4"
+    },
+    {
+      "text": "48 hours. No studio day.",
+      "emphasis": "48",
+      "type": "broll",
+      "durationFrames": 92,
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4"
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "durationFrames": 91,
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4"
+    }
+  ],
+  "voiceover_script": "[curious]I'm not a real person. [deliberate]But I could be in your next ad. [firm]Made from photos you already have. [grounded]Forty-eight hours. No studio day. [warm]Tap below for your free sample.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-corporate-3.mp3",
+  "bg_music_volume": 0.08,
+  "voiceover": "madebyhexa-ads/h-pre-emptive-doubt/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "I'm",
+      "startMs": 0,
+      "endMs": 320
+    },
+    {
+      "word": "not",
+      "startMs": 360,
+      "endMs": 480
+    },
+    {
+      "word": "a",
+      "startMs": 520,
+      "endMs": 560
+    },
+    {
+      "word": "real",
+      "startMs": 608,
+      "endMs": 800
+    },
+    {
+      "word": "person.",
+      "startMs": 880,
+      "endMs": 1680
+    },
+    {
+      "word": "But",
+      "startMs": 1840,
+      "endMs": 2080
+    },
+    {
+      "word": "I",
+      "startMs": 2120,
+      "endMs": 2160
+    },
+    {
+      "word": "could",
+      "startMs": 2213,
+      "endMs": 2480
+    },
+    {
+      "word": "be",
+      "startMs": 2560,
+      "endMs": 2720
+    },
+    {
+      "word": "in",
+      "startMs": 2773,
+      "endMs": 2880
+    },
+    {
+      "word": "your",
+      "startMs": 2912,
+      "endMs": 3040
+    },
+    {
+      "word": "next",
+      "startMs": 3104,
+      "endMs": 3360
+    },
+    {
+      "word": "ad.",
+      "startMs": 3467,
+      "endMs": 3760
+    },
+    {
+      "word": "Made",
+      "startMs": 4040,
+      "endMs": 4480
+    },
+    {
+      "word": "from",
+      "startMs": 4512,
+      "endMs": 4640
+    },
+    {
+      "word": "photos",
+      "startMs": 4697,
+      "endMs": 5040
+    },
+    {
+      "word": "you",
+      "startMs": 5080,
+      "endMs": 5200
+    },
+    {
+      "word": "already",
+      "startMs": 5240,
+      "endMs": 5520
+    },
+    {
+      "word": "have.",
+      "startMs": 5600,
+      "endMs": 6000
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 6240,
+      "endMs": 6880
+    },
+    {
+      "word": "hours.",
+      "startMs": 6960,
+      "endMs": 7520
+    },
+    {
+      "word": "No",
+      "startMs": 7573,
+      "endMs": 7680
+    },
+    {
+      "word": "studio",
+      "startMs": 7749,
+      "endMs": 8160
+    },
+    {
+      "word": "day.",
+      "startMs": 8240,
+      "endMs": 8560
+    },
+    {
+      "word": "Tap",
+      "startMs": 8800,
+      "endMs": 9280
+    },
+    {
+      "word": "below",
+      "startMs": 9320,
+      "endMs": 9520
+    },
+    {
+      "word": "for",
+      "startMs": 9560,
+      "endMs": 9680
+    },
+    {
+      "word": "your",
+      "startMs": 9712,
+      "endMs": 9840
+    },
+    {
+      "word": "free",
+      "startMs": 9888,
+      "endMs": 10080
+    },
+    {
+      "word": "sample.",
+      "startMs": 10149,
+      "endMs": 10800
+    }
+  ]
+}

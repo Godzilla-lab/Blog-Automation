@@ -1,0 +1,318 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-09-wed-pm-what-59-buys-you. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "pm",
+    "comment_keyword": "$59",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/09-wed-pm-what-59-buys-you.md"
+  },
+  "slides": [
+    {
+      "text": "What $59 buys you.",
+      "emphasis": "$59",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-25-lip-sync.mp4",
+      "durationFrames": 188
+    },
+    {
+      "text": "60-sec cinematic ad.",
+      "emphasis": "60-sec",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 190
+    },
+    {
+      "text": "Same realism as $8K shoot.",
+      "emphasis": "Same",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 113
+    },
+    {
+      "text": "Free sample. No card.",
+      "emphasis": "Free",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-15-showreel.mp4",
+      "durationFrames": 109
+    },
+    {
+      "text": "Comment $59 \u2193",
+      "emphasis": "$59",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 84
+    }
+  ],
+  "voiceover_script": "[curious]What does fifty-nine dollars actually buy you? Be honest with yourself before you watch this. [deliberate]Sixty seconds of cinematic product video. From one of your photos. Forty-eight hours. [firm]Same realism as an eight thousand dollar studio shoot. [grounded]We're not making this up. Free sample, no card. [warm]Comment fifty-nine to see it.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "59",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-corporate-2.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-09-wed-pm-what-59-buys-you/voiceover.mp3",
+  "_end_word_indices": [
+    14,
+    27,
+    36,
+    45,
+    50
+  ],
+  "word_timestamps": [
+    {
+      "word": "What",
+      "startMs": 0,
+      "endMs": 160
+    },
+    {
+      "word": "does",
+      "startMs": 224,
+      "endMs": 480
+    },
+    {
+      "word": "fifty-nine",
+      "startMs": 533,
+      "endMs": 960
+    },
+    {
+      "word": "dollars",
+      "startMs": 1020,
+      "endMs": 1440
+    },
+    {
+      "word": "actually",
+      "startMs": 1520,
+      "endMs": 2160
+    },
+    {
+      "word": "buy",
+      "startMs": 2220,
+      "endMs": 2400
+    },
+    {
+      "word": "you?",
+      "startMs": 2460,
+      "endMs": 2720
+    },
+    {
+      "word": "Be",
+      "startMs": 2907,
+      "endMs": 3280
+    },
+    {
+      "word": "honest",
+      "startMs": 3326,
+      "endMs": 3600
+    },
+    {
+      "word": "with",
+      "startMs": 3632,
+      "endMs": 3760
+    },
+    {
+      "word": "yourself",
+      "startMs": 3804,
+      "endMs": 4160
+    },
+    {
+      "word": "before",
+      "startMs": 4194,
+      "endMs": 4400
+    },
+    {
+      "word": "you",
+      "startMs": 4440,
+      "endMs": 4560
+    },
+    {
+      "word": "watch",
+      "startMs": 4613,
+      "endMs": 4880
+    },
+    {
+      "word": "this.",
+      "startMs": 4944,
+      "endMs": 5760
+    },
+    {
+      "word": "Sixty",
+      "startMs": 5768,
+      "endMs": 6080
+    },
+    {
+      "word": "seconds",
+      "startMs": 6140,
+      "endMs": 6560
+    },
+    {
+      "word": "of",
+      "startMs": 6613,
+      "endMs": 6720
+    },
+    {
+      "word": "cinematic",
+      "startMs": 6776,
+      "endMs": 7280
+    },
+    {
+      "word": "product",
+      "startMs": 7320,
+      "endMs": 7600
+    },
+    {
+      "word": "video.",
+      "startMs": 7667,
+      "endMs": 8080
+    },
+    {
+      "word": "From",
+      "startMs": 8176,
+      "endMs": 8560
+    },
+    {
+      "word": "one",
+      "startMs": 8580,
+      "endMs": 8640
+    },
+    {
+      "word": "of",
+      "startMs": 8667,
+      "endMs": 8720
+    },
+    {
+      "word": "your",
+      "startMs": 8768,
+      "endMs": 8960
+    },
+    {
+      "word": "photos.",
+      "startMs": 9029,
+      "endMs": 9520
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 9667,
+      "endMs": 10640
+    },
+    {
+      "word": "hours.",
+      "startMs": 10747,
+      "endMs": 11600
+    },
+    {
+      "word": "Same",
+      "startMs": 11640,
+      "endMs": 11840
+    },
+    {
+      "word": "realism",
+      "startMs": 11910,
+      "endMs": 12400
+    },
+    {
+      "word": "as",
+      "startMs": 12453,
+      "endMs": 12560
+    },
+    {
+      "word": "an",
+      "startMs": 12613,
+      "endMs": 12720
+    },
+    {
+      "word": "eight",
+      "startMs": 12747,
+      "endMs": 12880
+    },
+    {
+      "word": "thousand",
+      "startMs": 12924,
+      "endMs": 13280
+    },
+    {
+      "word": "dollar",
+      "startMs": 13326,
+      "endMs": 13600
+    },
+    {
+      "word": "studio",
+      "startMs": 13669,
+      "endMs": 14080
+    },
+    {
+      "word": "shoot.",
+      "startMs": 14133,
+      "endMs": 14880
+    },
+    {
+      "word": "We're",
+      "startMs": 14920,
+      "endMs": 15040
+    },
+    {
+      "word": "not",
+      "startMs": 15080,
+      "endMs": 15200
+    },
+    {
+      "word": "making",
+      "startMs": 15246,
+      "endMs": 15520
+    },
+    {
+      "word": "this",
+      "startMs": 15568,
+      "endMs": 15760
+    },
+    {
+      "word": "up.",
+      "startMs": 15840,
+      "endMs": 16079
+    },
+    {
+      "word": "Free",
+      "startMs": 16192,
+      "endMs": 16640
+    },
+    {
+      "word": "sample,",
+      "startMs": 16709,
+      "endMs": 17280
+    },
+    {
+      "word": "no",
+      "startMs": 17360,
+      "endMs": 17520
+    },
+    {
+      "word": "card.",
+      "startMs": 17600,
+      "endMs": 18000
+    },
+    {
+      "word": "Comment",
+      "startMs": 18200,
+      "endMs": 18720
+    },
+    {
+      "word": "fifty-nine",
+      "startMs": 18773,
+      "endMs": 19280
+    },
+    {
+      "word": "to",
+      "startMs": 19360,
+      "endMs": 19520
+    },
+    {
+      "word": "see",
+      "startMs": 19560,
+      "endMs": 19680
+    },
+    {
+      "word": "it.",
+      "startMs": 19733,
+      "endMs": 20000
+    }
+  ]
+}

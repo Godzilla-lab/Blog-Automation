@@ -1,0 +1,314 @@
+{
+  "_comment": "Aria female-voice variant of k-how-many-products. Same script + footage.",
+  "slides": [
+    {
+      "text": "How many products could you launch?",
+      "emphasis": "many",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 65
+    },
+    {
+      "text": "Cinematic ads in 48 hours.",
+      "emphasis": "48",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-21-showreel.mp4",
+      "durationFrames": 106
+    },
+    {
+      "text": "We did it for one creator.",
+      "emphasis": "one",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-26-dance.mp4",
+      "durationFrames": 91
+    },
+    {
+      "text": "881K followers. 10M views.",
+      "emphasis": "881K",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-32-reels.mp4",
+      "durationFrames": 146
+    },
+    {
+      "text": "In 30 days. No studio.",
+      "emphasis": "30",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 113
+    },
+    {
+      "text": "See your product as a real ad.",
+      "emphasis": "your",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-30-lip-sync.mp4",
+      "durationFrames": 104
+    },
+    {
+      "text": "Free Sample Below \u2193",
+      "emphasis": "Free",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-17-showreel.mp4",
+      "durationFrames": 65
+    }
+  ],
+  "voiceover_script": "[curious]How many products could you launch [deliberate]if you had cinematic ads ready in forty-eight hours? [firm]We did this for a creator client. [punchy]Eight hundred eighty-one thousand followers. Ten million views. [grounded]In thirty days. No shoots. No studio. [warm]See what your product looks like as a real ad. [building]Free sample below.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "FREESAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-energetic-3.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/k-how-many-products-f/voiceover.mp3",
+  "word_timestamps": [
+    {
+      "word": "How",
+      "startMs": 0,
+      "endMs": 80
+    },
+    {
+      "word": "many",
+      "startMs": 128,
+      "endMs": 320
+    },
+    {
+      "word": "products",
+      "startMs": 373,
+      "endMs": 800
+    },
+    {
+      "word": "could",
+      "startMs": 840,
+      "endMs": 1040
+    },
+    {
+      "word": "you",
+      "startMs": 1080,
+      "endMs": 1200
+    },
+    {
+      "word": "launch",
+      "startMs": 1269,
+      "endMs": 1680
+    },
+    {
+      "word": "if",
+      "startMs": 1800,
+      "endMs": 2000
+    },
+    {
+      "word": "you",
+      "startMs": 2040,
+      "endMs": 2160
+    },
+    {
+      "word": "had",
+      "startMs": 2200,
+      "endMs": 2320
+    },
+    {
+      "word": "cinematic",
+      "startMs": 2376,
+      "endMs": 2880
+    },
+    {
+      "word": "ads",
+      "startMs": 2960,
+      "endMs": 3200
+    },
+    {
+      "word": "ready",
+      "startMs": 3240,
+      "endMs": 3440
+    },
+    {
+      "word": "in",
+      "startMs": 3520,
+      "endMs": 3680
+    },
+    {
+      "word": "forty-eight",
+      "startMs": 3720,
+      "endMs": 4080
+    },
+    {
+      "word": "hours?",
+      "startMs": 4173,
+      "endMs": 4720
+    },
+    {
+      "word": "We",
+      "startMs": 5040,
+      "endMs": 5520
+    },
+    {
+      "word": "did",
+      "startMs": 5560,
+      "endMs": 5680
+    },
+    {
+      "word": "this",
+      "startMs": 5728,
+      "endMs": 5920
+    },
+    {
+      "word": "for",
+      "startMs": 5940,
+      "endMs": 6000
+    },
+    {
+      "word": "a",
+      "startMs": 6080,
+      "endMs": 6160
+    },
+    {
+      "word": "creator",
+      "startMs": 6210,
+      "endMs": 6560
+    },
+    {
+      "word": "client.",
+      "startMs": 6629,
+      "endMs": 7240
+    },
+    {
+      "word": "Eight",
+      "startMs": 7340,
+      "endMs": 7604
+    },
+    {
+      "word": "hundred",
+      "startMs": 7644,
+      "endMs": 7924
+    },
+    {
+      "word": "eighty-one",
+      "startMs": 7981,
+      "endMs": 8484
+    },
+    {
+      "word": "thousand",
+      "startMs": 8537,
+      "endMs": 8964
+    },
+    {
+      "word": "followers.",
+      "startMs": 9036,
+      "endMs": 9964
+    },
+    {
+      "word": "Ten",
+      "startMs": 10034,
+      "endMs": 10244
+    },
+    {
+      "word": "million",
+      "startMs": 10304,
+      "endMs": 10724
+    },
+    {
+      "word": "views.",
+      "startMs": 10831,
+      "endMs": 11604
+    },
+    {
+      "word": "In",
+      "startMs": 11724,
+      "endMs": 12164
+    },
+    {
+      "word": "thirty",
+      "startMs": 12175,
+      "endMs": 12244
+    },
+    {
+      "word": "days.",
+      "startMs": 12340,
+      "endMs": 12884
+    },
+    {
+      "word": "No",
+      "startMs": 13044,
+      "endMs": 13364
+    },
+    {
+      "word": "shoots.",
+      "startMs": 13421,
+      "endMs": 14044
+    },
+    {
+      "word": "No",
+      "startMs": 14137,
+      "endMs": 14324
+    },
+    {
+      "word": "studio.",
+      "startMs": 14393,
+      "endMs": 14884
+    },
+    {
+      "word": "See",
+      "startMs": 15204,
+      "endMs": 15684
+    },
+    {
+      "word": "what",
+      "startMs": 15716,
+      "endMs": 15844
+    },
+    {
+      "word": "your",
+      "startMs": 15876,
+      "endMs": 16004
+    },
+    {
+      "word": "product",
+      "startMs": 16044,
+      "endMs": 16324
+    },
+    {
+      "word": "looks",
+      "startMs": 16364,
+      "endMs": 16564
+    },
+    {
+      "word": "like",
+      "startMs": 16612,
+      "endMs": 16804
+    },
+    {
+      "word": "as",
+      "startMs": 16857,
+      "endMs": 16964
+    },
+    {
+      "word": "a",
+      "startMs": 17004,
+      "endMs": 17044
+    },
+    {
+      "word": "real",
+      "startMs": 17124,
+      "endMs": 17444
+    },
+    {
+      "word": "ad.",
+      "startMs": 17577,
+      "endMs": 17845
+    },
+    {
+      "word": "Free",
+      "startMs": 18004,
+      "endMs": 18324
+    },
+    {
+      "word": "sample",
+      "startMs": 18370,
+      "endMs": 18644
+    },
+    {
+      "word": "below.",
+      "startMs": 18711,
+      "endMs": 19204
+    }
+  ]
+}

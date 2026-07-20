@@ -1,0 +1,160 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-19-sun-am-same-product-5-hooks. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "am",
+    "comment_keyword": "SAMPLE",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/19-sun-am-same-product-5-hooks.md"
+  },
+  "slides": [
+    {
+      "text": "1 product. 5 ads.",
+      "emphasis": "5 ads",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 130
+    },
+    {
+      "text": "Same photo. 5 variants.",
+      "emphasis": "5 variants",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 89
+    },
+    {
+      "text": "48 hours. $59 each.",
+      "emphasis": "$59",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-08-showreel.mp4",
+      "durationFrames": 87
+    },
+    {
+      "text": "Comment SAMPLE \u2193",
+      "emphasis": "SAMPLE",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 82
+    }
+  ],
+  "voiceover_script": "[firm]One product. Five ads. Five hooks. All AI. [punchy]Same photo. Five variants. [deliberate]Forty-eight hours. Fifty-nine dollars each. [warm]Comment SAMPLE for yours.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "SAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-energetic-2.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-19-sun-am-same-product-5-hooks/voiceover.mp3",
+  "_end_word_indices": [
+    7,
+    11,
+    16,
+    20
+  ],
+  "word_timestamps": [
+    {
+      "word": "One",
+      "startMs": 0,
+      "endMs": 320
+    },
+    {
+      "word": "product.",
+      "startMs": 390,
+      "endMs": 1120
+    },
+    {
+      "word": "Five",
+      "startMs": 1168,
+      "endMs": 1360
+    },
+    {
+      "word": "ads.",
+      "startMs": 1480,
+      "endMs": 2080
+    },
+    {
+      "word": "Five",
+      "startMs": 2128,
+      "endMs": 2320
+    },
+    {
+      "word": "hooks.",
+      "startMs": 2400,
+      "endMs": 3040
+    },
+    {
+      "word": "All",
+      "startMs": 3100,
+      "endMs": 3280
+    },
+    {
+      "word": "AI.",
+      "startMs": 3440,
+      "endMs": 3840
+    },
+    {
+      "word": "Same",
+      "startMs": 4120,
+      "endMs": 4560
+    },
+    {
+      "word": "photo.",
+      "startMs": 4640,
+      "endMs": 5240
+    },
+    {
+      "word": "Five",
+      "startMs": 5280,
+      "endMs": 5440
+    },
+    {
+      "word": "variants.",
+      "startMs": 5511,
+      "endMs": 6320
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 6360,
+      "endMs": 6640
+    },
+    {
+      "word": "hours.",
+      "startMs": 6720,
+      "endMs": 7280
+    },
+    {
+      "word": "Fifty-nine",
+      "startMs": 7320,
+      "endMs": 7680
+    },
+    {
+      "word": "dollars",
+      "startMs": 7730,
+      "endMs": 8080
+    },
+    {
+      "word": "each.",
+      "startMs": 8144,
+      "endMs": 8720
+    },
+    {
+      "word": "Comment",
+      "startMs": 8880,
+      "endMs": 9363
+    },
+    {
+      "word": "SAMPLE",
+      "startMs": 9432,
+      "endMs": 9843
+    },
+    {
+      "word": "for",
+      "startMs": 9903,
+      "endMs": 10083
+    },
+    {
+      "word": "yours.",
+      "startMs": 10163,
+      "endMs": 10643
+    }
+  ]
+}

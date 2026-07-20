@@ -1,0 +1,185 @@
+{
+  "_comment": "TikTok organic week-1 piece. Slug: tt-10-thu-am-client-reaction. Voice = same natural settings as p/q/r batch.",
+  "_tiktok_meta": {
+    "slot": "am",
+    "comment_keyword": "SAMPLE",
+    "week": "2026-06-22",
+    "script_source": "workspace/tiktok/2026-06-22-week-batch/10-thu-am-client-reaction.md"
+  },
+  "slides": [
+    {
+      "text": "She sent one photo.",
+      "emphasis": "one photo",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-07-showreel.mp4",
+      "durationFrames": 130
+    },
+    {
+      "text": "This is what she got back.",
+      "emphasis": "this",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-30-lip-sync.mp4",
+      "durationFrames": 62
+    },
+    {
+      "text": "48 hours. $59.",
+      "emphasis": "$59",
+      "type": "broll",
+      "footage": "madebyhexa-ads/videos/portfolio-01-showreel.mp4",
+      "durationFrames": 166
+    },
+    {
+      "text": "Comment SAMPLE \u2193",
+      "emphasis": "SAMPLE",
+      "type": "cta",
+      "footage": "madebyhexa-ads/videos/portfolio-06-showreel.mp4",
+      "durationFrames": 88
+    }
+  ],
+  "voiceover_script": "[curious]She sent us one photo. This is what she got back. [warm]Watch her reaction. [deliberate]Forty-eight hours from photo to this. Fifty-nine dollars. [punchy]Comment SAMPLE for yours.",
+  "accent_color": "#00B8FF",
+  "seconds_per_slide": 4,
+  "cta_keyword": "SAMPLE",
+  "handle": "madebyhexa.co/offer",
+  "bg_music": "sfx/bg-chill.mp3",
+  "bg_music_volume": 0.1,
+  "voiceover": "madebyhexa-ads/tt-10-thu-am-client-reaction/voiceover.mp3",
+  "_end_word_indices": [
+    10,
+    13,
+    21,
+    25
+  ],
+  "word_timestamps": [
+    {
+      "word": "She",
+      "startMs": 0,
+      "endMs": 320
+    },
+    {
+      "word": "sent",
+      "startMs": 368,
+      "endMs": 560
+    },
+    {
+      "word": "us",
+      "startMs": 640,
+      "endMs": 800
+    },
+    {
+      "word": "one",
+      "startMs": 840,
+      "endMs": 960
+    },
+    {
+      "word": "photo.",
+      "startMs": 1053,
+      "endMs": 1920
+    },
+    {
+      "word": "This",
+      "startMs": 1984,
+      "endMs": 2240
+    },
+    {
+      "word": "is",
+      "startMs": 2320,
+      "endMs": 2480
+    },
+    {
+      "word": "what",
+      "startMs": 2512,
+      "endMs": 2640
+    },
+    {
+      "word": "she",
+      "startMs": 2680,
+      "endMs": 2800
+    },
+    {
+      "word": "got",
+      "startMs": 2860,
+      "endMs": 3040
+    },
+    {
+      "word": "back.",
+      "startMs": 3104,
+      "endMs": 3840
+    },
+    {
+      "word": "Watch",
+      "startMs": 3853,
+      "endMs": 4080
+    },
+    {
+      "word": "her",
+      "startMs": 4120,
+      "endMs": 4240
+    },
+    {
+      "word": "reaction.",
+      "startMs": 4311,
+      "endMs": 5400
+    },
+    {
+      "word": "Forty-eight",
+      "startMs": 5660,
+      "endMs": 6400
+    },
+    {
+      "word": "hours",
+      "startMs": 6467,
+      "endMs": 6800
+    },
+    {
+      "word": "from",
+      "startMs": 6848,
+      "endMs": 7040
+    },
+    {
+      "word": "photo",
+      "startMs": 7120,
+      "endMs": 7520
+    },
+    {
+      "word": "to",
+      "startMs": 7573,
+      "endMs": 7680
+    },
+    {
+      "word": "this.",
+      "startMs": 7760,
+      "endMs": 8520
+    },
+    {
+      "word": "Fifty-nine",
+      "startMs": 8593,
+      "endMs": 9280
+    },
+    {
+      "word": "dollars.",
+      "startMs": 9370,
+      "endMs": 10440
+    },
+    {
+      "word": "Comment",
+      "startMs": 10660,
+      "endMs": 11043
+    },
+    {
+      "word": "SAMPLE",
+      "startMs": 11134,
+      "endMs": 11683
+    },
+    {
+      "word": "for",
+      "startMs": 11723,
+      "endMs": 11843
+    },
+    {
+      "word": "yours.",
+      "startMs": 11936,
+      "endMs": 12563
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<p>The economics of a law firm depend on a fact most lawyers never measure directly: the percentage of qualified prospects who fall out of intake before the engagement letter is signed. In a typical mid-sized firm, that number sits between 30% and 60%, and the firm has no idea, because the prospects who fell out never enter the matter management system. They are invisible losses that show up only in the gap between marketing spend and signed clients.</p>
+
+<p>This post lays out exactly where prospects drop in the intake funnel, the 2026 response-time benchmarks that determine which firm signs the client, the four intake-failure patterns we see most often when we audit law firms, and the 30-day shape of an AI intake build that closes the response gap. By the end you should be able to model your own intake leakage in a spreadsheet by Friday.</p>
+
+<div class="tldr">
+  <h3>Key takeaways</h3>
+  <ul>
+    <li>The number that drives law firm growth in 2026 is intake conversion rate, not marketing spend. Firms with 50% intake conversion outgrow firms with 20% intake conversion at every spend level.</li>
+    <li>The response gap is the single largest driver of lost clients. Prospects who hear back in under 5 minutes convert 8-100x better than prospects who hear back after 30 minutes.</li>
+    <li>AI intake works because it handles the response gap at 3 am and 5 pm Friday, not because it qualifies prospects better than your front desk.</li>
+    <li>Bolt AI intake onto your existing matter management system (Clio, MyCase, Filevine, PracticePanther). The rebuild kills the project.</li>
+  </ul>
+</div>
+
+<h2>What "intake leakage" actually looks like in a 2026 law firm</h2>
+
+<p>Think about the path a prospect actually takes. Someone Googles "personal injury lawyer near me" at 8:47 pm on a Tuesday. They click an ad. They fill out a contact form. They expect to hear back tonight. They wait. The next morning at 9 am they fill out the form on the next firm's site. At 9:12 am, that second firm calls them. By 9:30 am, the second firm has scheduled the consultation. By noon Wednesday, your firm's intake coordinator sees the form for the first time and calls. The prospect already signed yesterday.</p>
+
+<p>The prospect did not "leave." The prospect never entered. Your CRM shows zero, because the matter never opened. <a href="https://www.legalsoft.com/blog/law-firm-client-intake-problems">Legal industry analysis of intake problems</a> shows the same pattern across the field: most firms cannot tell you what their intake leakage rate is because the leaks happen before any tracked stage in the matter pipeline.</p>
+
+<p>The leakage compounds in four places: response time on the first contact, qualifying conversation depth, fee/scope conversation, and engagement letter follow-through. <a href="https://hyperleap.ai/blog/legal-client-intake-statistics-2026">2026 legal intake statistics</a> put the cumulative drop-off between web form and signed engagement at 60-70% in firms without dedicated intake systems.</p>
+
+<h2>The response-time math: 5 minutes vs 30 minutes</h2>
+
+<p>The single most cited statistic in lead-response research is the Lead Response Management Study, replicated in legal-specific data since: prospects contacted within 5 minutes of inquiry are between 8x and 100x more likely to qualify and book than prospects contacted after 30 minutes. <a href="https://www.clio.com/resources/ai-for-lawyers/ai-lead-generation-law-firms">Clio's analysis of AI lead generation for law firms</a> aligns with the same window.</p>
+
+<p>The number is not magic. It is a behavioral truth about how a person searches for a lawyer. When somebody fills out a contact form, they are not casually browsing; they are mid-decision. They are usually filling out forms on three firms simultaneously. The firm that calls first walks them through the next decision: scheduling a consultation. Once that consultation is on the calendar, the prospect stops looking. Form submissions to the other two firms are ignored.</p>
+
+<p>This is why "we will respond within one business day" is a losing intake policy in 2026, no matter how good the firm is at law. The decision was made before your business day started.</p>
+
+<p>The further implication is uncomfortable for marketing-led growth: doubling the ad spend on a firm with a 30-minute response gap produces less revenue than fixing the response gap at the existing ad spend. The math is stark. If a $20,000 monthly ad budget produces 200 inquiries and 30% convert (60 signed matters) at a 30-minute average response, the same 200 inquiries at a 5-minute response convert at 60-80% (120-160 signed matters). The marketing team gets credit for the revenue lift either way, but the actual leverage was on the operations side.</p>
+
+<p>The implication for AI intake is narrow but specific. The AI does not need to be smarter than your intake team. It needs to be awake. <a href="https://ferdinandagent.ai/post/why-modern-law-firms-are-moving-to-ai-powered-client-intake">Industry analysis of AI-powered intake</a> describes the same shift: the value is response coverage, not response sophistication.</p>
+
+<h2>The four intake-failure patterns we see most often</h2>
+
+<p>Across the engagements we have shipped with mid-sized firms, four failure patterns repeat:</p>
+
+<p><strong>Pattern 1: the after-hours dead zone.</strong> 35-50% of qualifying inquiries arrive between 5 pm and 9 am or on weekends. If the intake team is 9-to-5 Monday-Friday, those inquiries sit untouched until business hours, by which point most have already signed elsewhere.</p>
+
+<p><strong>Pattern 2: the screening-call bottleneck.</strong> The intake coordinator is also fielding existing-client calls, vendor inquiries, and walk-ins. New inquiries get queued, callbacks slip, and the 5-minute window becomes 4 hours by accident.</p>
+
+<p><strong>Pattern 3: the over-qualification problem.</strong> Some firms try to qualify too aggressively at first contact, asking 15 questions before scheduling a consultation. Prospects hang up. The data the firm wanted was useful to the firm; it was friction to the prospect. The right move is to schedule first and qualify during the consultation.</p>
+
+<p><strong>Pattern 4: the lost-message black hole.</strong> Voicemails get checked sporadically. Web form submissions go to a shared inbox nobody owns. Text messages from after-hours inquiries get read by whoever happens to look at the firm phone. <a href="https://connex.ai/us/resources/optimizing-legal-intake-agentic-ai-for-client-onboarding">Coverage of agentic AI in legal client onboarding</a> describes the same failure mode across the field.</p>
+
+<p>Each pattern is structurally fixable. None requires the AI to be smarter than a human; each requires the AI to be available when humans are not.</p>
+
+<h2>What an AI intake stack actually does in 2026</h2>
+
+<p>The right shape for a law firm under 50 attorneys is narrow:</p>
+
+<p><strong>First-touch response.</strong> Inbound web form, missed call, or text triggers an AI agent that responds within 60 seconds, acknowledges the inquiry, and starts a structured conversation. The conversation collects only the data needed to schedule the consultation (matter type, urgency, jurisdiction, contact preference); it does not try to qualify the case substantively.</p>
+
+<p><strong>Conflict check.</strong> The AI runs the prospect name against the firm's existing-client list before scheduling. A 30-second check that used to sit in a manual queue.</p>
+
+<p><strong>Consultation booking.</strong> The AI offers the prospect three time slots from the attorney's actual calendar, books the consultation, and sends both calendar invites with the intake form attached.</p>
+
+<p><strong>Human handoff with context.</strong> By the time the attorney or intake coordinator picks up the file Monday morning, the consultation is on the calendar with the prospect's matter type, urgency level, contact history, and a transcript of the AI conversation already in the matter management system. The human picks up where the AI left off.</p>
+
+<p>What the AI explicitly does not do: provide legal advice, quote fees, or commit the firm to a representation. Those are the activities that need attorney judgment and have liability attached. <a href="/services/customer-service-automation">Customer service automation engagements</a> follow the same activity-vs-outcome split: automate the procedural steps, route everything judgmental.</p>
+
+<h2>The 30-day implementation path for a mid-sized law firm</h2>
+
+<p>This is the shape we run at <a href="/about/team">Hexa AI Agency</a> when a firm asks for <a href="/services/ai-agent-development">AI intake agent development</a>. The same shape works whether the build is internal or external.</p>
+
+<p><strong>Week 1: lock the baseline.</strong> Pull 90 days of inbound data from the firm's web forms, phone logs, and CRM. Measure four numbers: total inquiries by source, current response time median, intake-to-consultation conversion rate, and consultation-to-signed-client conversion rate. Document the attribution formula: if intake-to-consultation lifts from 20% to 40%, what does that mean in dollar terms based on average matter value?</p>
+
+<p><strong>Week 2: build the first-touch AI agent.</strong> Configure the AI for the firm's matter types, calendar availability, and conflict-check process. Integrate with the existing matter management system (Clio, MyCase, Filevine, PracticePanther) via API. Pilot on one inquiry source first; resist scope creep.</p>
+
+<p><strong>Week 3: launch on a portion of inquiry traffic.</strong> Route 50% of new inbound to the AI agent and 50% to the human intake team. Watch consultation-booking rate and prospect satisfaction in parallel.</p>
+
+<p><strong>Week 4: measure and decide.</strong> Compare baseline against week 4. If consultation-booking rate on the AI-routed half is at least flat with the human-routed half AND the after-hours coverage gap closed, roll to 100% routing with humans handling exceptions. If consultation-booking dropped, the AI conversation script needs tightening.</p>
+
+<p>Budget realistically. An AI intake build for a mid-sized firm lands in the $8,000 to $25,000 range for the initial build, plus $400 to $1,200 per month for the AI usage. <a href="https://www.legalbrandmarketing.com/is-ai-intake-automation-worth-it-for-law-firms-return-on-investment-analysis">Industry ROI analysis of AI intake</a> generally finds the payback inside 60 days for firms with $200K+ in monthly matter intake value.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>How much does AI client intake cost for a law firm in 2026?</h3>
+<p>For a mid-sized firm under 50 attorneys, expect $8,000 to $25,000 for the initial build and integration, plus $400 to $1,200 per month for the AI usage on top of your existing matter management subscription. A platform-only solution with no custom workflow work is cheaper but tends to underperform on conversion.</p>
+
+<h3>Does AI client intake practice law?</h3>
+<p>No, and a properly scoped AI intake agent is configured to refuse if a prospect tries to push it that direction. The AI handles procedural steps: response acknowledgment, matter-type collection, conflict check, scheduling. Legal advice and fee quotes route to an attorney. Any vendor pitching an AI that "qualifies cases legally" should be a hard pass.</p>
+
+<h3>Will AI intake replace my intake coordinator?</h3>
+<p>No. The AI handles the first-touch response and the scheduling, which frees the intake coordinator from after-hours coverage and the screening-call bottleneck. The coordinator's role shifts toward higher-value work: nurturing prospects through to engagement, managing the existing-client communication, and handling the cases that the AI flagged for human attention.</p>
+
+<h3>When is AI intake the wrong answer for a law firm?</h3>
+<p>When the firm's matter intake is already under one volume threshold (under 30 inquiries per month, the manual process scales fine), when the firm has not yet measured its current intake leakage, or when the firm's matter types are highly specialized and require attorney judgment on the very first call. Build the baseline measurement first; then evaluate.</p>
+
+<p>If you are evaluating an AI intake build for your firm and want a second opinion on the scope, book a call at <a href="https://cal.com/hexaiagency">cal.com/hexaiagency</a> and we will read the proposal with you, free. We do this often for firms running <a href="/case-studies/bd-lead-capture-automation">lead capture automation</a> across both legal and adjacent service-business intake.</p>

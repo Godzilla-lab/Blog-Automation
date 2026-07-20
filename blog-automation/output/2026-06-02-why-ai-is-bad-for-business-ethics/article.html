@@ -1,0 +1,81 @@
+<p>We are an AI automation agency. We make our living building AI for service businesses. So when we publish a post titled "where AI is bad for business," the natural assumption is that this is going to be a soft-sell where every objection gets answered with "but actually." It is not. There are four ethical scenarios where we have walked away from AI builds inside the last year, and where any honest AI agency would walk away. This post lays them out so a buyer can read the warning before they sign.</p>
+
+<p>By the end you should know which AI projects you should refuse, which AI projects should be redesigned before they ship, and which AI agencies will say "this is the wrong build" out loud instead of taking the engagement and shipping anyway.</p>
+
+<div class="tldr">
+  <h3>Key takeaways</h3>
+  <ul>
+    <li>Four AI build categories where the ethical answer is no, even when the business case looks positive: surveillance of staff, deceptive personalization, automated denial of service to protected classes, and AI-generated medical or legal advice.</li>
+    <li>The ethics conversation is not separate from the ROI conversation. AI projects with ethics problems become reputational liabilities that cost more than the original build saved.</li>
+    <li>"It is technically legal" is not the bar. The bar is "would the company defend this on the front page of a regional newspaper."</li>
+    <li>Any AI agency that takes any build without an ethics screen is one bad headline away from being the example in the next regulator's deck.</li>
+  </ul>
+</div>
+
+<h2>Where the ethics conversation actually starts</h2>
+
+<p>Most "AI ethics" discussions in 2026 happen at the abstract level, with vendors writing principles that never get applied to specific build decisions. The version that matters is concrete: a buyer says "we want AI to do X." The agency says yes or no. The decision happens in 15 minutes on a discovery call, not in a 40-page governance document.</p>
+
+<p>The framing that has worked for us across discovery calls is asking three questions out loud before the scope conversation begins. First, what does this AI decide that previously a human decided. Second, who is on the receiving end of those decisions. Third, what happens if the AI is wrong in a specific, predictable way. If the answers to those three questions describe a scenario the buyer cannot defend in plain language to a customer or regulator, the build is the wrong build.</p>
+
+<p>This is the conversation most AI agencies skip. Skipping it produces engagement revenue in the short term and reputational damage in the medium term. <a href="https://www.rand.org/pubs/presentations/PTA2680-1.html">RAND's research on AI deployment risk</a> consistently identifies misalignment between capability and ethical context as a leading cause of project failure on a longer time horizon than the typical buyer expects.</p>
+
+<h2>Scenario 1: AI surveillance of staff dressed up as productivity</h2>
+
+<p>The buyer pitches "an AI agent that scores employee productivity in real time, flags low performers, and recommends them for performance improvement plans." The vendor pitches it as productivity analytics. The reality is staff surveillance, and the staff side of the equation eventually finds out.</p>
+
+<p>Two structural problems. The first is that productivity proxies (keystroke counts, time-on-task, response-rate metrics) consistently fail to capture the actual value an employee creates. A senior employee who spent 90 minutes thinking before sending a 200-word email may have produced more value than the junior employee who sent 47 emails in the same window. The AI cannot tell which case is which.</p>
+
+<p>The second is the cascade once the build exists. Surveillance-grade productivity metrics tend to expand from "monitoring" to "evidence for termination" to "input to compensation," and each step is harder to walk back than the one before. The build that was sold as "productivity insights" becomes the build that drives turnover and lawsuits. <a href="https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-says-artificial-intelligence-projects-in-infrastructure-and-operations-stall-ahead-of-meaningful-roi-returns">Gartner's framing on AI stalling without alignment</a> applies here too: the build that lacks human-side alignment fails on a long horizon even if it hits its narrow KPIs early.</p>
+
+<p>The honest version of "productivity analytics" focuses on workflow bottlenecks, not on individual employee scoring. The same data, scoped differently, produces a build the buyer can defend.</p>
+
+<h2>Scenario 2: deceptive personalization that hides who is talking</h2>
+
+<p>The buyer asks for an AI chat or voice agent that "sounds like a human" and does not disclose that it is AI. The pitch is conversion lift; the reality is consumer deception. <a href="https://www.forrester.com/blogs/build-the-right-chatbot-business-case">Forrester's analysis of chatbot business cases</a> consistently finds that disclosure-pattern bots underperform short-term and outperform on multi-quarter horizons because the trust hit from non-disclosure compounds.</p>
+
+<p>The ethical line is narrow but firm. AI agents that handle support, intake, scheduling, or quoting can absolutely be useful. The right pattern is to identify clearly ("Hi, I am an AI assistant; I can help with X, Y, Z, and escalate to a human for anything else"). The wrong pattern is to imitate a specific human, decline to disclose, or pretend to have feelings the AI does not have.</p>
+
+<p>Several jurisdictions have moved or are moving toward mandatory disclosure for AI-driven consumer-facing interactions. The agencies still building non-disclosing bots in 2026 are also the agencies whose clients will be the named examples in next year's enforcement actions. <a href="https://complexdiscovery.com/why-95-of-corporate-ai-projects-fail-lessons-from-mits-2025-study">Analysis of corporate AI project failure modes</a> identifies regulatory exposure as one of the late-cycle reasons projects get pulled.</p>
+
+<h2>Scenario 3: automated denial of service in ways that disadvantage protected classes</h2>
+
+<p>The buyer asks for an AI to "qualify leads more efficiently" and the qualification model, trained on historical data, ends up routing applications by ZIP code, name patterns, or other features that correlate with protected-class status. This is not a hypothetical; it is a documented and well-litigated failure mode in lending, insurance, hiring, and rental markets.</p>
+
+<p>The technical fix is auditing the model's decisions for disparate impact before deployment and continuously after. The harder fix is the conversation with the buyer about which signals the model is allowed to use. Many buyers will resist limiting input signals because removing them looks like leaving accuracy on the table. The agency that ships anyway and lets the buyer's lawyers find out later is the agency whose case study disappears from their website inside the year.</p>
+
+<p>The Forrester and McKinsey analyses on responsible AI in 2025-2026 both point at the same structural answer: build the audit cadence into the engagement from week one, not as an afterthought. <a href="https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/2025/the-state-of-ai-how-organizations-are-rewiring-to-capture-value_final.pdf">McKinsey 2025 State of AI</a> ties responsible AI maturity to durable value capture; the connection is not coincidence.</p>
+
+<h2>Scenario 4: AI-generated medical, legal, or financial advice without licensed review</h2>
+
+<p>The buyer is in a regulated industry. The pitch is "an AI assistant that answers customer questions." The reality is the AI is going to confidently produce advice on prescriptions, contract enforceability, or tax positions. The model will sound confident on subjects it does not actually understand at the depth required.</p>
+
+<p>The honest scope in regulated industries is narrow. AI for procedural support (scheduling, intake, document collection, FAQ on practice policy) is fine. AI for substantive advice is the wrong build. The line is not always perfectly clear, but the discovery-call test is simple: would the licensed professional in this practice put their name behind whatever the AI is about to say. If not, the AI should not be saying it.</p>
+
+<p>The agencies that take regulated-advice builds anyway are pricing in zero liability exposure that will come due eventually. The agencies that decline these builds, redirect the buyer toward the procedural-support version of the same workflow, and ship that instead are doing the right thing for everyone involved.</p>
+
+<h2>The screening question that catches all four scenarios</h2>
+
+<p>At <a href="/about/team">Hexa AI Agency</a> we run the same three-question ethics screen on every discovery call before any <a href="/services/ai-agent-development">AI agent development</a> scope is agreed. Across the engagements we have shipped, the screen has redirected 10-15% of inbound builds toward redesigned scopes and walked us away from a smaller percentage entirely.</p>
+
+<p>The three questions, in order: (1) what does this AI decide that previously a human decided. (2) Who is on the receiving end of those decisions. (3) What happens if the AI is wrong in a specific, predictable way, and is the impact reversible or not. If the third answer is "irreversible harm to a specific person or class of people," the scope needs redesigning or the build needs declining.</p>
+
+<p>The screen is not a brake on AI deployment. It is the discipline that distinguishes AI builds that survive a year from AI builds that become the case study in the next regulator's deck. The buyer who insists on skipping the screen is the buyer most likely to be calling the agency back in 18 months asking how to unwind the build.</p>
+
+<p>The economics of this discipline are interesting. Agencies that screen scope harder ship fewer builds, but the builds they ship renew at materially higher rates and produce more referrals. Agencies that ship everything they are asked to ship hit higher revenue in year one and burn through clients faster in year two. The first model compounds; the second model treads water. The buyer who is choosing between agencies should ask each one to describe a build they declined and why. The agencies that have a real story have done the work; the agencies that say "we have never had to decline a build" are the ones you should be most cautious with.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>Where is AI clearly ethical and useful for small businesses?</h3>
+<p>Most AI deployments are not ethically problematic at all. Customer service automation, invoice processing, lead intake, scheduling, behavioral email personalization, and inventory forecasting are all comfortable scopes when configured with disclosure, audit, and an escalation path to humans. The ethical conversation tightens around decisions made about specific people.</p>
+
+<h3>How do I screen an AI vendor for ethical scoping?</h3>
+<p>Ask the vendor to walk through the three questions above on the first call. The right vendor will engage with the questions seriously and may push back on parts of your initial scope. The wrong vendor will reassure you the questions do not apply to your build. The reassurance is the warning sign.</p>
+
+<h3>What if an AI vendor says "it is legal" as the answer to an ethics question?</h3>
+<p>"Legal" is not the same as "ethical" or "defensible." Many AI scoping decisions land in spaces where the law is not yet settled, and the vendor's "it is legal today" framing assumes the regulator will not catch up. The better question is whether you would defend the build on the front page of a regional newspaper if asked. If the answer is no, do not ship it.</p>
+
+<h3>When should we definitely not build AI?</h3>
+<p>When the AI would make irreversible decisions about specific people without a documented escalation path. When the AI requires deceiving users about its nature. When the AI is producing substantive advice in a licensed-professional domain. When the build's success requires features that correlate with protected-class status. Each of these scenarios has redesign paths; the right move is to redesign rather than ship the unethical version.</p>
+
+<p>If you are evaluating an AI build and want a second opinion on the ethics scoping, book a call at <a href="https://cal.com/hexaiagency">cal.com/hexaiagency</a> and we will read the proposal with you, free. We do this often for teams running <a href="/services/customer-service-automation">customer service automation</a> where the ethical considerations are concrete and the scope is straightforward to get right.</p>

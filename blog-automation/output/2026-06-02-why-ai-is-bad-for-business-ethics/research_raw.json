@@ -1,0 +1,131 @@
+{
+  "topic": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build",
+  "niche": "general",
+  "research_date": "2026-06-02",
+  "mode": "manual_tavily_only",
+  "tavily_queries_run": 6,
+  "tavily_results_returned": 20,
+  "sources": [
+    {
+      "title": "Ethical concerns mount as AI takes bigger decision-making role",
+      "url": "https://news.harvard.edu/gazette/story/2020/10/ethical-concerns-mount-as-ai-takes-bigger-decision-making-role",
+      "content": "While big business already has a huge head start, small businesses could also potentially be transformed by AI, says Karen Mills \u201975, M.B.A. \u201977, who ran the U.S. Small Business Administration from 2009 to 2013. With half the country employed by small businesses before the COVID-19 pandemic, that could have major implications for the national economy over the long haul.\n\nRather than hamper small businesses, the technology could give their owners detailed new insights into sales trends, cash flow, ordering, and other important financial information in real time so they can better understand how",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build statistics 2026"
+    },
+    {
+      "title": "AI for small business | U.S. Small Business Administration - SBA",
+      "url": "https://www.sba.gov/business-guide/manage-your-business/ai-small-business",
+      "content": "SBA is dedicated to informing small businesses about the ethical use of AI tools. We also want to help you think about effective ways to implement AI into your business practices. AI is relatively new, so start small. If you are unsure what tool you may need, many AI tools offer basic services for free or at a lower cost. Try testing them to see if they add value to your business. You may find they improve internal efficiencies, freeing up your time to focus on growing your business.\n\nRead on to find out about both the benefits and risks of using AI in your small business. If you're new to AI ",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build cost ROI general"
+    },
+    {
+      "title": "5 Ethical Considerations of AI in Business",
+      "url": "https://online.hbs.edu/blog/post/ethical-considerations-of-ai",
+      "content": "### 4. Privacy\n\nEthical concerns around AI privacy focus on collecting, storing, and using employee data. AI systems can analyze vast amounts of personal and professional information, which must be properly protected to avoid privacy violations, unauthorized access, and misuse. [...] Cybersecurity challenges include:\n\n Phishing: An online scam where cybercriminals disguise themselves as a legitimate individual or organization to trick you into revealing personal information or financial data\n Malware: A combination of \"malicious\" and \"software,\" it's a program used to gain unauthorized access ",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build case study general business"
+    },
+    {
+      "title": "Ethics Is the Defining Issue for the Future of AI. And Time Is Running ...",
+      "url": "https://news.darden.virginia.edu/2026/01/22/ethics-is-the-defining-issue-for-the-future-of-ai-and-time-is-running-short",
+      "content": "### Are AI ethics an afterthought for many companies or organizations?\n\nToo often, AI ethics have been treated as an afterthought rather than a core design principle. Organizations may sign on to broad \u201cethical principles,\u201d but when it comes to building or deploying AI, ethics is bolted on late in the process, if at all.\n\nWhen ethics is left until the end, it is always the weakest link. Companies find themselves reacting to scandals instead of building trust and resilience.\n\n### Do competitive pressures cause businesses to rush implementation of AI? [...] Organizations often feel pressure from",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build benchmarks 2026"
+    },
+    {
+      "title": "The Root Causes of Failure for Artificial Intelligence Projects and ...",
+      "url": "https://www.rand.org/pubs/research_reports/RRA2680-1.html",
+      "content": "that sells the most items. The data science team lacks this business context and therefore might make the wrong assumptions. These kinds of errors often become obvious only after the data science team delivers a completed AI model and attempts to integrate it into day-to-day business operations. [...] ### Leadership-Driven Failures\n\nMore than any other type of issue, our interviewees noted that failures driven by the decisions and expectations of the organization's business leadership were far and away the most frequent causes of project failure. Eighty-four percent of our interviewees cited o",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build failure rate research"
+    },
+    {
+      "title": "7 AI Myths Holding Your Business Back in 2026 (+ What Actually Works)",
+      "url": "https://www.eklavvya.com/blog/ai-myths-corporates",
+      "content": "Preventing AI bias requires a multi-layered approach:   \n(1) Use diverse, representative training data  \n(2) Implement regular bias audits and testing  \n(3) Maintain human oversight for high-stakes decisions  \n(4) Build diverse development teams  \n(5) Establish clear ethical guidelines and accountability measures.   \n  \nOrganizations should also implement explainable AI systems that can show why decisions were made, making it easier to identify and correct biased patterns. No AI system will be perfectly unbiased, but these practices significantly reduce discriminatory outcomes.\n\nHow much does ",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build statistics 2026"
+    },
+    {
+      "title": "AI Ethical Concerns in 2026: What Enterprises Must Address",
+      "url": "https://kanerika.com/blogs/ai-ethical-concerns",
+      "content": "### What are the 4 pillars of ethical AI?\n\nThe four pillars of ethical AI are fairness, transparency, accountability, and privacy. Fairness ensures AI systems treat all individuals equitably without discriminatory bias. Transparency demands that algorithmic decision-making processes remain interpretable and explainable to stakeholders. Accountability establishes clear responsibility chains for AI outcomes, ensuring organizations answer for system failures. Privacy protects personal data throughout the AI lifecycle, from collection through processing. These pillars form the foundation of respon",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build statistics 2026"
+    },
+    {
+      "title": "AI Presents a Major Opportunity for Small Businesses\u2014But Support ...",
+      "url": "https://www.goldmansachs.com/community-impact/10000-small-businesses-voices/insights/ai-presents-a-major-opportunity-for-small-businesses",
+      "content": "However, a significant implementation gap exists. Only 14% of small businesses are fully integrating AI into core operations, suggesting many are still in early stages of adoption. Of all those using AI, many said they have faced challenges such as concerns about data privacy and security (50%), a lack of technical expertise (49%), and difficulty choosing the right AI tools (48%). Small businesses recognize they need help: 73% say their business would benefit from additional access to training and resources necessary to successfully implement and evaluate AI. [...] Ai is delivering results for",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build statistics 2026"
+    },
+    {
+      "title": "AI ROI Metrics for Small Businesses",
+      "url": "https://www.lucid.now/blog/ai-roi-metrics-for-small-businesses",
+      "content": "## Conclusion: AI Growth Potential for Small Businesses\n\nSmall businesses that actively track and fine-tune their AI return on investment (ROI) are setting themselves up for incredible growth opportunities. With projections showing that 80% of retail companies plan to adopt AI by 2025 and 92.1% of businesses already reporting measurable results from AI investments, the real challenge lies in implementing AI effectively. [...] ### What are the key steps for small businesses to successfully launch an AI pilot program?\n\nTo kick off a successful AI pilot program, small businesses need to start wit",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build cost ROI general"
+    },
+    {
+      "title": "Enterprise AI Cost Savings: ROI You Can Measure | Coworker AI",
+      "url": "https://coworker.ai/blog/enterprise-ai-cost-savings",
+      "content": "Make sure you have clear attribution of benefits within different business units. If your AI solution, for example, reduces both customer service time and increases sales conversions, carefully separate these impacts to avoid counting the same customer interactions twice.\n\n### Scenario Planning\n\nAI's evolving nature means scenario planning provides a more realistic approach to ROI estimation.\n\nInstead of calculating a single ROI figure, develop multiple projections (best, base, and worst cases) to account for various implementation outcomes.\n\nAI may initially boost earnings, causing returns on",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build cost ROI general"
+    },
+    {
+      "title": "How AI Delivers Real ROI for Your Business",
+      "url": "https://riseuplabs.com/how-ai-delivers-real-roi-for-your-business",
+      "content": "Align AI Initiatives with Business Goals:  \n  Prioritize projects tied to clear financial and strategic objectives.\n Invest in Robust, Scalable Data Infrastructure:  \n  Quality data is the foundation for all successful AI applications.\n Start Small\u2014Scale What Works:  \n  Pilot AI in discrete areas, refine based on measured outcomes, then expand.\n Build Cross-Functional Teams:  \n  Involve IT, business, and end users from day one for smooth adoption.\n Set Up Continuous Measurement Loops:  \n  Track, analyze, and iterate with a culture of evidence-based decision-making.\n Engage Leadership and Foste",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build cost ROI general"
+    },
+    {
+      "title": "What is the Small Business Ethical Dilemma of AI?",
+      "url": "https://www.hr2fit.com/hr-insights/what-is-the-small-business-ethical-dilemma-of-ai",
+      "content": "An SMB owner of an engineering firm implemented an AI product that helps predict project timelines. Everything was going well, and profits were significantly up for the engineering firm; bonuses were being planned. Then a discovery was made: the AI product that had brought them great success was not implemented properly, and all the projects that used it were flawed. This created an ethical dilemma for the SMB owner. The owner could choose to remain silent and not inform clients, blaming significant project delays on other factors, or disclose the implementation error, risking damage to their ",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build case study general business"
+    },
+    {
+      "title": "The Ethics of AI at Work: What Every Company Should Consider",
+      "url": "https://www.techclass.com/resources/learning-and-development-articles/ethics-of-ai-at-work-what-every-company-should-consider",
+      "content": "\ud83d\udeab Unacceptable Risk\n\nAI practices that are a clear threat to fundamental rights, such as social scoring. Outright banned.\n\nEurope has taken a global lead with the EU AI Act, the first comprehensive legal framework for AI. Agreed upon in 2024, the AI Act is poised to set a de facto international standard for AI governance. Its approach is risk-based: the law categorizes AI systems into four levels of risk, unacceptable, high, limited, and minimal, and tailors obligations accordingly. [...] 4. Conduct Bias Audits and Testing: Before an AI tool goes live, and periodically after, test it for unfai",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build case study general business"
+    },
+    {
+      "title": "A study on ethical implications of artificial intelligence adoption in business: challenges and best practices | Future Business Journal | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1186/s43093-025-00462-5",
+      "content": "in ethical views among small businesses. J Bus Ethics 11:555\u2013566\")]. Then, the context of ethical dilemma varies from profession to profession [102 Competence, ethical practice and professional ethics teaching. Ethics Soc Welfare 9(3):297\u2013311\")]. Similarly, persons of dissimilar ages have different choices and preferences that often influences the individual ethical perspective [101 Demographic & related differences in ethical views among small businesses. J Bus Ethics 11:555\u2013566\")]. Growth of social media and internet has introduced new ethical challenges related to privacy, data security, an",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build case study general business"
+    },
+    {
+      "title": "Why Small Businesses Struggle to Turn AI Into Strategic Advantage",
+      "url": "https://jsbs.scholasticahq.com/article/158957-resource-poor-risk-rich-why-small-businesses-struggle-to-turn-ai-into-strategic-advantage",
+      "content": "store where an employee uses an AI chatbot to answer a customer\u2019s technical question. The AI \u201challucinates\u201d an incorrect and unsafe answer, leading to product misuse and potential harm to the customer. Providing incorrect and unsafe answers harms multiple stakeholder groups; first, the customer, who receives a flawed and potentially harmful solution. Second, the employee is placed in a position requiring them to use tools for which they have not received adequate training. Third, the firm risks losing business and trust and incurring reputational damage. [...] create unintended adverse outcome",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build benchmarks 2026"
+    },
+    {
+      "title": "5 Ethical Considerations of AI in Business - McGraw Hill",
+      "url": "https://www.mheducation.com/highered/blog/2026/03/5-ethical-considerations-of-ai-in-business.html",
+      "content": "According to the article, with the rapid rise of artificial intelligence (AI), many organizations are quickly trying to adapt to and implement new technologies. According to a PricewaterhouseCoopers (PwC) survey, 73 percent of U.S. companies have already adopted AI in an aspect of their business.\n\nYet, in the rush to implement AI, some organizations ignore the ethical concerns. [...] However, if the AI system is trained on biased data\u2014such as the notion that men dominate the finance industry or nurses are primarily female\u2014it may unfairly prioritize candidates and overlook qualified ones from d",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build benchmarks 2026"
+    },
+    {
+      "title": "AI Is Powering Small Business Growth in 2026",
+      "url": "https://www.uschamber.com/co/run/technology/ai-powered-growth-engines",
+      "content": "Small business leaders believe AI will help them compete and \u201cpunch above their weight,\u201d the report noted. More small businesses are investing in AI tools and skills and seeking upskilling opportunities for themselves and their teams.\n\nAI has moved from a tool to a strategic asset for small businesses aiming to stay resilient and grow in 2026. Sharat Raghavan, Economist and Director of Research at LinkedIn \n\n## Authenticity matters in the AI era\n\nWhile many small business owners use AI to help them create content, they also believe \u201creal human voices\u201d remain important\u2014and putting human voices ",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build benchmarks 2026"
+    },
+    {
+      "title": "Survey: Small Businesses Embrace AI \u2014 But Need Training and Support to Fully Harness It  | Goldman Sachs",
+      "url": "https://www.goldmansachs.com/pressroom/press-releases/2026/small-businesses-embrace-ai-but-need-training-and-support-to-fully-harness-it",
+      "content": "# Survey: Small Businesses Embrace AI \u2014 But Need Training and Support to Fully Harness It\n\nNinety-three percent report positive business impact, yet only 14% have fully integrated AI into core operations [...] Many cite barriers to deeper integration, such as lack of technical expertise, difficulty choosing tools, and data privacy concerns. As a result, small businesses say they need help: 73% say they would benefit from additional access to training and implementation resources. [...] There is also strong support for expanding access to AI education and training. Eighty-five percent said they",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build survey report 2026"
+    },
+    {
+      "title": "5 scenarios where AI doesn't help but does harm | Carlo Pepe posted on the topic | LinkedIn",
+      "url": "https://www.linkedin.com/posts/carlopepe_5-scenarios-where-ai-doesnt-help-but-does-activity-7330953051249311744-HOqx",
+      "content": "and aligned with our business values. It means actively questioning the decisions AI makes and being prepared to intervene if necessary. This is especially important in areas like customer service, hiring, and finance, where biases can have significant impacts. For beginners looking to implement AI in their business, it's essential to start with a foundational understanding of ethics in AI. Consider setting up a cross-functional team to oversee your AI initiatives. This team should include not only data scientists but also professionals from HR, legal, and customer service, each bringing a uni",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build statistics 2026"
+    },
+    {
+      "title": "AI projects: 95% fail, but 5% succeed rapidly | Cindi Howson posted on the topic | LinkedIn",
+      "url": "https://www.linkedin.com/posts/biscorecard_genai-activity-7364053718280937474-ErOl",
+      "content": "negative real-world value. They succeed on the vendor's checklist, but they fail on the company's balance sheet. The real failure rate isn't about projects that are shut down. A project that is killed is a lesson learned. The real failure is the zombie project that is never measured, never questioned, and is allowed to consume resources because no one has the institutional courage to admit it's a dead end.",
+      "query": "Where AI goes wrong for small businesses on ethics: the four scenarios you should refuse the build failure rate research"
+    }
+  ],
+  "notes_for_writer": "These are raw Tavily search results, deduplicated and ranked with credible publishers (gartner.com, mckinsey.com, rand.org, etc.) floated to the top. There is NO LLM-synthesized brief - the writer (chat-Claude or operator) must read these sources and pick 6-12 citation URLs + 3-5 buyer pain points + first-hand-experience context directly. The shape mirrors what blog_research.py would emit if Anthropic were alive."
+}

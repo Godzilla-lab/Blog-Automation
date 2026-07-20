@@ -1,0 +1,30 @@
+{
+  "title": "AI Customer Service for Small Businesses: 2026 Playbook",
+  "slug": "the-ultimate-guide-to-ai-customer-service-automation-for-small-businesses-in-2026",
+  "topic": "AI customer service automation for small businesses",
+  "niche": "retail",
+  "qa_passed": true,
+  "word_count": 1884,
+  "internal_links_used": 3,
+  "external_links_used": 8,
+  "mode": "manual_hand_fix",
+  "rewrite_of_live_post": true,
+  "live_url": "https://hexaaiagency.com/blog/the-ultimate-guide-to-ai-customer-service-automation-for-small-businesses-in-2026",
+  "priority_rank": 1,
+  "priority_reason": "Indexing-guide §6 audit found this post had broken structure (1 H2 for 3,233 words). Score 3/10, top rewrite priority.",
+  "primary_keyword": "AI customer service automation for small businesses",
+  "secondary_keywords": [
+    "AI ticket deflection",
+    "AI ticket triage",
+    "FAQ deflection",
+    "AI for customer support SMB",
+    "customer service automation 2026",
+    "Zendesk AI",
+    "Gorgias AI",
+    "Intercom Fin"
+  ],
+  "model": "manual (hand-drafted under API outage)",
+  "generated_at": "2026-06-02T11:30:00",
+  "website": "hexaaiagency.com",
+  "files": ["article.html", "paste_sections.md", "draft_eval.json", "research_raw.json", "metadata.json"]
+}

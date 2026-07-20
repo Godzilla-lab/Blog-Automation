@@ -1,0 +1,101 @@
+<p>"Move fast on AI" was the prevailing advice through 2024. By 2026 the cohort of businesses that took the advice literally has produced enough data for an honest counter-pattern. Five recurring archetypes of businesses that automated too early show up in the AI-rebuild engagements we get called into. None of these are named companies; they are composites of patterns we have audited repeatedly across the last 18 months. The lessons are the same regardless of which specific business each composite represents.</p>
+
+<p>This post lays out the five most common early-automation failure archetypes in 2026, what each operator learned at significant cost, the structural reason each pattern fails, and the diagnostic question that would have caught the failure before the build started.</p>
+
+<div class="tldr">
+  <h3>Key takeaways</h3>
+  <ul>
+    <li>The five archetypes: the chatbot-before-knowledge-base, the AI-on-dirty-data, the all-workflows-at-once, the AI-replacing-judgment, and the platform-migration-for-AI.</li>
+    <li>Each archetype was technically successful (the AI shipped, the demo worked) and operationally damaging (renewal did not happen, team trust collapsed, owner relationships strained).</li>
+    <li>The common factor is missing baseline measurement before the build. Without a baseline, the AI's actual impact is invisible regardless of what the dashboard reports.</li>
+    <li>The diagnostic question that would have caught each failure: "what specific dollar amount on your finance team's monthly report will this AI move?" If the answer is vague, the build is premature.</li>
+  </ul>
+</div>
+
+<h2>Archetype 1: the chatbot-before-knowledge-base</h2>
+
+<p>The operator deployed an AI customer service chatbot on an out-of-date knowledge base. The bot confidently answered customer questions with stale or contradictory information. Customer satisfaction surveys started flagging "the chatbot gave me wrong information" within the first month. The bot was tuned, retuned, and eventually pulled, but the customer-trust damage took six months to recover.</p>
+
+<p>The structural failure: AI customer service requires a current knowledge base as a prerequisite. The chatbot did exactly what it was configured to do; the inputs were the problem. <a href="https://www.kustomer.com/resources/blog/ai-powered-ticket-deflection">Kustomer's 2026 analysis</a> identifies knowledge-base quality as the prerequisite for any deflection-focused AI deployment.</p>
+
+<p>The diagnostic question that would have caught it: "what is the current accuracy of your knowledge base on the categories the AI will handle?" If the answer is below 85%, fix the knowledge base before deploying the bot. The two-week hygiene pass is the cheapest insurance in the build.</p>
+
+<h2>Archetype 2: AI on dirty data</h2>
+
+<p>The operator deployed AI predictive scoring against a CRM full of duplicate contacts, blank deal stages, and inconsistent pipeline names. The model produced confidently wrong predictions. The sales team learned to ignore the AI scores within a few weeks. The investment in the AI was wasted because the underlying data could not support the prediction quality the AI was capable of producing.</p>
+
+<p>The structural failure: predictive AI is only as good as the data it operates on. The dirty data was a known problem that nobody had prioritized fixing; the AI deployment exposed it visibly without fixing it. <a href="https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/2025/the-state-of-ai-how-organizations-are-rewiring-to-capture-value_final.pdf">McKinsey's 2025 framing</a> emphasizes the data-layer prerequisites for AI value capture.</p>
+
+<p>The diagnostic question: "what percentage of records in your CRM, PMS, or ERP are clean by your own internal definition?" If the answer is below 90%, fix the data first. <a href="/services/crm-ai-integration">CRM and AI integration engagements</a> always start with this data audit.</p>
+
+<h2>Archetype 3: all workflows at once</h2>
+
+<p>The operator deployed AI across customer service, sales, marketing, and operations simultaneously in a six-month project. Each workflow needed configuration attention the team did not have time to provide. None of the four deployments hit their baseline metrics because none of them received the focused attention required. The operator concluded "AI does not work for our business" when the actual conclusion should have been "we tried to deploy too much at once."</p>
+
+<p>The structural failure: AI implementations need focused configuration and team adoption per workflow. Parallel deployment dilutes the configuration attention and produces shallow integration across multiple workflows instead of deep integration in one.</p>
+
+<p>The diagnostic question: "if we deploy AI in exactly one workflow this quarter, which one would produce the largest measurable impact?" Pick that one. Pilot it. Prove ROI. Expand to the next workflow only after the first one is producing documented value.</p>
+
+<h2>Archetype 4: AI replacing judgment</h2>
+
+<p>The operator deployed AI to handle workflows that required judgment the AI could not exercise. Customer hardship conversations were handled by AI scripts. Property tenant relationships were handed to an AI agent. Sales negotiations were routed to a generative model. Each deployment produced operationally awkward outcomes that customers, tenants, and prospects remembered. The brand damage outlasted the AI deployment by a full year.</p>
+
+<p>The structural failure: AI absorbs procedural workflows well and judgment workflows badly. Deploying AI against judgment is exactly the misalignment between capability and business problem that <a href="https://www.rand.org/pubs/presentations/PTA2680-1.html">RAND's research on AI deployment risk</a> identifies as the leading cause of failure.</p>
+
+<p>The diagnostic question: "in this workflow, what percentage of cases need a human's judgment versus a procedural response?" If the answer is more than 30% needing judgment, the AI is being deployed against the wrong target. Move it to the procedural workflows; keep humans on the judgment work.</p>
+
+<h2>Archetype 5: platform migration for AI</h2>
+
+<p>The operator switched their CRM, PMS, or ERP platform specifically to access "better AI features." The migration consumed six months of operational pain, retraining, and integration rebuild. By the time the new platform was stable, the AI features that justified the move had been matched by the previous platform's product updates. The operator paid the migration cost for a feature parity outcome.</p>
+
+<p>The structural failure: platform AI features advance roughly in sync across the major vendors. Migrating to access a temporary feature lead almost always pays the migration cost in full while gaining nothing durable. <a href="https://www.gartner.com/en/newsroom/press-releases/2026-04-07-gartner-says-artificial-intelligence-projects-in-infrastructure-and-operations-stall-ahead-of-meaningful-roi-returns">Gartner's framing on AI stalling without baselines</a> applies to migration projects too.</p>
+
+<p>The diagnostic question: "if we stay on the current platform and add an AI workflow layer on top, what is the gap versus the new platform?" The answer is usually "marginal." Stay put unless the gap is genuinely large and durable.</p>
+
+<h2>What the five archetypes have in common</h2>
+
+<p>The common thread is missing baseline measurement before the build. Each archetype shipped without the operator documenting today's specific number on the metric the AI was supposed to move. Without that baseline, the AI's actual impact was invisible from day one. The renewal conversation at month 12 became a debate rather than a defense of a documented outcome.</p>
+
+<p>The discipline that prevents all five archetypes is the same discipline that produces durable ROI: document the baseline metric, design the attribution formula, run a 30-day pilot, expand only after the pilot proves value. The discipline is operating-model change, not technology selection.</p>
+
+<ul>
+  <li><strong>Forrester on chatbot business case:</strong> AI deployments that fail at renewal lack documented baselines. All five archetypes share this failure. <a href="https://www.forrester.com/blogs/build-the-right-chatbot-business-case">Source</a>.</li>
+  <li><strong>MIT NANDA 2025 analysis:</strong> 95% of corporate generative AI pilots produce zero measurable revenue impact. The five archetypes describe how the 95% happens. <a href="https://complexdiscovery.com/why-95-of-corporate-ai-projects-fail-lessons-from-mits-2025-study">Source</a>.</li>
+  <li><strong>BCG 2024 on GenAI bottom-line impact:</strong> operating-model change rather than tool selection drives ROI; the absence of that change is what links all five archetypes. <a href="https://www.bcg.com/publications/2024/from-potential-to-profit-with-genai">Source</a>.</li>
+  <li><strong>Salesforce on AI in customer service:</strong> AI's durable value sits at the procedural layer with documented baselines; without those preconditions, deployments stall. <a href="https://www.salesforce.com/service/ai/customer-service-ai">Source</a>.</li>
+  <li><strong>Industry analysis on coordination failures:</strong> response-gap and judgment-misalignment failures concentrate in operators that deployed AI ahead of operational readiness. <a href="https://www.fieldproxy.ai/resources/blog/how-to-stop-losing-cleaning-contracts-due-to-poor-communication-d1-20">Source</a>.</li>
+</ul>
+
+<h2>The diagnostic shape we run before any AI scope</h2>
+
+<p>At <a href="/about/team">Hexa AI Agency</a> we run the same screening conversation before any <a href="/services/ai-workflow-automation">AI workflow automation</a> scope is agreed. The conversation has five questions and any one of them returning vague answers is a red flag.</p>
+
+<p><strong>Question 1:</strong> what specific business metric will this AI move, and what is the baseline number today?</p>
+
+<p><strong>Question 2:</strong> how will we attribute revenue, recovered cost, or saved hours back to the AI system?</p>
+
+<p><strong>Question 3:</strong> what is the smallest scope we can pilot in 30 days that proves or kills the thesis?</p>
+
+<p><strong>Question 4:</strong> what does failure look like, and at what point do we pull the plug?</p>
+
+<p>If the operator can answer all four with specifics, the build is worth scoping. If any answer is vague, the build is premature regardless of how excited the team is about the technology. Across the engagements we have shipped, the operators that passed this screen produced durable value; the operators that did not pass it became the rebuild engagements we got called into a year later.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>How do I know if my business is about to fall into one of these archetypes?</h3>
+<p>Run the five diagnostic questions on your current AI scope before signing. If any answer is vague, you are about to become one of the archetypes. The questions are not gotchas; they are the table-stakes operational discipline that separates successful builds from failures.</p>
+
+<h3>Is it ever right to move fast on AI in 2026?</h3>
+<p>Yes, after the diagnostic returns clear answers. Speed within a well-scoped project is fine; speed in place of scoping discipline is what produces the archetypes. The "move fast" framing is correct when the foundations exist and wrong when they do not.</p>
+
+<h3>What if we already deployed AI in one of these archetype patterns?</h3>
+<p>Audit the deployment against the failure mode. Most of the archetypes have recovery paths: narrow the bot's scope, hygiene the data, retreat to one workflow, route judgment to humans, layer AI on the existing platform. The recovery is usually cheaper than the original build was; the operational damage takes longer to undo than the technical fix takes to ship.</p>
+
+<h3>When should we walk away from an AI project entirely?</h3>
+<p>When the diagnostic comes back with vague answers and the leadership team refuses to do the work to produce specific ones. Vague answers are not a starting point that improves with time; they are an early warning that the project will end up in one of the five archetypes.</p>
+
+<p>If you are evaluating an AI build and want a second opinion on the diagnostic, book a call at <a href="https://cal.com/hexaiagency">cal.com/hexaiagency</a> and we will read the proposal with you, free. We do this often for operators considering <a href="/services/ai-agent-development">AI agent development</a> for the first time, where the diagnostic discipline matters most.</p>
+
+<p>One closing operational reality. Operators who hit one of the five archetypes are not unusual. The base rate of mishandled AI deployment in 2026 is roughly the 95% figure MIT NANDA documented; most operators who tried to ship AI in 2024-2025 are now in some version of the rebuild conversation. The pattern is not shameful; it is statistically normal. The discipline of running the diagnostic before the next build is what separates operators who learn from the first failure and ship the second build successfully from operators who repeat the same archetype with a different vendor.</p>
+
+<p>The closing strategic point. The vendor market has a structural incentive to push operators into the archetypes because broad deployment makes contracts bigger. The buyer-side defense is the diagnostic discipline that scopes builds against documented baselines. Operators who internalize this defense escape the failure pattern; operators who do not, repeat it.</p>

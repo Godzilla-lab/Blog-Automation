@@ -1,0 +1,33 @@
+{
+  "_comment": "Canonical allowlist of internal URLs the blog writer can link to. Single source of truth. Loaded by blog_prompt.txt and blog_validator.py. Edit this file when a new service, industry, or case-study page ships on hexaaiagency.com.",
+  "_last_reviewed": "2026-06-02",
+  "domain": "hexaaiagency.com",
+
+  "services": [
+    {"path": "/services/ai-workflow-automation",     "label": "AI workflow automation",          "use_when": "the post is about automating a multi-step business process (intake, billing, reporting, AP)"},
+    {"path": "/services/ai-agent-development",       "label": "AI agent development",            "use_when": "the post is about building a custom agent (lead-response, voice, niche assistant)"},
+    {"path": "/services/crm-ai-integration",         "label": "CRM and AI integration",          "use_when": "the post is about layering AI on HubSpot, Pipedrive, Salesforce, Follow Up Boss, etc."},
+    {"path": "/services/customer-service-automation","label": "customer service automation",     "use_when": "the post is about triage, FAQ, chatbots, ticket deflection, or Shopify/Gorgias/Zendesk"},
+    {"path": "/services/proposal-automation",        "label": "proposal automation",             "use_when": "the post is about quotes, proposals, contract docs, or sales-cycle compression"}
+  ],
+
+  "industries": [
+    {"path": "/industries/property-management", "label": "property management",         "use_when": "the post addresses landlords, leasing offices, multifamily, tenant comms"},
+    {"path": "/industries/finance",             "label": "finance and accounting",      "use_when": "the post addresses AP, AR, bookkeeping, invoicing, QuickBooks, Xero"},
+    {"path": "/industries/healthcare",          "label": "healthcare",                  "use_when": "the post addresses dental, medical, clinic ops (skip for anything regulated like diagnosis)"},
+    {"path": "/industries/retail",              "label": "retail and ecommerce",        "use_when": "the post addresses Shopify, returns, inventory, ecom support"},
+    {"path": "/industries/real-estate",         "label": "real estate",                 "use_when": "the post addresses agents, brokerages, lead response, Follow Up Boss"}
+  ],
+
+  "case_studies": [
+    {"path": "/case-studies/bd-lead-capture-automation",   "label": "BD lead capture automation case study",    "use_when": "you're referencing inbound lead-capture / form-to-CRM builds"},
+    {"path": "/case-studies/pipedrive-contact-enrichment", "label": "Pipedrive contact enrichment case study",  "use_when": "you're referencing CRM enrichment, lead scoring, or data-quality work"},
+    {"path": "/case-studies/pipedrive-auto-note-taker",    "label": "Pipedrive auto note-taker case study",     "use_when": "you're referencing call notes, transcription, sales-cycle automation"},
+    {"path": "/case-studies/ecommerce-order-automation",   "label": "ecommerce order automation case study",    "use_when": "you're referencing order flows, fulfillment, Shopify backend"},
+    {"path": "/case-studies/hubspot-crm-automation",       "label": "HubSpot CRM automation case study",        "use_when": "you're referencing HubSpot workflows, deal pipelines, sequences"},
+    {"path": "/case-studies/instagram-dm-chatbot",         "label": "Instagram DM chatbot case study",          "use_when": "you're referencing IG / DM / ManyChat / social-comms automation"},
+    {"path": "/case-studies/ai-chat-system",               "label": "AI chat system case study",                "use_when": "you're referencing on-site chatbots or LLM-powered conversational UX"},
+    {"path": "/case-studies/content-engine",               "label": "content engine case study",                "use_when": "you're referencing content production, blog/social automation"},
+    {"path": "/case-studies/proposal-automation",          "label": "proposal automation case study",           "use_when": "you're referencing quote / proposal / contract document work"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "qa_passed": true,
+  "validator": {
+    "passed": true,
+    "failures": [],
+    "stats": {
+      "words": 1834,
+      "internal_links": 3,
+      "external_links": 9,
+      "internal_links_off_allowlist": 0,
+      "has_tldr": true,
+      "has_first_hand": true,
+      "em_en_dashes": 0,
+      "banned_phrase_hits": []
+    }
+  },
+  "evaluator": {
+    "skipped": true,
+    "reason": "LLM evaluator not run in --validate-only mode"
+  },
+  "mode": "manual_revalidated_revalidated",
+  "revalidated_at": "2026-06-02T11:43:18.340709"
+}

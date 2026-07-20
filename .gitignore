@@ -58,3 +58,21 @@ skills/remotion-video/remotion/.tmp-*.json
 
 # Stray cwd marker files
 tmpclaude-*-cwd
+
+# Rendered media (regenerable deliverables/intermediates — keep out of git history)
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.orig
+
+# QA frames extracted from renders
+.qa_frames/
+
+# Rendered ad frames & creatives (regenerable)
+madebyhexa-ads/**/*.png
+madebyhexa-ads/**/*.jpg
+madebyhexa-ads/**/*.jpeg
+sabi-motion-sample/*.png
+sabi-motion-sample/*.jpg
+hexa-leak-ads/
